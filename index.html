@@ -93,6 +93,21 @@
     margin-bottom: 16px;
   }
   .controls nav.tabs { margin-bottom: 0; }
+  .controls-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  #searchInput {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    width: 200px;
+  }
   label.sortby {
     display: flex;
     align-items: center;
@@ -257,10 +272,13 @@
 
   <div class="controls">
     <nav class="tabs" id="tabs" role="tablist" aria-label="League"></nav>
-    <label class="sortby">
-      Sort by
-      <select id="sortBySelect"></select>
-    </label>
+    <div class="controls-right">
+      <input type="search" id="searchInput" placeholder="Search name or club…" aria-label="Search runners">
+      <label class="sortby">
+        Sort by
+        <select id="sortBySelect"></select>
+      </label>
+    </div>
   </div>
 
   <div class="panel">
@@ -316,9 +334,7 @@
 
   function raceCellValue(entry, raceKey) {
     const r = entry.races[raceKey];
-    if (!r) return null;
-    if (raceKey === "marathon_half" && r.bib) return r.time + " (Bib " + r.bib + ")";
-    return r.time || null;
+    return r ? (r.time || null) : null;
   }
 
   function buildHead() {
@@ -381,11 +397,17 @@
   function buildRows() {
     const tbody = document.getElementById("bodyRows");
     tbody.innerHTML = "";
-    const list = (DATA.leagues[activeLeague] || []).slice();
+    const fullList = DATA.leagues[activeLeague] || [];
 
-    // stable overall rank = order as pre-sorted by cumulative time in the JSON
+    // stable overall rank = order as pre-sorted by cumulative time in the JSON,
+    // computed from the full league before any search filtering is applied.
     const rankOf = new Map();
-    (DATA.leagues[activeLeague] || []).forEach((e, i) => rankOf.set(e, i + 1));
+    fullList.forEach((e, i) => rankOf.set(e, i + 1));
+
+    const term = document.getElementById("searchInput").value.trim().toLowerCase();
+    let list = term
+      ? fullList.filter((e) => e.name.toLowerCase().includes(term) || (e.club || "").toLowerCase().includes(term))
+      : fullList.slice();
 
     list.sort((a, b) => {
       const va = getSortValue(a, sortState.col);
@@ -397,6 +419,9 @@
     });
 
     document.getElementById("emptyState").hidden = list.length > 0;
+    document.getElementById("emptyState").textContent = term
+      ? "No runners match your search."
+      : "No runners in this league yet.";
     document.getElementById("board").style.display = list.length ? "" : "none";
 
     list.forEach((entry) => {
@@ -501,6 +526,10 @@
       list.appendChild(li);
     });
   }
+
+  document.getElementById("searchInput").addEventListener("input", () => {
+    if (DATA) buildRows();
+  });
 
   function render() {
     buildTabs();
