@@ -34,11 +34,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.units import mm
+from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 BASE_DIR = Path(__file__).resolve().parent
 RESULTS_DIR = BASE_DIR / "results"
+PDF_DIR = BASE_DIR / "pdfs"
 OUTPUT_PATH = BASE_DIR / "results.json"
 ANOMALIES_PATH = BASE_DIR / "anomalies.txt"
+
+LEAGUE_LABELS = {"half_marathon": "Half Marathon", "marathon": "Marathon"}
 
 MARATHON_EVENT_ID = "381348"
 MARATHON_TAB = "results"
@@ -422,6 +430,70 @@ def build_leaderboard(roster, marathon_half_entries, other_races):
     return entrants, anomalies
 
 
+def race_cell_text(entry, race_key, races_meta):
+    r = entry["races"].get(race_key)
+    if r and r.get("time"):
+        return r["time"]
+    return "--" if races_meta[race_key]["status"] == "pending" else "-"
+
+
+def write_league_pdf(league_key, entrants, races_ordered, generated_at):
+    """Render a printable leaderboard PDF for one league (Half Marathon or
+    Marathon) into PDF_DIR, mirroring the columns shown on the webpage."""
+    PDF_DIR.mkdir(exist_ok=True)
+    league_label = LEAGUE_LABELS[league_key]
+    race_order = list(races_ordered.keys())
+
+    headers = ["#", "Name", "Cumulative", "Club"]
+    for rk in race_order:
+        label = races_ordered[rk]["label"]
+        if rk == "marathon_half":
+            label = league_label
+        headers.append(label)
+
+    data = [headers]
+    for i, e in enumerate(entrants, start=1):
+        row = [str(i), e["name"], e["cumulative_time"] or "-", e["club"] or "-"]
+        row.extend(race_cell_text(e, rk, races_ordered) for rk in race_order)
+        data.append(row)
+
+    out_path = PDF_DIR / f"{league_key}.pdf"
+    doc = SimpleDocTemplate(
+        str(out_path),
+        pagesize=landscape(A4),
+        leftMargin=14 * mm,
+        rightMargin=14 * mm,
+        topMargin=14 * mm,
+        bottomMargin=14 * mm,
+        title=f"No Rest For the Wicked 2026 - {league_label} League",
+    )
+    styles = getSampleStyleSheet()
+    story = [
+        Paragraph(f"No Rest For the Wicked 2026 &mdash; {league_label} League", styles["Title"]),
+        Paragraph(f"Generated {generated_at} &middot; {len(entrants)} runner(s)", styles["Normal"]),
+        Spacer(1, 8 * mm),
+    ]
+
+    if entrants:
+        table = Table(data, repeatRows=1)
+        table.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#b3122a")),
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+            ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+            ("FONTSIZE", (0, 0), (-1, -1), 7.5),
+            ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#faf9f7")]),
+            ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#e2ddd3")),
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ("ALIGN", (0, 0), (0, -1), "CENTER"),
+        ]))
+        story.append(table)
+    else:
+        story.append(Paragraph("No runners in this league yet.", styles["Normal"]))
+
+    doc.build(story)
+    return f"pdfs/{league_key}.pdf"
+
+
 def main():
     race_defs_by_key = {r["key"]: r for r in RACE_FILE_DEFS}
 
@@ -465,12 +537,18 @@ def main():
 
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
+    league_pdfs = {
+        league_key: write_league_pdf(league_key, leagues.get(league_key, []), races_ordered, generated_at)
+        for league_key in LEAGUE_LABELS
+    }
+
     output = {
         "event": "No Rest For the Wicked 2026",
         "logo": "images/logo.jpg",
         "generated_at": generated_at,
         "races": races_ordered,
         "leagues": leagues,
+        "league_pdfs": league_pdfs,
     }
 
     OUTPUT_PATH.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")

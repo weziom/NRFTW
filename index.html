@@ -56,19 +56,23 @@
 
   nav.tabs {
     display: flex;
-    gap: 6px;
+    gap: 12px;
     flex-wrap: wrap;
     margin-bottom: 16px;
   }
   nav.tabs button {
     appearance: none;
+    position: relative;
+    overflow: hidden;
     border: 1px solid var(--border);
     background: var(--panel);
     color: var(--text);
-    padding: 9px 16px;
-    border-radius: 999px;
-    font-size: 0.88rem;
-    font-weight: 600;
+    padding: 20px 28px;
+    min-width: 200px;
+    border-radius: 18px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: left;
     cursor: pointer;
   }
   nav.tabs button[aria-selected="true"] {
@@ -76,9 +80,27 @@
     border-color: var(--accent);
     color: var(--accent-ink);
   }
+  nav.tabs button .label {
+    position: relative;
+    z-index: 1;
+  }
   nav.tabs button .count {
     font-weight: 400;
     opacity: 0.75;
+  }
+  nav.tabs button .bg-distance {
+    position: absolute;
+    z-index: 0;
+    right: 10px;
+    bottom: -6px;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: currentColor;
+    opacity: 0.13;
+    pointer-events: none;
+    white-space: nowrap;
+    line-height: 1;
   }
 
   .controls {
@@ -123,6 +145,23 @@
     background: var(--panel);
     color: var(--text);
   }
+
+  a.download-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: var(--accent-ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  a.download-pdf:hover { opacity: 0.9; }
+  a.download-pdf[hidden] { display: none; }
 
   .panel {
     background: var(--panel);
@@ -214,7 +253,8 @@
   @media (max-width: 600px) {
     header.site img.logo { width: 96px; height: 96px; }
     header.site h1 { font-size: 1.15rem; }
-    nav.tabs button { padding: 8px 12px; font-size: 0.82rem; }
+    nav.tabs button { padding: 14px 18px; font-size: 0.95rem; min-width: 0; flex: 1 1 auto; }
+    nav.tabs button .bg-distance { font-size: 1.7rem; right: 8px; bottom: -4px; }
     .controls { justify-content: center; }
     .controls-right { width: 100%; justify-content: center; }
     #searchInput { flex: 1 1 100%; max-width: none; }
@@ -242,6 +282,7 @@
         Sort by
         <select id="sortBySelect"></select>
       </label>
+      <a class="download-pdf" id="downloadPdf" href="#" download hidden>⬇ Download PDF</a>
     </div>
   </div>
 
@@ -259,6 +300,8 @@
     <span id="generatedAt"></span> ·
     Sources: <a href="https://my.raceresult.com/381348/" target="_blank" rel="noopener">Marathon / Half Marathon</a>,
     scanned Peel Hill result sheets
+    <br>
+    Page developed and maintained by Lee Cook
   </footer>
 </div>
 
@@ -275,8 +318,8 @@
     { key: "age_group", label: "Age group" },
   ];
   const LEAGUES = [
-    { key: "half_marathon", label: "Half Marathon" },
-    { key: "marathon", label: "Marathon" },
+    { key: "half_marathon", label: "Half Marathon", distance: "13.1 MI" },
+    { key: "marathon", label: "Marathon", distance: "26.2 MI" },
   ];
 
   let DATA = null;
@@ -434,7 +477,9 @@
       btn.setAttribute("role", "tab");
       btn.setAttribute("aria-selected", String(lg.key === activeLeague));
       const count = (DATA.leagues[lg.key] || []).length;
-      btn.innerHTML = lg.label + ' <span class="count">(' + count + ')</span>';
+      btn.innerHTML =
+        '<span class="bg-distance">' + lg.distance + '</span>' +
+        '<span class="label">' + lg.label + ' <span class="count">(' + count + ')</span></span>';
       btn.addEventListener("click", () => {
         activeLeague = lg.key;
         sortState = { col: "cumulative_seconds", dir: "asc" };
@@ -465,11 +510,25 @@
     if (DATA) buildRows();
   });
 
+  function updateDownloadLink() {
+    const link = document.getElementById("downloadPdf");
+    const href = DATA.league_pdfs && DATA.league_pdfs[activeLeague];
+    if (href) {
+      link.href = href;
+      const league = LEAGUES.find((lg) => lg.key === activeLeague);
+      link.textContent = "⬇ Download " + (league ? league.label : "") + " PDF";
+      link.hidden = false;
+    } else {
+      link.hidden = true;
+    }
+  }
+
   function render() {
     buildTabs();
     buildSortSelect();
     buildHead();
     buildRows();
+    updateDownloadLink();
     document.getElementById("generatedAt").textContent = "Last updated " + new Date(DATA.generated_at).toLocaleString();
   }
 

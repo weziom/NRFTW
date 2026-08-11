@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-11T16:06:06Z",
+  "generated_at": "2026-08-11T17:18:14Z",
   "races": {
     "peel_hill": {
       "label": "Peel Hill",
@@ -3641,5 +3641,9 @@
         "cumulative_time": "00:52:14"
       }
     ]
+  },
+  "league_pdfs": {
+    "half_marathon": "pdfs/half_marathon.pdf",
+    "marathon": "pdfs/marathon.pdf"
   }
 }
