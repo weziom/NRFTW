@@ -277,12 +277,12 @@
   <div class="controls">
     <nav class="tabs" id="tabs" role="tablist" aria-label="League"></nav>
     <div class="controls-right">
+      <a class="download-pdf" id="downloadPdf" href="#" download hidden>⬇ PDF</a>
       <input type="search" id="searchInput" placeholder="Search name or club…" aria-label="Search runners">
       <label class="sortby">
         Sort by
         <select id="sortBySelect"></select>
       </label>
-      <a class="download-pdf" id="downloadPdf" href="#" download hidden>⬇ Download PDF</a>
     </div>
   </div>
 
@@ -516,7 +516,7 @@
     if (href) {
       link.href = href;
       const league = LEAGUES.find((lg) => lg.key === activeLeague);
-      link.textContent = "⬇ Download " + (league ? league.label : "") + " PDF";
+      link.title = "Download " + (league ? league.label : "") + " PDF";
       link.hidden = false;
     } else {
       link.hidden = true;
