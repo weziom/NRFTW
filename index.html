@@ -36,25 +36,22 @@
 
   header.site {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 16px;
-    padding: 12px 4px 20px;
+    text-align: center;
+    gap: 10px;
+    padding: 16px 4px 24px;
   }
   header.site img.logo {
-    width: 56px;
-    height: 56px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     flex-shrink: 0;
   }
   header.site h1 {
-    font-size: 1.35rem;
-    margin: 0 0 2px;
-    letter-spacing: -0.01em;
-  }
-  header.site p {
+    font-size: 1.4rem;
     margin: 0;
-    color: var(--muted);
-    font-size: 0.85rem;
+    letter-spacing: -0.01em;
   }
 
   nav.tabs {
@@ -106,7 +103,9 @@
     border: 1px solid var(--border);
     background: var(--panel);
     color: var(--text);
-    width: 200px;
+    flex: 1 1 140px;
+    min-width: 0;
+    max-width: 220px;
   }
   label.sortby {
     display: flex;
@@ -181,6 +180,21 @@
   td.cumulative { font-weight: 700; color: var(--accent); }
   td.pending { color: var(--pending); }
 
+  /* Keep Rank + Name visible while the rest of a wide table scrolls
+     horizontally under them - the header row is already sticky vertically,
+     so these need matching opaque backgrounds per row state to cover it. */
+  th:nth-child(1), th:nth-child(2),
+  td.rank, td.name {
+    position: sticky;
+    z-index: 2;
+  }
+  th:nth-child(1), td.rank { left: 0; min-width: 34px; }
+  th:nth-child(2), td.name { left: 34px; box-shadow: 3px 0 4px -2px rgba(0,0,0,0.12); }
+  th:nth-child(1), th:nth-child(2) { z-index: 3; background: var(--panel); }
+  tbody tr td.rank, tbody tr td.name { background: var(--panel); }
+  tbody tr:nth-child(even) td.rank, tbody tr:nth-child(even) td.name { background: var(--row-alt); }
+  tbody tr:hover td.rank, tbody tr:hover td.name { background: var(--row-hover); }
+
   .empty-state {
     padding: 32px 16px;
     text-align: center;
@@ -225,22 +239,6 @@
     font-weight: 700;
   }
 
-  .races-status {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 4px 0 18px;
-  }
-  .race-chip {
-    font-size: 0.72rem;
-    padding: 5px 10px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    white-space: nowrap;
-  }
-  .race-chip.complete { color: var(--accent); border-color: var(--accent); }
-
   footer.site {
     text-align: center;
     color: var(--muted);
@@ -250,9 +248,13 @@
   footer.site a { color: var(--link); }
 
   @media (max-width: 600px) {
-    header.site img.logo { width: 44px; height: 44px; }
-    header.site h1 { font-size: 1.1rem; }
+    header.site img.logo { width: 96px; height: 96px; }
+    header.site h1 { font-size: 1.15rem; }
     nav.tabs button { padding: 8px 12px; font-size: 0.82rem; }
+    .controls { justify-content: center; }
+    .controls-right { width: 100%; justify-content: center; }
+    #searchInput { flex: 1 1 100%; max-width: none; }
+    label.sortby { flex: 1 1 auto; justify-content: center; }
     table { font-size: 0.8rem; }
     thead th, tbody td { padding: 8px 8px; }
   }
@@ -262,13 +264,8 @@
 <div class="wrap">
   <header class="site">
     <img class="logo" src="images/logo.jpg" alt="No Rest For the Wicked logo">
-    <div>
-      <h1>No Rest For the Wicked 2026</h1>
-      <p>Cumulative time leaderboard</p>
-    </div>
+    <h1>No Rest For the Wicked 2026</h1>
   </header>
-
-  <div class="races-status" id="racesStatus"></div>
 
   <div class="controls">
     <nav class="tabs" id="tabs" role="tablist" aria-label="League"></nav>
@@ -343,12 +340,12 @@
     const cols = [
       { key: "rank", label: "#", sortable: false },
       { key: "name", label: "Name", sortable: true },
+      { key: "cumulative_seconds", label: "Cumulative", sortable: true },
       { key: "club", label: "Club", sortable: true },
     ];
     RACE_ORDER.forEach((rk) => {
       cols.push({ key: "race:" + rk, label: DATA.races[rk].label, sortable: true });
     });
-    cols.push({ key: "cumulative_seconds", label: "Cumulative", sortable: true });
 
     cols.forEach((c) => {
       const th = document.createElement("th");
@@ -437,6 +434,11 @@
       tdName.textContent = entry.name;
       tr.appendChild(tdName);
 
+      const tdCum = document.createElement("td");
+      tdCum.className = "cumulative";
+      tdCum.textContent = entry.cumulative_time || "–";
+      tr.appendChild(tdCum);
+
       const tdClub = document.createElement("td");
       tdClub.className = "club";
       tdClub.textContent = entry.club || "—";
@@ -453,11 +455,6 @@
         }
         tr.appendChild(td);
       });
-
-      const tdCum = document.createElement("td");
-      tdCum.className = "cumulative";
-      tdCum.textContent = entry.cumulative_time || "–";
-      tr.appendChild(tdCum);
 
       tbody.appendChild(tr);
     });
@@ -498,18 +495,6 @@
     select.value = sortState.col;
   }
 
-  function buildRacesStatus() {
-    const el = document.getElementById("racesStatus");
-    el.innerHTML = "";
-    RACE_ORDER.forEach((rk) => {
-      const r = DATA.races[rk];
-      const chip = document.createElement("span");
-      chip.className = "race-chip" + (r.status === "complete" ? " complete" : "");
-      chip.textContent = r.label + (r.status === "complete" ? " ✓ " + r.finishers : " – not yet run");
-      el.appendChild(chip);
-    });
-  }
-
   function buildNotes() {
     const list = document.getElementById("notesList");
     const summary = document.getElementById("notesSummary");
@@ -536,7 +521,6 @@
     buildSortSelect();
     buildHead();
     buildRows();
-    buildRacesStatus();
     document.getElementById("generatedAt").textContent = "Last updated " + new Date(DATA.generated_at).toLocaleString();
   }
 
