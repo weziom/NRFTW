@@ -450,7 +450,7 @@
         if (val) {
           td.textContent = val;
         } else {
-          td.textContent = DATA.races[rk].status === "pending" ? "not yet run" : "–";
+          td.textContent = DATA.races[rk].status === "pending" ? "--" : "–";
           td.className = "pending";
         }
         tr.appendChild(td);
