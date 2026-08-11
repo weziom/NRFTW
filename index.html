@@ -29,7 +29,7 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap {
-    max-width: 980px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 16px 16px 48px;
   }
@@ -140,19 +140,20 @@
     border-collapse: collapse;
     font-size: 0.86rem;
     min-width: 640px;
+    table-layout: auto;
   }
   thead th {
     position: sticky;
     top: 0;
     background: var(--panel);
     text-align: left;
-    padding: 10px 12px;
+    padding: 10px 10px;
     border-bottom: 2px solid var(--border);
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     color: var(--muted);
-    white-space: nowrap;
+    white-space: normal;
     cursor: pointer;
     user-select: none;
   }
@@ -202,43 +203,6 @@
     font-size: 0.9rem;
   }
 
-  details.notes {
-    margin-top: 18px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 4px 16px;
-  }
-  details.notes summary {
-    cursor: pointer;
-    padding: 12px 0;
-    font-weight: 600;
-    font-size: 0.88rem;
-    list-style: none;
-  }
-  details.notes summary::-webkit-details-marker { display: none; }
-  details.notes summary::before {
-    content: "\25B8";
-    display: inline-block;
-    margin-right: 8px;
-    transition: transform 0.15s;
-  }
-  details.notes[open] summary::before { transform: rotate(90deg); }
-  details.notes ul { margin: 0 0 14px; padding-left: 1.2em; }
-  details.notes li { margin-bottom: 8px; font-size: 0.83rem; color: var(--muted); line-height: 1.4; }
-  details.notes li .tag {
-    display: inline-block;
-    font-size: 0.66rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    background: var(--row-hover);
-    color: var(--accent);
-    border-radius: 5px;
-    padding: 1px 6px;
-    margin-right: 6px;
-    font-weight: 700;
-  }
-
   footer.site {
     text-align: center;
     color: var(--muted);
@@ -257,6 +221,9 @@
     label.sortby { flex: 1 1 auto; justify-content: center; }
     table { font-size: 0.8rem; }
     thead th, tbody td { padding: 8px 8px; }
+    /* Club is column 4 (#, Name, Cumulative, Club, ...races) - drop it on
+       mobile so Cumulative reads as the second real column after Name. */
+    th:nth-child(4), td:nth-child(4) { display: none; }
   }
 </style>
 </head>
@@ -288,11 +255,6 @@
     <div class="empty-state" id="emptyState" hidden>No runners in this league yet.</div>
   </div>
 
-  <details class="notes" id="notesBlock">
-    <summary id="notesSummary">Data notes</summary>
-    <ul id="notesList"></ul>
-  </details>
-
   <footer class="site">
     <span id="generatedAt"></span> ·
     Sources: <a href="https://my.raceresult.com/381348/" target="_blank" rel="noopener">Marathon / Half Marathon</a>,
@@ -313,12 +275,12 @@
     { key: "age_group", label: "Age group" },
   ];
   const LEAGUES = [
-    { key: "marathon", label: "Marathon" },
     { key: "half_marathon", label: "Half Marathon" },
+    { key: "marathon", label: "Marathon" },
   ];
 
   let DATA = null;
-  let activeLeague = "marathon";
+  let activeLeague = "half_marathon";
   let sortState = { col: "cumulative_seconds", dir: "asc" };
 
   function fmtTime(sec) {
@@ -344,7 +306,11 @@
       { key: "club", label: "Club", sortable: true },
     ];
     RACE_ORDER.forEach((rk) => {
-      cols.push({ key: "race:" + rk, label: DATA.races[rk].label, sortable: true });
+      let label = DATA.races[rk].label;
+      if (rk === "marathon_half") {
+        label = activeLeague === "half_marathon" ? "Half Marathon" : "Marathon";
+      }
+      cols.push({ key: "race:" + rk, label: label, sortable: true });
     });
 
     cols.forEach((c) => {
@@ -495,23 +461,6 @@
     select.value = sortState.col;
   }
 
-  function buildNotes() {
-    const list = document.getElementById("notesList");
-    const summary = document.getElementById("notesSummary");
-    list.innerHTML = "";
-    const anomalies = DATA.anomalies || [];
-    summary.textContent = "Data notes (" + anomalies.length + " anomal" + (anomalies.length === 1 ? "y" : "ies") + " flagged while parsing)";
-    anomalies.forEach((a) => {
-      const li = document.createElement("li");
-      const tag = document.createElement("span");
-      tag.className = "tag";
-      tag.textContent = a.type.replace(/_/g, " ");
-      li.appendChild(tag);
-      li.appendChild(document.createTextNode(a.detail));
-      list.appendChild(li);
-    });
-  }
-
   document.getElementById("searchInput").addEventListener("input", () => {
     if (DATA) buildRows();
   });
@@ -531,7 +480,6 @@
     })
     .then((data) => {
       DATA = data;
-      buildNotes();
       render();
     })
     .catch((err) => {

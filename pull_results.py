@@ -38,6 +38,7 @@ import requests
 BASE_DIR = Path(__file__).resolve().parent
 RESULTS_DIR = BASE_DIR / "results"
 OUTPUT_PATH = BASE_DIR / "results.json"
+ANOMALIES_PATH = BASE_DIR / "anomalies.txt"
 
 MARATHON_EVENT_ID = "381348"
 MARATHON_TAB = "results"
@@ -462,18 +463,27 @@ def main():
     for rdef in other_race_defs:
         races_ordered[rdef["key"]] = races_meta[rdef["key"]]
 
+    generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
     output = {
         "event": "No Rest For the Wicked 2026",
         "logo": "images/logo.jpg",
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "generated_at": generated_at,
         "races": races_ordered,
         "leagues": leagues,
-        "anomalies": anomalies,
     }
 
     OUTPUT_PATH.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
 
+    anomaly_lines = [f"No Rest For the Wicked 2026 - anomalies as of {generated_at}", ""]
+    for a in anomalies:
+        anomaly_lines.append(f"[{a['type']}] {a['detail']}")
+    if not anomalies:
+        anomaly_lines.append("(none)")
+    ANOMALIES_PATH.write_text("\n".join(anomaly_lines) + "\n", encoding="utf-8")
+
     print(f"Wrote {OUTPUT_PATH}")
+    print(f"Wrote {ANOMALIES_PATH}")
     print(f"  Series entrants (Peel Hill finishers): {len(entrants)}")
     print(f"  Marathon league: {len(leagues['marathon'])}, Half Marathon league: {len(leagues['half_marathon'])}, Unassigned: {len(leagues['unassigned'])}")
     print(f"  Anomalies flagged: {len(anomalies)}")
