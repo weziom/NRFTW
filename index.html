@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Rest For the Wicked 2026 — Leaderboard</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --text: #23201b;
+    --muted: #6b6459;
+    --border: #e2ddd3;
+    --accent: #b3122a;
+    --accent-ink: #ffffff;
+    --row-alt: #faf9f7;
+    --row-hover: #fdeee1;
+    --link: #b3122a;
+    --pending: #8a8378;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px 16px 48px;
+  }
+
+  header.site {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 4px 20px;
+  }
+  header.site img.logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  header.site h1 {
+    font-size: 1.35rem;
+    margin: 0 0 2px;
+    letter-spacing: -0.01em;
+  }
+  header.site p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  nav.tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  nav.tabs button {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  nav.tabs button[aria-selected="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  nav.tabs button .count {
+    font-weight: 400;
+    opacity: 0.75;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .controls nav.tabs { margin-bottom: 0; }
+  label.sortby {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  label.sortby select {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+    min-width: 640px;
+  }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--panel);
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--border);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+  }
+  thead th.sortable:hover { color: var(--text); }
+  thead th .arrow {
+    display: inline-block;
+    width: 0.8em;
+    opacity: 0.5;
+  }
+  thead th[aria-sort="ascending"] .arrow::after { content: "\2191"; opacity: 1; }
+  thead th[aria-sort="descending"] .arrow::after { content: "\2193"; opacity: 1; }
+  thead th[aria-sort="none"] .arrow::after { content: ""; }
+
+  tbody td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:hover { background: var(--row-hover); }
+
+  td.name { white-space: normal; min-width: 140px; font-weight: 600; }
+  td.club { color: var(--muted); white-space: normal; min-width: 120px; }
+  td.rank { color: var(--muted); font-weight: 600; }
+  td.cumulative { font-weight: 700; color: var(--accent); }
+  td.pending { color: var(--pending); }
+
+  .empty-state {
+    padding: 32px 16px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  details.notes {
+    margin-top: 18px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px 16px;
+  }
+  details.notes summary {
+    cursor: pointer;
+    padding: 12px 0;
+    font-weight: 600;
+    font-size: 0.88rem;
+    list-style: none;
+  }
+  details.notes summary::-webkit-details-marker { display: none; }
+  details.notes summary::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.15s;
+  }
+  details.notes[open] summary::before { transform: rotate(90deg); }
+  details.notes ul { margin: 0 0 14px; padding-left: 1.2em; }
+  details.notes li { margin-bottom: 8px; font-size: 0.83rem; color: var(--muted); line-height: 1.4; }
+  details.notes li .tag {
+    display: inline-block;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: var(--row-hover);
+    color: var(--accent);
+    border-radius: 5px;
+    padding: 1px 6px;
+    margin-right: 6px;
+    font-weight: 700;
+  }
+
+  .races-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px 0 18px;
+  }
+  .race-chip {
+    font-size: 0.72rem;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .race-chip.complete { color: var(--accent); border-color: var(--accent); }
+
+  footer.site {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.75rem;
+    margin-top: 28px;
+  }
+  footer.site a { color: var(--link); }
+
+  @media (max-width: 600px) {
+    header.site img.logo { width: 44px; height: 44px; }
+    header.site h1 { font-size: 1.1rem; }
+    nav.tabs button { padding: 8px 12px; font-size: 0.82rem; }
+    table { font-size: 0.8rem; }
+    thead th, tbody td { padding: 8px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <img class="logo" src="images/logo.jpg" alt="No Rest For the Wicked logo">
+    <div>
+      <h1>No Rest For the Wicked 2026</h1>
+      <p>Cumulative time leaderboard</p>
+    </div>
+  </header>
+
+  <div class="races-status" id="racesStatus"></div>
+
+  <div class="controls">
+    <nav class="tabs" id="tabs" role="tablist" aria-label="League"></nav>
+    <label class="sortby">
+      Sort by
+      <select id="sortBySelect"></select>
+    </label>
+  </div>
+
+  <div class="panel">
+    <div class="table-scroll">
+      <table id="board">
+        <thead><tr id="headRow"></tr></thead>
+        <tbody id="bodyRows"></tbody>
+      </table>
+    </div>
+    <div class="empty-state" id="emptyState" hidden>No runners in this league yet.</div>
+  </div>
+
+  <details class="notes" id="notesBlock">
+    <summary id="notesSummary">Data notes</summary>
+    <ul id="notesList"></ul>
+  </details>
+
+  <footer class="site">
+    <span id="generatedAt"></span> ·
+    Sources: <a href="https://my.raceresult.com/381348/" target="_blank" rel="noopener">Marathon / Half Marathon</a>,
+    scanned Peel Hill result sheets
+  </footer>
+</div>
+
+<script>
+(function () {
+  // Marathon / Half Marathon is the first event of the series and is always
+  // shown first, regardless of what order races happen chronologically.
+  const RACE_ORDER = ["marathon_half", "peel_hill", "ramsey_10k", "killer_mile", "foxdale_5", "trail_run"];
+  const SORT_OPTIONS = [
+    { key: "cumulative_seconds", label: "Cumulative time" },
+    { key: "name", label: "Name" },
+    { key: "club", label: "Club" },
+    { key: "gender", label: "Gender" },
+    { key: "age_group", label: "Age group" },
+  ];
+  const LEAGUES = [
+    { key: "marathon", label: "Marathon" },
+    { key: "half_marathon", label: "Half Marathon" },
+  ];
+
+  let DATA = null;
+  let activeLeague = "marathon";
+  let sortState = { col: "cumulative_seconds", dir: "asc" };
+
+  function fmtTime(sec) {
+    if (sec === null || sec === undefined) return null;
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = Math.floor(sec % 60);
+    return [h, m, s].map((v, i) => (i === 0 ? String(v) : String(v).padStart(2, "0"))).join(":");
+  }
+
+  function raceCellValue(entry, raceKey) {
+    const r = entry.races[raceKey];
+    if (!r) return null;
+    if (raceKey === "marathon_half" && r.bib) return r.time + " (Bib " + r.bib + ")";
+    return r.time || null;
+  }
+
+  function buildHead() {
+    const headRow = document.getElementById("headRow");
+    headRow.innerHTML = "";
+    const cols = [
+      { key: "rank", label: "#", sortable: false },
+      { key: "name", label: "Name", sortable: true },
+      { key: "club", label: "Club", sortable: true },
+    ];
+    RACE_ORDER.forEach((rk) => {
+      cols.push({ key: "race:" + rk, label: DATA.races[rk].label, sortable: true });
+    });
+    cols.push({ key: "cumulative_seconds", label: "Cumulative", sortable: true });
+
+    cols.forEach((c) => {
+      const th = document.createElement("th");
+      th.textContent = c.label + " ";
+      if (c.sortable) {
+        th.classList.add("sortable");
+        th.setAttribute("aria-sort", sortState.col === c.key ? (sortState.dir === "asc" ? "ascending" : "descending") : "none");
+        const arrow = document.createElement("span");
+        arrow.className = "arrow";
+        th.appendChild(arrow);
+        th.addEventListener("click", () => {
+          if (sortState.col === c.key) {
+            sortState.dir = sortState.dir === "asc" ? "desc" : "asc";
+          } else {
+            sortState = { col: c.key, dir: "asc" };
+          }
+          render();
+        });
+      }
+      headRow.appendChild(th);
+    });
+  }
+
+  function getSortValue(entry, col) {
+    if (col === "name") return entry.name.toLowerCase();
+    if (col === "club") return (entry.club || "").toLowerCase();
+    if (col === "gender") return (entry.gender || "").toLowerCase();
+    if (col === "age_group") return (entry.age_group || "").toLowerCase();
+    if (col === "cumulative_seconds") return entry.cumulative_seconds === null ? Infinity : entry.cumulative_seconds;
+    if (col.startsWith("race:")) {
+      const rk = col.slice(5);
+      const r = entry.races[rk];
+      return r && r.time ? parseTimeToSeconds(r.time) : Infinity;
+    }
+    return 0;
+  }
+
+  function parseTimeToSeconds(text) {
+    const m = text.match(/^(\d+):(\d{2}):(\d{2})$/);
+    if (m) return (+m[1]) * 3600 + (+m[2]) * 60 + (+m[3]);
+    const m2 = text.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
+    if (m2 && (m2[1] || m2[2] || m2[3])) return (+(m2[1]||0)) * 3600 + (+(m2[2]||0)) * 60 + (+(m2[3]||0));
+    return Infinity;
+  }
+
+  function buildRows() {
+    const tbody = document.getElementById("bodyRows");
+    tbody.innerHTML = "";
+    const list = (DATA.leagues[activeLeague] || []).slice();
+
+    // stable overall rank = order as pre-sorted by cumulative time in the JSON
+    const rankOf = new Map();
+    (DATA.leagues[activeLeague] || []).forEach((e, i) => rankOf.set(e, i + 1));
+
+    list.sort((a, b) => {
+      const va = getSortValue(a, sortState.col);
+      const vb = getSortValue(b, sortState.col);
+      let cmp;
+      if (typeof va === "string") cmp = va.localeCompare(vb);
+      else cmp = va - vb;
+      return sortState.dir === "asc" ? cmp : -cmp;
+    });
+
+    document.getElementById("emptyState").hidden = list.length > 0;
+    document.getElementById("board").style.display = list.length ? "" : "none";
+
+    list.forEach((entry) => {
+      const tr = document.createElement("tr");
+
+      const tdRank = document.createElement("td");
+      tdRank.className = "rank";
+      tdRank.textContent = rankOf.get(entry);
+      tr.appendChild(tdRank);
+
+      const tdName = document.createElement("td");
+      tdName.className = "name";
+      tdName.textContent = entry.name;
+      tr.appendChild(tdName);
+
+      const tdClub = document.createElement("td");
+      tdClub.className = "club";
+      tdClub.textContent = entry.club || "—";
+      tr.appendChild(tdClub);
+
+      RACE_ORDER.forEach((rk) => {
+        const td = document.createElement("td");
+        const val = raceCellValue(entry, rk);
+        if (val) {
+          td.textContent = val;
+        } else {
+          td.textContent = DATA.races[rk].status === "pending" ? "not yet run" : "–";
+          td.className = "pending";
+        }
+        tr.appendChild(td);
+      });
+
+      const tdCum = document.createElement("td");
+      tdCum.className = "cumulative";
+      tdCum.textContent = entry.cumulative_time || "–";
+      tr.appendChild(tdCum);
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  function buildTabs() {
+    const tabs = document.getElementById("tabs");
+    tabs.innerHTML = "";
+    LEAGUES.forEach((lg) => {
+      const btn = document.createElement("button");
+      btn.setAttribute("role", "tab");
+      btn.setAttribute("aria-selected", String(lg.key === activeLeague));
+      const count = (DATA.leagues[lg.key] || []).length;
+      btn.innerHTML = lg.label + ' <span class="count">(' + count + ')</span>';
+      btn.addEventListener("click", () => {
+        activeLeague = lg.key;
+        sortState = { col: "cumulative_seconds", dir: "asc" };
+        render();
+      });
+      tabs.appendChild(btn);
+    });
+  }
+
+  function buildSortSelect() {
+    const select = document.getElementById("sortBySelect");
+    if (!select.options.length) {
+      SORT_OPTIONS.forEach((opt) => {
+        const el = document.createElement("option");
+        el.value = opt.key;
+        el.textContent = opt.label;
+        select.appendChild(el);
+      });
+      select.addEventListener("change", () => {
+        sortState = { col: select.value, dir: "asc" };
+        render();
+      });
+    }
+    select.value = sortState.col;
+  }
+
+  function buildRacesStatus() {
+    const el = document.getElementById("racesStatus");
+    el.innerHTML = "";
+    RACE_ORDER.forEach((rk) => {
+      const r = DATA.races[rk];
+      const chip = document.createElement("span");
+      chip.className = "race-chip" + (r.status === "complete" ? " complete" : "");
+      chip.textContent = r.label + (r.status === "complete" ? " ✓ " + r.finishers : " – not yet run");
+      el.appendChild(chip);
+    });
+  }
+
+  function buildNotes() {
+    const list = document.getElementById("notesList");
+    const summary = document.getElementById("notesSummary");
+    list.innerHTML = "";
+    const anomalies = DATA.anomalies || [];
+    summary.textContent = "Data notes (" + anomalies.length + " anomal" + (anomalies.length === 1 ? "y" : "ies") + " flagged while parsing)";
+    anomalies.forEach((a) => {
+      const li = document.createElement("li");
+      const tag = document.createElement("span");
+      tag.className = "tag";
+      tag.textContent = a.type.replace(/_/g, " ");
+      li.appendChild(tag);
+      li.appendChild(document.createTextNode(a.detail));
+      list.appendChild(li);
+    });
+  }
+
+  function render() {
+    buildTabs();
+    buildSortSelect();
+    buildHead();
+    buildRows();
+    buildRacesStatus();
+    document.getElementById("generatedAt").textContent = "Last updated " + new Date(DATA.generated_at).toLocaleString();
+  }
+
+  fetch("results.json")
+    .then((r) => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then((data) => {
+      DATA = data;
+      buildNotes();
+      render();
+    })
+    .catch((err) => {
+      document.querySelector(".wrap").insertAdjacentHTML(
+        "afterbegin",
+        '<p style="color:#b3122a;font-weight:600">Could not load results.json (' + err.message + '). ' +
+        "If you opened this file directly, serve the folder over HTTP instead, e.g. <code>python -m http.server</code>, then open http://localhost:8000/.</p>"
+      );
+    });
+})();
+</script>
+</body>
+</html>

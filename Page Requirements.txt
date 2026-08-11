@@ -1,0 +1,30 @@
+Create a cumulative time leaderboard for a running event 'No Rest For the Wicked 2026'
+Event logo in images/logo.jpg
+Webpage should be mobile friendly, white background.
+User should be able to easily sort between Half and Full Marathon and also gender, age groups.
+
+Data Sources for times
+Marathon / Half Marathon - https://my.raceresult.com/381348/
+Peel Hill - Results in results
+Ramsey 10K
+Killer Mile
+Foxdale 5
+Trail Run
+
+Use the persons full name to match results to the person.
+
+Important: The No Rest For the Wicked Series officially starts with the Marathon / Half Marathon
+event, IF the person has a result from Peel Hill then they are registered in the series.
+If they are not listed then they are not taking part in the series.
+
+When parsing Results, point out any anomolies.
+
+There is two leagues for the No Rest For the Wicked, Half Marathon and Marathon.
+
+Create a python virtual environment.
+Create a python script to pull and parse results.
+Results to be dropped in to results folder for future races.
+
+Parse results into a single JSON file
+Leaderboard page will load data from above JSON, data must be sortable and clearly show results for each race.
+Leaderboard sorted based on cumulative time for the event
