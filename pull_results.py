@@ -437,7 +437,7 @@ def race_cell_text(entry, race_key, races_meta):
     return "--" if races_meta[race_key]["status"] == "pending" else "-"
 
 
-def write_league_pdf(league_key, entrants, races_ordered, generated_at):
+def write_league_pdf(league_key, entrants, races_ordered):
     """Render a printable leaderboard PDF for one league (Half Marathon or
     Marathon) into PDF_DIR, mirroring the columns shown on the webpage."""
     PDF_DIR.mkdir(exist_ok=True)
@@ -470,7 +470,6 @@ def write_league_pdf(league_key, entrants, races_ordered, generated_at):
     styles = getSampleStyleSheet()
     story = [
         Paragraph(f"No Rest For the Wicked 2026 &mdash; {league_label} League", styles["Title"]),
-        Paragraph(f"Generated {generated_at} &middot; {len(entrants)} runner(s)", styles["Normal"]),
         Spacer(1, 8 * mm),
     ]
 
@@ -538,7 +537,7 @@ def main():
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
     league_pdfs = {
-        league_key: write_league_pdf(league_key, leagues.get(league_key, []), races_ordered, generated_at)
+        league_key: write_league_pdf(league_key, leagues.get(league_key, []), races_ordered)
         for league_key in LEAGUE_LABELS
     }
 
