@@ -90,7 +90,7 @@ def normalize_name(name):
 
 
 def parse_time_to_seconds(text):
-    text = text.strip()
+    text = re.sub(r"\s+", "", text.strip())
     m = re.match(r"^(\d+):(\d{2}):(\d{2})$", text)
     if m:
         h, mnt, s = map(int, m.groups())
@@ -230,6 +230,32 @@ def load_file_race(race_def):
     return entries, meta, anomalies
 
 
+def _raceresult_list_name(config):
+    """Find the 'Result Overall' list name. Newer raceresult events put list
+    definitions at Tab.Config.Lists; some older events (seen on a 2021 event)
+    leave Tab.Config null and put them at the top-level TabConfig.Lists instead."""
+    lists = ((config.get("Tab") or {}).get("Config") or {}).get("Lists")
+    if not lists:
+        lists = (config.get("TabConfig") or {}).get("Lists") or []
+    return next((lst["Name"] for lst in lists if lst["Name"].endswith("Result Overall")), None)
+
+
+def _strip_name_marker(name):
+    """Drop trailing '*TAG' markers some raceresult events append to a name
+    (e.g. '*IOMC' for IoM Championship eligibility) - not part of the name."""
+    return re.sub(r"\s*\*\S+$", "", name).strip()
+
+
+def _find_col(col, *candidates):
+    """Return the column index for the first candidate field name present.
+    Field names have drifted across raceresult events/years; candidates
+    should be ordered from newest/most-common to oldest."""
+    for c in candidates:
+        if c in col:
+            return col[c]
+    return None
+
+
 def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
     session = requests.Session()
     session.headers.update(HEADERS)
@@ -241,11 +267,7 @@ def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
     server = config["server"]
     key = config["key"]
 
-    list_name = next(
-        (lst["Name"] for lst in config["Tab"]["Config"]["Lists"]
-         if lst["Name"].endswith("Result Overall")),
-        None,
-    )
+    list_name = _raceresult_list_name(config)
     if not list_name:
         raise RuntimeError("Could not find the 'Result Overall' list in raceresult config")
 
@@ -267,11 +289,14 @@ def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
     ).json()
 
     col = {field: i for i, field in enumerate(payload["DataFields"])}
-    name_col = col["NamePlusBib"]
-    club_col = col["ResolvedAffiliatedClubName"]
-    cat_col = col["[AGEGROUP.NAME]&WithBrackets([Finish.AGEGROUP.th])"]
-    result_col = col["WithStatus([RESULT])"]
-    rank_col = col["WithStatus([OverallRank.Th])"]
+    name_col = _find_col(col, "NamePlusBib", "DisplayName")
+    bib_col = col.get("BIB")
+    club_col = _find_col(col, "ResolvedAffiliatedClubName", "CLUB")
+    cat_col = col[next(f for f in col if f.startswith("[AGEGROUP.NAME]"))]
+    result_col = _find_col(col, "WithStatus([RESULT])", "[TimeOrStatus]", "TimeOrStatus")
+    rank_col = _find_col(col, "WithStatus([OverallRank.Th])", "WithStatus([OverallRank.th])")
+    if rank_col is None:
+        rank_col = next((col[f] for f in col if "rank" in f.lower()), None)
     sex_col = col.get(GENDER_FIELD_EXPR)
 
     entries = []
@@ -287,7 +312,9 @@ def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
         for r in rows:
             name_bib = r[name_col]
             m = re.match(r"^(.*)\s\((\d+)\)$", name_bib)
-            name, bib = (m.group(1), m.group(2)) if m else (name_bib, None)
+            name, bib_from_name = (m.group(1), m.group(2)) if m else (name_bib, None)
+            name = _strip_name_marker(name)
+            bib = r[bib_col] if bib_col is not None else bib_from_name
             time_text = r[result_col]
             category_text = r[cat_col].strip()
             entries.append({
@@ -296,8 +323,8 @@ def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
                 "bib": bib,
                 "position": None,
                 "name": name.strip(),
-                "rank": r[rank_col],
-                "club": r[club_col].strip(),
+                "rank": r[rank_col] if rank_col is not None else None,
+                "club": r[club_col].strip() if club_col is not None else "",
                 "category": category_text,
                 "time": time_text,
                 "seconds": parse_time_to_seconds(time_text),
@@ -323,11 +350,7 @@ def fetch_10k_race(event_id, tab="results"):
     server = config["server"]
     key = config["key"]
 
-    list_name = next(
-        (lst["Name"] for lst in config["Tab"]["Config"]["Lists"]
-         if lst["Name"].endswith("Result Overall")),
-        None,
-    )
+    list_name = _raceresult_list_name(config)
     if not list_name:
         raise RuntimeError("Could not find the 'Result Overall' list in raceresult config")
 
@@ -345,12 +368,13 @@ def fetch_10k_race(event_id, tab="results"):
     payload = session.get(f"https://{server}/{event_id}/{tab}/list", params=params, timeout=30).json()
 
     col = {field: i for i, field in enumerate(payload["DataFields"])}
-    name_col = col["NamePlusBib"]
-    club_col = col["CLUB"]
+    name_col = _find_col(col, "NamePlusBib", "DisplayName")
+    club_col = _find_col(col, "CLUB", "ResolvedAffiliatedClubName")
     cat_col = col[next(f for f in col if f.startswith("[AGEGROUP.NAME]"))]
-    result_col = col["TimeOrStatus"]
-    rank_field = next((f for f in col if f.lower().startswith("withstatus([overallrank")), None)
-    rank_col = col[rank_field] if rank_field is not None else None
+    result_col = _find_col(col, "TimeOrStatus", "[TimeOrStatus]", "WithStatus([RESULT])")
+    rank_col = _find_col(col, "WithStatus([OverallRank.th])", "WithStatus([OverallRank.Th])")
+    if rank_col is None:
+        rank_col = next((col[f] for f in col if "rank" in f.lower()), None)
     sex_col = col.get(GENDER_FIELD_EXPR)
 
     entries = []
@@ -358,7 +382,7 @@ def fetch_10k_race(event_id, tab="results"):
         for r in rows:
             name_bib = r[name_col]
             m = re.match(r"^(.*)\s\((\d+)\)$", name_bib)
-            name = (m.group(1) if m else name_bib).strip()
+            name = _strip_name_marker(m.group(1) if m else name_bib)
             category_text = r[cat_col].strip()
             rank_text = r[rank_col] if rank_col is not None else ""
             position_m = re.match(r"^(\d+)", rank_text)
@@ -366,7 +390,7 @@ def fetch_10k_race(event_id, tab="results"):
                 "position": int(position_m.group(1)) if position_m else None,
                 "name": name,
                 "category": category_text,
-                "club": r[club_col].strip(),
+                "club": r[club_col].strip() if club_col is not None else "",
                 "time": r[result_col],
                 "seconds": parse_time_to_seconds(r[result_col]),
                 "key": normalize_name(resolve_alias(name)),
