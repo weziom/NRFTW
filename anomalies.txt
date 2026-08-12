@@ -1,4 +1,4 @@
-No Rest For the Wicked 2026 - anomalies as of 2026-08-11T17:25:05Z
+No Rest For the Wicked 2026 - anomalies as of 2026-08-12T11:33:22Z
 
 [duplicate_name] 2 Marathon/Half Marathon entrants share the name 'David Williams'. Matched to the series roster by club name where possible.
 [no_result] Series entrant 'Harry Kneen' has no matching Marathon/Half Marathon result.
@@ -12,7 +12,6 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-11T17:25:05Z
 [no_result] Series entrant 'Nikki Arthur' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Samantha Perry' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Paul Kneen' has no matching Marathon/Half Marathon result. Possible spelling mismatch: found similarly named 'Paul Keen' in Marathon/Half Marathon results.
-[no_result] Series entrant 'Jeffrey Moore' has no matching Marathon/Half Marathon result. Possible spelling mismatch: found similarly named 'Jeffrey M Moore' in Marathon/Half Marathon results.
 [no_result] Series entrant 'Nigel Armstrong' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Emily Bridson' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Aalish Atkinson' has no matching Marathon/Half Marathon result.
@@ -32,3 +31,31 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-11T17:25:05Z
 [no_result] Series entrant 'Troy Turner' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Fraiser Cunningham' has no matching Marathon/Half Marathon result. Possible spelling mismatch: found similarly named 'Fraser Cunningham' in Marathon/Half Marathon results.
 [no_result] Series entrant 'Terry Foster' has no matching Marathon/Half Marathon result.
+[no_result] Series entrant 'Harry Kneen' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Dan Richmond' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Oliver Harrison' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Chris Reynolds' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Tim Perry' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Lloyd Taggart' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Nikki Arthur' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Tim Goldy' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Samantha Perry' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Paul Kneen' has no matching Ramsey 10K result. Possible spelling mismatch: found similarly named 'Paul Keen' in Ramsey 10K results.
+[no_result] Series entrant 'Nigel Armstrong' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Emily Bridson' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Aalish Atkinson' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Dan Phair' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Peter Bradley' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Aalin Atherton' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Richard Costain' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Oscar Cadden' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Chris Hodgson' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Geoff Quayle' has no matching Ramsey 10K result.
+[no_result] Series entrant 'David Hodgson' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Peter Cooper' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Ian Callister' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Rosa Nelson-Rohrer' has no matching Ramsey 10K result.
+[no_result] Series entrant 'John Watterson' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Troy Turner' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Fraiser Cunningham' has no matching Ramsey 10K result.
+[no_result] Series entrant 'Terry Foster' has no matching Ramsey 10K result.

@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-11T17:25:05Z",
+  "generated_at": "2026-08-12T11:33:22Z",
   "races": {
     "peel_hill": {
       "label": "Peel Hill",
@@ -17,9 +17,9 @@
     },
     "ramsey_10k": {
       "label": "Ramsey 10K",
-      "status": "pending",
-      "source": null,
-      "finishers": 0
+      "status": "complete",
+      "source": "ramsey10k_2026.csv",
+      "finishers": 169
     },
     "killer_mile": {
       "label": "Killer Mile",
@@ -61,12 +61,16 @@
             "time": "2h54m12s",
             "category": "Senior Men (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 2,
+            "time": "34:26",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 11562,
         "cumulative_time": "03:12:42"
       },
@@ -89,12 +93,16 @@
             "time": "2h55m31s",
             "category": "Men 35-39 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 14,
+            "time": "37:04",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 11858,
         "cumulative_time": "03:17:38"
       },
@@ -117,12 +125,16 @@
             "time": "3h7m8s",
             "category": "Men 50-54 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 38,
+            "time": "41:24",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 12719,
         "cumulative_time": "03:31:59"
       },
@@ -145,12 +157,16 @@
             "time": "3h49m40s",
             "category": "Men 40-44 (6th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 64,
+            "time": "46:48",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 15342,
         "cumulative_time": "04:15:42"
       },
@@ -173,12 +189,16 @@
             "time": "3h49m52s",
             "category": "Men 50-54 (7th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 52,
+            "time": "44:28",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 15355,
         "cumulative_time": "04:15:55"
       },
@@ -201,12 +221,16 @@
             "time": "3h51m0s",
             "category": "Senior Men (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 60,
+            "time": "46:19",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 15368,
         "cumulative_time": "04:16:08"
       },
@@ -229,12 +253,16 @@
             "time": "3h51m56s",
             "category": "Men 55-59 (10th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 48,
+            "time": "44:06",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 15476,
         "cumulative_time": "04:17:56"
       },
@@ -257,12 +285,16 @@
             "time": "3h49m34s",
             "category": "Women 55-59 (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 75,
+            "time": "48:19",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 15531,
         "cumulative_time": "04:18:51"
       },
@@ -285,12 +317,16 @@
             "time": "3h57m59s",
             "category": "Men 55-59 (12th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 63,
+            "time": "46:35",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 15888,
         "cumulative_time": "04:24:48"
       },
@@ -313,12 +349,16 @@
             "time": "4h3m11s",
             "category": "Men 40-44 (8th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 76,
+            "time": "48:28",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 16385,
         "cumulative_time": "04:33:05"
       },
@@ -341,12 +381,16 @@
             "time": "4h7m9s",
             "category": "Women 45-49 (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 96,
+            "time": "51:28",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 16591,
         "cumulative_time": "04:36:31"
       },
@@ -369,12 +413,16 @@
             "time": "4h3m5s",
             "category": "Women 50-54 (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 159,
+            "time": "66:22",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 16798,
         "cumulative_time": "04:39:58"
       },
@@ -397,12 +445,16 @@
             "time": "4h20m52s",
             "category": "Men 40-44 (10th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 62,
+            "time": "46:28",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 17266,
         "cumulative_time": "04:47:46"
       }
@@ -427,12 +479,16 @@
             "time": "1h17m46s",
             "category": "Men 35-39 (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 9,
+            "time": "35:43",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 5836,
         "cumulative_time": "01:37:16"
       },
@@ -455,12 +511,16 @@
             "time": "1h17m39s",
             "category": "Senior Men (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 8,
+            "time": "35:42",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 5837,
         "cumulative_time": "01:37:17"
       },
@@ -483,12 +543,16 @@
             "time": "1h18m11s",
             "category": "Junior Men (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 6,
+            "time": "35:38",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 5924,
         "cumulative_time": "01:38:44"
       },
@@ -539,12 +603,16 @@
             "time": "1h18m26s",
             "category": "Men 55-59 (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 10,
+            "time": "35:45",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 5979,
         "cumulative_time": "01:39:39"
       },
@@ -567,12 +635,16 @@
             "time": "1h20m26s",
             "category": "Men 50-54 (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 13,
+            "time": "37:04",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6095,
         "cumulative_time": "01:41:35"
       },
@@ -595,12 +667,16 @@
             "time": "1h23m20s",
             "category": "Senior Men (4th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 11,
+            "time": "36:58",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6238,
         "cumulative_time": "01:43:58"
       },
@@ -623,12 +699,16 @@
             "time": "1h23m19s",
             "category": "Men 40-44 (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 12,
+            "time": "37:00",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6301,
         "cumulative_time": "01:45:01"
       },
@@ -651,14 +731,50 @@
             "time": "1h25m23s",
             "category": "Women 35-39 (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 31,
+            "time": "40:02",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6445,
         "cumulative_time": "01:47:25"
+      },
+      {
+        "name": "Jeffrey Moore",
+        "club": "",
+        "gender": "M",
+        "age_group": "40-44",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 30,
+            "time": "00:23:59",
+            "category": "V40"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "483",
+            "rank": "15th",
+            "time": "1h25m9s",
+            "category": "Men 40-44 (3rd)"
+          },
+          "ramsey_10k": {
+            "position": 30,
+            "time": "40:00",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 6548,
+        "cumulative_time": "01:49:08"
       },
       {
         "name": "Geoff Rice",
@@ -679,12 +795,16 @@
             "time": "1h28m9s",
             "category": "Men 55-59 (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 26,
+            "time": "39:46",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6604,
         "cumulative_time": "01:50:04"
       },
@@ -707,12 +827,16 @@
             "time": "1h28m7s",
             "category": "Men 40-44 (5th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 23,
+            "time": "39:02",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6630,
         "cumulative_time": "01:50:30"
       },
@@ -735,12 +859,16 @@
             "time": "1h28m38s",
             "category": "Men 35-39 (5th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 22,
+            "time": "38:58",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6670,
         "cumulative_time": "01:51:10"
       },
@@ -763,12 +891,16 @@
             "time": "1h29m20s",
             "category": "Men 40-44 (7th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 36,
+            "time": "41:10",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6728,
         "cumulative_time": "01:52:08"
       },
@@ -819,12 +951,16 @@
             "time": "1h32m18s",
             "category": "Junior Women (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 33,
+            "time": "40:45",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 6930,
         "cumulative_time": "01:55:30"
       },
@@ -847,12 +983,16 @@
             "time": "1h32m31s",
             "category": "Men 40-44 (8th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 35,
+            "time": "41:07",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7005,
         "cumulative_time": "01:56:45"
       },
@@ -875,12 +1015,16 @@
             "time": "1h34m39s",
             "category": "Men 35-39 (6th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 39,
+            "time": "41:27",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7063,
         "cumulative_time": "01:57:43"
       },
@@ -903,12 +1047,16 @@
             "time": "1h34m22s",
             "category": "Men 50-54 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 40,
+            "time": "41:32",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7134,
         "cumulative_time": "01:58:54"
       },
@@ -931,12 +1079,16 @@
             "time": "1h35m59s",
             "category": "Men 35-39 (9th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 37,
+            "time": "41:21",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7135,
         "cumulative_time": "01:58:55"
       },
@@ -959,12 +1111,16 @@
             "time": "1h36m58s",
             "category": "Men 50-54 (5th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 128,
+            "time": "55:58",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7386,
         "cumulative_time": "02:03:06"
       },
@@ -987,12 +1143,16 @@
             "time": "1h39m2s",
             "category": "Senior Men (14th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 34,
+            "time": "40:58",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7397,
         "cumulative_time": "02:03:17"
       },
@@ -1015,12 +1175,16 @@
             "time": "1h37m40s",
             "category": "Men 45-49 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 55,
+            "time": "45:17",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7411,
         "cumulative_time": "02:03:31"
       },
@@ -1043,12 +1207,16 @@
             "time": "1h39m14s",
             "category": "Senior Men (15th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 54,
+            "time": "45:04",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7427,
         "cumulative_time": "02:03:47"
       },
@@ -1071,12 +1239,16 @@
             "time": "1h38m42s",
             "category": "Men 45-49 (4th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 46,
+            "time": "43:58",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7437,
         "cumulative_time": "02:03:57"
       },
@@ -1099,12 +1271,16 @@
             "time": "1h40m45s",
             "category": "Women 35-39 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 50,
+            "time": "44:25",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7504,
         "cumulative_time": "02:05:04"
       },
@@ -1127,12 +1303,16 @@
             "time": "1h42m11s",
             "category": "Men 45-49 (6th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 58,
+            "time": "46:05",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7679,
         "cumulative_time": "02:07:59"
       },
@@ -1155,12 +1335,16 @@
             "time": "1h41m28s",
             "category": "Senior Men (19th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 45,
+            "time": "43:54",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7729,
         "cumulative_time": "02:08:49"
       },
@@ -1183,12 +1367,16 @@
             "time": "1h43m33s",
             "category": "Senior Women (5th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 61,
+            "time": "46:23",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7791,
         "cumulative_time": "02:09:51"
       },
@@ -1211,12 +1399,16 @@
             "time": "1h46m35s",
             "category": "Junior Men (6th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 67,
+            "time": "47:27",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7895,
         "cumulative_time": "02:11:35"
       },
@@ -1239,12 +1431,16 @@
             "time": "1h44m56s",
             "category": "Men 45-49 (7th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 65,
+            "time": "47:04",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7923,
         "cumulative_time": "02:12:03"
       },
@@ -1267,12 +1463,16 @@
             "time": "1h44m19s",
             "category": "Senior Women (6th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 69,
+            "time": "47:38",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7943,
         "cumulative_time": "02:12:23"
       },
@@ -1295,12 +1495,16 @@
             "time": "1h45m32s",
             "category": "Men 40-44 (14th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 57,
+            "time": "46:03",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7968,
         "cumulative_time": "02:12:48"
       },
@@ -1323,12 +1527,16 @@
             "time": "1h45m33s",
             "category": "Women 45-49 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 73,
+            "time": "48:08",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 7977,
         "cumulative_time": "02:12:57"
       },
@@ -1351,12 +1559,16 @@
             "time": "1h46m58s",
             "category": "Women 50-54 (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 70,
+            "time": "47:52",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8030,
         "cumulative_time": "02:13:50"
       },
@@ -1379,12 +1591,16 @@
             "time": "1h46m26s",
             "category": "Women 60-64 (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 72,
+            "time": "48:05",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8035,
         "cumulative_time": "02:13:55"
       },
@@ -1407,12 +1623,16 @@
             "time": "1h47m12s",
             "category": "Men 45-49 (9th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 71,
+            "time": "48:02",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8039,
         "cumulative_time": "02:13:59"
       },
@@ -1435,12 +1655,16 @@
             "time": "1h49m10s",
             "category": "Senior Women (8th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 79,
+            "time": "48:56",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8223,
         "cumulative_time": "02:17:03"
       },
@@ -1463,12 +1687,16 @@
             "time": "1h47m51s",
             "category": "Men 50-54 (7th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 82,
+            "time": "49:14",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8226,
         "cumulative_time": "02:17:06"
       },
@@ -1491,12 +1719,16 @@
             "time": "1h49m0s",
             "category": "Senior Men (27th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 81,
+            "time": "49:06",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8279,
         "cumulative_time": "02:17:59"
       },
@@ -1519,12 +1751,16 @@
             "time": "1h49m45s",
             "category": "Senior Men (28th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 83,
+            "time": "49:18",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8293,
         "cumulative_time": "02:18:13"
       },
@@ -1547,12 +1783,16 @@
             "time": "1h48m41s",
             "category": "Men 55-59 (8th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 87,
+            "time": "50:11",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8296,
         "cumulative_time": "02:18:16"
       },
@@ -1575,12 +1815,16 @@
             "time": "1h49m35s",
             "category": "Men 40-44 (15th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 77,
+            "time": "48:50",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8325,
         "cumulative_time": "02:18:45"
       },
@@ -1631,12 +1875,16 @@
             "time": "1h53m43s",
             "category": "Senior Men (30th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 113,
+            "time": "53:56",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8527,
         "cumulative_time": "02:22:07"
       },
@@ -1659,12 +1907,16 @@
             "time": "1h55m53s",
             "category": "Men 50-54 (10th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 92,
+            "time": "50:37",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8566,
         "cumulative_time": "02:22:46"
       },
@@ -1687,12 +1939,16 @@
             "time": "1h52m15s",
             "category": "Women 45-49 (6th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 102,
+            "time": "52:25",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8631,
         "cumulative_time": "02:23:51"
       },
@@ -1715,12 +1971,16 @@
             "time": "1h55m5s",
             "category": "Women 40-44 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 101,
+            "time": "52:25",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8717,
         "cumulative_time": "02:25:17"
       },
@@ -1743,12 +2003,16 @@
             "time": "1h54m5s",
             "category": "Women 65-69 (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 104,
+            "time": "52:30",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8759,
         "cumulative_time": "02:25:59"
       },
@@ -1771,12 +2035,16 @@
             "time": "1h57m41s",
             "category": "Men 50-54 (11th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 98,
+            "time": "52:07",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8797,
         "cumulative_time": "02:26:37"
       },
@@ -1799,12 +2067,16 @@
             "time": "1h58m34s",
             "category": "Men 50-54 (12th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 115,
+            "time": "54:07",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8901,
         "cumulative_time": "02:28:21"
       },
@@ -1827,12 +2099,16 @@
             "time": "1h58m9s",
             "category": "Men 55-59 (11th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 109,
+            "time": "53:17",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8907,
         "cumulative_time": "02:28:27"
       },
@@ -1855,12 +2131,16 @@
             "time": "1h58m9s",
             "category": "Women 50-54 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 108,
+            "time": "53:17",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8908,
         "cumulative_time": "02:28:28"
       },
@@ -1883,12 +2163,16 @@
             "time": "1h57m53s",
             "category": "Men 35-39 (19th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 94,
+            "time": "50:59",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8930,
         "cumulative_time": "02:28:50"
       },
@@ -1911,12 +2195,16 @@
             "time": "1h58m48s",
             "category": "Women 55-59 (3rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 107,
+            "time": "52:44",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8940,
         "cumulative_time": "02:29:00"
       },
@@ -1939,12 +2227,16 @@
             "time": "2h3m3s",
             "category": "Men 35-39 (25th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 53,
+            "time": "44:47",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8955,
         "cumulative_time": "02:29:15"
       },
@@ -1967,12 +2259,16 @@
             "time": "2h3m3s",
             "category": "Men 35-39 (24th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 85,
+            "time": "49:25",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 8994,
         "cumulative_time": "02:29:54"
       },
@@ -1995,12 +2291,16 @@
             "time": "1h59m56s",
             "category": "Men 35-39 (20th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 114,
+            "time": "54:00",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9001,
         "cumulative_time": "02:30:01"
       },
@@ -2023,12 +2323,16 @@
             "time": "1h58m29s",
             "category": "Women 45-49 (8th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 105,
+            "time": "52:31",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9058,
         "cumulative_time": "02:30:58"
       },
@@ -2051,12 +2355,16 @@
             "time": "1h58m49s",
             "category": "Women 45-49 (9th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 106,
+            "time": "52:32",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9077,
         "cumulative_time": "02:31:17"
       },
@@ -2079,12 +2387,16 @@
             "time": "2h4m46s",
             "category": "Senior Men (44th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 91,
+            "time": "50:37",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9128,
         "cumulative_time": "02:32:08"
       },
@@ -2107,12 +2419,16 @@
             "time": "2h1m43s",
             "category": "Men 50-54 (13th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 122,
+            "time": "55:31",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9217,
         "cumulative_time": "02:33:37"
       },
@@ -2135,12 +2451,16 @@
             "time": "2h4m0s",
             "category": "Men 50-54 (15th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 123,
+            "time": "55:32",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9238,
         "cumulative_time": "02:33:58"
       },
@@ -2163,12 +2483,16 @@
             "time": "2h1m13s",
             "category": "Women 40-44 (9th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 127,
+            "time": "55:45",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9259,
         "cumulative_time": "02:34:19"
       },
@@ -2191,12 +2515,16 @@
             "time": "2h1m55s",
             "category": "Women 40-44 (11th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 117,
+            "time": "54:36",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9270,
         "cumulative_time": "02:34:30"
       },
@@ -2219,12 +2547,16 @@
             "time": "2h7m24s",
             "category": "Men 35-39 (32nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 124,
+            "time": "55:35",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9418,
         "cumulative_time": "02:36:58"
       },
@@ -2247,12 +2579,16 @@
             "time": "2h6m14s",
             "category": "Senior Women (21st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 112,
+            "time": "53:43",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9418,
         "cumulative_time": "02:36:58"
       },
@@ -2275,12 +2611,16 @@
             "time": "2h4m11s",
             "category": "Senior Women (19th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 130,
+            "time": "56:25",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9478,
         "cumulative_time": "02:37:58"
       },
@@ -2303,12 +2643,16 @@
             "time": "2h8m1s",
             "category": "Men 55-59 (14th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 120,
+            "time": "55:26",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9505,
         "cumulative_time": "02:38:25"
       },
@@ -2331,12 +2675,16 @@
             "time": "2h5m0s",
             "category": "Women 55-59 (5th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 135,
+            "time": "58:07",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9562,
         "cumulative_time": "02:39:22"
       },
@@ -2359,12 +2707,16 @@
             "time": "2h7m24s",
             "category": "Women 35-39 (10th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 125,
+            "time": "55:36",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9570,
         "cumulative_time": "02:39:30"
       },
@@ -2387,12 +2739,16 @@
             "time": "2h10m39s",
             "category": "Women 45-49 (13th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 133,
+            "time": "56:58",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9736,
         "cumulative_time": "02:42:16"
       },
@@ -2415,12 +2771,16 @@
             "time": "2h11m25s",
             "category": "Men 45-49 (23rd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 134,
+            "time": "57:37",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9740,
         "cumulative_time": "02:42:20"
       },
@@ -2443,12 +2803,16 @@
             "time": "2h9m37s",
             "category": "Men 45-49 (20th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 132,
+            "time": "56:49",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9749,
         "cumulative_time": "02:42:29"
       },
@@ -2471,12 +2835,16 @@
             "time": "2h4m50s",
             "category": "Women 45-49 (11th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 131,
+            "time": "56:36",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9808,
         "cumulative_time": "02:43:28"
       },
@@ -2499,12 +2867,16 @@
             "time": "2h11m33s",
             "category": "Men 55-59 (15th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 140,
+            "time": "59:13",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 9827,
         "cumulative_time": "02:43:47"
       },
@@ -2527,12 +2899,16 @@
             "time": "2h15m23s",
             "category": "Women 45-49 (16th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 163,
+            "time": "68:52",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 10165,
         "cumulative_time": "02:49:25"
       },
@@ -2555,12 +2931,16 @@
             "time": "2h15m49s",
             "category": "Men 55-59 (16th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 147,
+            "time": "60:40",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 10234,
         "cumulative_time": "02:50:34"
       },
@@ -2583,12 +2963,16 @@
             "time": "2h19m8s",
             "category": "Women 35-39 (14th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 136,
+            "time": "58:14",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 10341,
         "cumulative_time": "02:52:21"
       },
@@ -2611,12 +2995,16 @@
             "time": "2h24m21s",
             "category": "Men 55-59 (17th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 151,
+            "time": "61:35",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 10492,
         "cumulative_time": "02:54:52"
       },
@@ -2639,12 +3027,16 @@
             "time": "2h18m32s",
             "category": "Women 70+ (1st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 164,
+            "time": "68:52",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 10541,
         "cumulative_time": "02:55:41"
       },
@@ -2667,12 +3059,16 @@
             "time": "2h22m47s",
             "category": "Women 65-69 (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 138,
+            "time": "59:06",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 10548,
         "cumulative_time": "02:55:48"
       },
@@ -2695,12 +3091,16 @@
             "time": "2h22m10s",
             "category": "Women 60-64 (6th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 155,
+            "time": "64:13",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 10661,
         "cumulative_time": "02:57:41"
       },
@@ -2723,12 +3123,16 @@
             "time": "2h26m23s",
             "category": "Women 40-44 (20th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 153,
+            "time": "62:25",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 11131,
         "cumulative_time": "03:05:31"
       },
@@ -2751,12 +3155,16 @@
             "time": "2h35m25s",
             "category": "Men 55-59 (20th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 169,
+            "time": "76:46",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 11535,
         "cumulative_time": "03:12:15"
       },
@@ -2779,12 +3187,16 @@
             "time": "2h43m27s",
             "category": "Men 35-39 (36th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 119,
+            "time": "54:58",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 11649,
         "cumulative_time": "03:14:09"
       },
@@ -2807,12 +3219,16 @@
             "time": "2h41m10s",
             "category": "Senior Men (60th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 157,
+            "time": "65:45",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 11860,
         "cumulative_time": "03:17:40"
       },
@@ -2835,12 +3251,16 @@
             "time": "2h38m27s",
             "category": "Men 70+ (2nd)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 166,
+            "time": "72:35",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 12172,
         "cumulative_time": "03:22:52"
       },
@@ -2863,12 +3283,16 @@
             "time": "2h42m36s",
             "category": "Men 55-59 (21st)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 165,
+            "time": "70:28",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 12325,
         "cumulative_time": "03:25:25"
       },
@@ -2891,12 +3315,16 @@
             "time": "2h56m15s",
             "category": "Women 45-49 (18th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 168,
+            "time": "76:46",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 13565,
         "cumulative_time": "03:46:05"
       },
@@ -2919,12 +3347,16 @@
             "time": "2h56m15s",
             "category": "Women 50-54 (9th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 167,
+            "time": "76:46",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 13565,
         "cumulative_time": "03:46:05"
       },
@@ -2947,12 +3379,16 @@
             "time": "2h59m36s",
             "category": "Men 50-54 (19th)"
           },
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 161,
+            "time": "68:18",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 2,
+        "races_completed": 3,
         "cumulative_seconds": 13614,
         "cumulative_time": "03:46:54"
       }
@@ -2993,12 +3429,16 @@
             "category": "SEN"
           },
           "marathon_half": null,
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 1,
+            "time": "33:54",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 1,
+        "races_completed": 2,
         "cumulative_seconds": 1120,
         "cumulative_time": "00:18:40"
       },
@@ -3103,12 +3543,16 @@
             "category": "V40"
           },
           "marathon_half": null,
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 7,
+            "time": "35:41",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 1,
+        "races_completed": 2,
         "cumulative_seconds": 1279,
         "cumulative_time": "00:21:19"
       },
@@ -3199,28 +3643,6 @@
         "races_completed": 1,
         "cumulative_seconds": 1410,
         "cumulative_time": "00:23:30"
-      },
-      {
-        "name": "Jeffrey Moore",
-        "club": "",
-        "gender": "Unknown",
-        "age_group": "V40",
-        "league": "unassigned",
-        "races": {
-          "peel_hill": {
-            "position": 30,
-            "time": "00:23:59",
-            "category": "V40"
-          },
-          "marathon_half": null,
-          "ramsey_10k": null,
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 1,
-        "cumulative_seconds": 1439,
-        "cumulative_time": "00:23:59"
       },
       {
         "name": "Nigel Armstrong",
@@ -3433,12 +3855,16 @@
             "category": "JUN"
           },
           "marathon_half": null,
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 110,
+            "time": "53:23",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 1,
+        "races_completed": 2,
         "cumulative_seconds": 1756,
         "cumulative_time": "00:29:16"
       },
@@ -3521,12 +3947,16 @@
             "category": "V40"
           },
           "marathon_half": null,
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 158,
+            "time": "65:57",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 1,
+        "races_completed": 2,
         "cumulative_seconds": 1970,
         "cumulative_time": "00:32:50"
       },
@@ -3565,12 +3995,16 @@
             "category": "V65"
           },
           "marathon_half": null,
-          "ramsey_10k": null,
+          "ramsey_10k": {
+            "position": 150,
+            "time": "61:30",
+            "category": ""
+          },
           "killer_mile": null,
           "foxdale_5": null,
           "trail_run": null
         },
-        "races_completed": 1,
+        "races_completed": 2,
         "cumulative_seconds": 2036,
         "cumulative_time": "00:33:56"
       },

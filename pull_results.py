@@ -68,6 +68,18 @@ RACE_FILE_DEFS = [
     {"key": "trail_run", "label": "Trail Run", "prefix": "trailrun"},
 ]
 
+# Known spelling/format variants of a runner's name as it appears in a race's
+# results, mapped onto the spelling used for that runner on the series roster
+# (Peel Hill), so they still match up without hand-editing the source CSV.
+# Keys are matched case-insensitively against the name as read from the file.
+NAME_ALIASES = {
+    "jeffrey m moore": "Jeffrey Moore",
+}
+
+
+def resolve_alias(name):
+    return NAME_ALIASES.get(name.strip().lower(), name)
+
 
 def normalize_name(name):
     name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
@@ -170,7 +182,7 @@ def load_csv_entries(paths):
                     "club": (row.get("club") or "").strip(),
                     "time": row["time"].strip(),
                     "seconds": parse_time_to_seconds(row["time"]),
-                    "key": normalize_name(name),
+                    "key": normalize_name(resolve_alias(name)),
                     "gender": gender,
                     "age_group": (row.get("category") or "").strip() or None,
                 })
@@ -279,7 +291,7 @@ def fetch_marathon_half():
                 "category": category_text,
                 "time": time_text,
                 "seconds": parse_time_to_seconds(time_text),
-                "key": normalize_name(name),
+                "key": normalize_name(resolve_alias(name)),
                 "gender": ("F" if (sex_col is not None and r[sex_col]) else "M"),
                 "age_group": split_age_group(category_text),
             })
