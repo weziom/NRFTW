@@ -19,10 +19,12 @@ Data sources:
     them into a CSV with the columns above.
 
 Series rule: a runner is only "in" the series if they have a Peel Hill
-result - that's the series roster. Scoring runs from the Marathon / Half
-Marathon onward, so cumulative time = sum of every race a roster runner has
-a result in, matched by full name. There are two leagues, split by whether
-the runner ran the Marathon or the Half Marathon.
+result - that's the series roster. Cumulative time = sum of every race
+result matched to that runner by full name. A roster runner missing a
+result for any race that has already been run is dropped from the series
+entirely (logged as a 'removed_incomplete_series' anomaly) - races that
+haven't happened yet don't count against anyone. There are two leagues,
+split by whether the runner ran the Marathon or the Half Marathon.
 """
 
 import csv
@@ -442,6 +444,25 @@ def build_leaderboard(roster, marathon_half_entries, other_races):
     return entrants, anomalies
 
 
+def filter_incomplete_entrants(entrants, races_meta):
+    """Drop any series entrant missing a result for a race that has already
+    been run. Races that haven't happened yet ('pending'/'needs_transcription')
+    don't count against anyone - only races with status 'complete' do."""
+    completed_races = [key for key, meta in races_meta.items() if meta["status"] == "complete"]
+    kept, anomalies = [], []
+    for e in entrants:
+        missing = [key for key in completed_races if not e["races"].get(key)]
+        if missing:
+            missing_labels = ", ".join(races_meta[key]["label"] for key in missing)
+            anomalies.append({
+                "type": "removed_incomplete_series",
+                "detail": f"'{e['name']}' removed from the series - missing a result for: {missing_labels}.",
+            })
+        else:
+            kept.append(e)
+    return kept, anomalies
+
+
 def race_cell_text(entry, race_key, races_meta):
     r = entry["races"].get(race_key)
     if r and r.get("time"):
@@ -534,17 +555,20 @@ def main():
         "finishers": len(marathon_half),
     }
 
-    entrants, match_anomalies = build_leaderboard(roster, marathon_half, other_races)
-    anomalies.extend(match_anomalies)
-
-    leagues = {"marathon": [], "half_marathon": [], "unassigned": []}
-    for e in entrants:
-        leagues.setdefault(e["league"], []).append(e)
-
     # Fixed race column order: peel_hill, marathon_half, then the rest as declared above.
     races_ordered = {"peel_hill": races_meta["peel_hill"], "marathon_half": races_meta["marathon_half"]}
     for rdef in other_race_defs:
         races_ordered[rdef["key"]] = races_meta[rdef["key"]]
+
+    entrants, match_anomalies = build_leaderboard(roster, marathon_half, other_races)
+    anomalies.extend(match_anomalies)
+
+    entrants, removal_anomalies = filter_incomplete_entrants(entrants, races_ordered)
+    anomalies.extend(removal_anomalies)
+
+    leagues = {"marathon": [], "half_marathon": [], "unassigned": []}
+    for e in entrants:
+        leagues.setdefault(e["league"], []).append(e)
 
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
