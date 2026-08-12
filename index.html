@@ -422,10 +422,15 @@
     tbody.innerHTML = "";
     const fullList = DATA.leagues[activeLeague] || [];
 
-    // stable overall rank = order as pre-sorted by cumulative time in the JSON,
-    // computed from the full league before any search filtering is applied.
+    // Rank = order as pre-sorted by cumulative time in the JSON, computed
+    // before any search filtering is applied so a search term doesn't
+    // reshuffle it. When a gender filter is active, rank instead reflects
+    // place within that gender category rather than the overall field.
+    const rankSource = genderFilter !== "all"
+      ? fullList.filter((e) => (e.gender || "").toLowerCase() === genderFilter)
+      : fullList;
     const rankOf = new Map();
-    fullList.forEach((e, i) => rankOf.set(e, i + 1));
+    rankSource.forEach((e, i) => rankOf.set(e, i + 1));
 
     const term = document.getElementById("searchInput").value.trim().toLowerCase();
     let list = term
