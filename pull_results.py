@@ -230,12 +230,12 @@ def load_file_race(race_def):
     return entries, meta, anomalies
 
 
-def fetch_marathon_half():
+def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
     session = requests.Session()
     session.headers.update(HEADERS)
 
     config = session.get(
-        f"https://my.raceresult.com/{MARATHON_EVENT_ID}/{MARATHON_TAB}/config",
+        f"https://my.raceresult.com/{event_id}/{tab}/config",
         timeout=30,
     ).json()
     server = config["server"]
@@ -252,7 +252,7 @@ def fetch_marathon_half():
     params = {
         "key": key,
         "listname": list_name,
-        "page": MARATHON_TAB,
+        "page": tab,
         "contest": "0",
         "r": "all",
         "l": "0",
@@ -261,7 +261,7 @@ def fetch_marathon_half():
         "term": "",
     }
     payload = session.get(
-        f"https://{server}/{MARATHON_EVENT_ID}/{MARATHON_TAB}/list",
+        f"https://{server}/{event_id}/{tab}/list",
         params=params,
         timeout=30,
     ).json()
@@ -301,6 +301,74 @@ def fetch_marathon_half():
                 "category": category_text,
                 "time": time_text,
                 "seconds": parse_time_to_seconds(time_text),
+                "key": normalize_name(resolve_alias(name)),
+                "gender": ("F" if (sex_col is not None and r[sex_col]) else "M"),
+                "age_group": split_age_group(category_text),
+            })
+    return entries
+
+
+def fetch_10k_race(event_id, tab="results"):
+    """Fetch a standalone raceresult 10K-style event (e.g. a historic Ramsey
+    10K) - same API shape as fetch_marathon_half, but these events use
+    different field names (CLUB instead of ResolvedAffiliatedClubName,
+    TimeOrStatus instead of WithStatus([RESULT])) and have no marathon/half
+    contest split, just result groups like 'Finished' / 'After Lap 2'.
+    Returns entries in the same shape as load_csv_entries() output, so they
+    can be matched with match_by_full_name() like any other race."""
+    session = requests.Session()
+    session.headers.update(HEADERS)
+
+    config = session.get(f"https://my.raceresult.com/{event_id}/{tab}/config", timeout=30).json()
+    server = config["server"]
+    key = config["key"]
+
+    list_name = next(
+        (lst["Name"] for lst in config["Tab"]["Config"]["Lists"]
+         if lst["Name"].endswith("Result Overall")),
+        None,
+    )
+    if not list_name:
+        raise RuntimeError("Could not find the 'Result Overall' list in raceresult config")
+
+    params = {
+        "key": key,
+        "listname": list_name,
+        "page": tab,
+        "contest": "0",
+        "r": "all",
+        "l": "0",
+        "fav": "",
+        "openedGroups": "{}",
+        "term": "",
+    }
+    payload = session.get(f"https://{server}/{event_id}/{tab}/list", params=params, timeout=30).json()
+
+    col = {field: i for i, field in enumerate(payload["DataFields"])}
+    name_col = col["NamePlusBib"]
+    club_col = col["CLUB"]
+    cat_col = col[next(f for f in col if f.startswith("[AGEGROUP.NAME]"))]
+    result_col = col["TimeOrStatus"]
+    rank_field = next((f for f in col if f.lower().startswith("withstatus([overallrank")), None)
+    rank_col = col[rank_field] if rank_field is not None else None
+    sex_col = col.get(GENDER_FIELD_EXPR)
+
+    entries = []
+    for rows in payload["data"].values():
+        for r in rows:
+            name_bib = r[name_col]
+            m = re.match(r"^(.*)\s\((\d+)\)$", name_bib)
+            name = (m.group(1) if m else name_bib).strip()
+            category_text = r[cat_col].strip()
+            rank_text = r[rank_col] if rank_col is not None else ""
+            position_m = re.match(r"^(\d+)", rank_text)
+            entries.append({
+                "position": int(position_m.group(1)) if position_m else None,
+                "name": name,
+                "category": category_text,
+                "club": r[club_col].strip(),
+                "time": r[result_col],
+                "seconds": parse_time_to_seconds(r[result_col]),
                 "key": normalize_name(resolve_alias(name)),
                 "gender": ("F" if (sex_col is not None and r[sex_col]) else "M"),
                 "age_group": split_age_group(category_text),
