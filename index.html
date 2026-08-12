@@ -280,6 +280,10 @@
       <a class="download-pdf" id="downloadPdf" href="#" download hidden>⬇ PDF</a>
       <input type="search" id="searchInput" placeholder="Search name or club…" aria-label="Search runners">
       <label class="sortby">
+        Gender
+        <select id="genderFilterSelect"></select>
+      </label>
+      <label class="sortby">
         Sort by
         <select id="sortBySelect"></select>
       </label>
@@ -314,7 +318,6 @@
     { key: "cumulative_seconds", label: "Cumulative time" },
     { key: "name", label: "Name" },
     { key: "club", label: "Club" },
-    { key: "gender", label: "Gender" },
     { key: "age_group", label: "Age group" },
   ];
   const LEAGUES = [
@@ -322,9 +325,16 @@
     { key: "marathon", label: "Marathon", distance: "26.2 MI" },
   ];
 
+  const GENDER_FILTERS = [
+    { key: "all", label: "All" },
+    { key: "f", label: "Female" },
+    { key: "m", label: "Male" },
+  ];
+
   let DATA = null;
   let activeLeague = "half_marathon";
   let sortState = { col: "cumulative_seconds", dir: "asc" };
+  let genderFilter = "all";
 
   function fmtTime(sec) {
     if (sec === null || sec === undefined) return null;
@@ -381,7 +391,6 @@
   function getSortValue(entry, col) {
     if (col === "name") return entry.name.toLowerCase();
     if (col === "club") return (entry.club || "").toLowerCase();
-    if (col === "gender") return (entry.gender || "").toLowerCase();
     if (col === "age_group") return (entry.age_group || "").toLowerCase();
     if (col === "cumulative_seconds") return entry.cumulative_seconds === null ? Infinity : entry.cumulative_seconds;
     if (col.startsWith("race:")) {
@@ -415,6 +424,10 @@
       ? fullList.filter((e) => e.name.toLowerCase().includes(term) || (e.club || "").toLowerCase().includes(term))
       : fullList.slice();
 
+    if (genderFilter !== "all") {
+      list = list.filter((e) => (e.gender || "").toLowerCase() === genderFilter);
+    }
+
     list.sort((a, b) => {
       const va = getSortValue(a, sortState.col);
       const vb = getSortValue(b, sortState.col);
@@ -427,6 +440,8 @@
     document.getElementById("emptyState").hidden = list.length > 0;
     document.getElementById("emptyState").textContent = term
       ? "No runners match your search."
+      : genderFilter !== "all"
+      ? "No runners match this filter."
       : "No runners in this league yet.";
     document.getElementById("board").style.display = list.length ? "" : "none";
 
@@ -506,6 +521,23 @@
     select.value = sortState.col;
   }
 
+  function buildGenderFilterSelect() {
+    const select = document.getElementById("genderFilterSelect");
+    if (!select.options.length) {
+      GENDER_FILTERS.forEach((opt) => {
+        const el = document.createElement("option");
+        el.value = opt.key;
+        el.textContent = opt.label;
+        select.appendChild(el);
+      });
+      select.addEventListener("change", () => {
+        genderFilter = select.value;
+        buildRows();
+      });
+    }
+    select.value = genderFilter;
+  }
+
   document.getElementById("searchInput").addEventListener("input", () => {
     if (DATA) buildRows();
   });
@@ -525,6 +557,7 @@
 
   function render() {
     buildTabs();
+    buildGenderFilterSelect();
     buildSortSelect();
     buildHead();
     buildRows();
