@@ -345,7 +345,7 @@
     const cols = [
       { key: "rank", label: "#", sortable: false },
       { key: "name", label: "Name", sortable: true },
-      { key: "cumulative_seconds", label: "Cumulative", sortable: true },
+      { key: "cumulative_seconds", label: "TOTAL", sortable: true },
       { key: "club", label: "Club", sortable: true },
     ];
     RACE_ORDER.forEach((rk) => {
@@ -459,7 +459,7 @@
         if (val) {
           td.textContent = val;
         } else {
-          td.textContent = DATA.races[rk].status === "pending" ? "--" : "–";
+          td.textContent = DATA.races[rk].status === "pending" ? "00:00:00" : "–";
           td.className = "pending";
         }
         tr.appendChild(td);

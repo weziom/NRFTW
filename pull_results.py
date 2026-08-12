@@ -67,7 +67,7 @@ RACE_FILE_DEFS = [
     {"key": "ramsey_10k", "label": "Ramsey 10K", "prefix": "ramsey10k"},
     {"key": "killer_mile", "label": "Killer Mile", "prefix": "killermile"},
     {"key": "foxdale_5", "label": "Foxdale 5", "prefix": "foxdale5"},
-    {"key": "trail_run", "label": "Trail Run", "prefix": "trailrun"},
+    {"key": "trail_run", "label": "Trail", "prefix": "trailrun"},
 ]
 
 # Known spelling/format variants of a runner's name as it appears in a race's
@@ -475,7 +475,7 @@ def race_cell_text(entry, race_key, races_meta):
     r = entry["races"].get(race_key)
     if r and r.get("time"):
         return r["time"]
-    return "--" if races_meta[race_key]["status"] == "pending" else "-"
+    return "00:00:00" if races_meta[race_key]["status"] == "pending" else "-"
 
 
 def write_league_pdf(league_key, entrants, races_ordered):
@@ -485,7 +485,7 @@ def write_league_pdf(league_key, entrants, races_ordered):
     league_label = LEAGUE_LABELS[league_key]
     race_order = list(races_ordered.keys())
 
-    headers = ["#", "Name", "Cumulative", "Club"]
+    headers = ["#", "Name", "TOTAL", "Club"]
     for rk in race_order:
         label = races_ordered[rk]["label"]
         if rk == "marathon_half":

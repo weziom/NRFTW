@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-12T11:42:41Z",
+  "generated_at": "2026-08-12T11:45:34Z",
   "races": {
     "peel_hill": {
       "label": "Peel Hill",
@@ -34,7 +34,7 @@
       "finishers": 0
     },
     "trail_run": {
-      "label": "Trail Run",
+      "label": "Trail",
       "status": "pending",
       "source": null,
       "finishers": 0
