@@ -5,9 +5,11 @@ a single results.json used by the leaderboard webpage.
 
 Data sources:
   - Marathon / Half Marathon: live API on my.raceresult.com (event 381348)
-  - Peel Hill, Ramsey 10K, Killer Mile, Foxdale 5, Trail Run: any CSV file
-    dropped into results/ whose filename contains that race's prefix (see
-    RACE_FILE_DEFS below) is picked up automatically, e.g.:
+  - Killer Mile: live "complete results" feed on racetek-live.co.uk
+    (race 2091, see fetch_racetek_results/KILLER_MILE_RACE_ID)
+  - Peel Hill, Ramsey 10K, Foxdale 5, Trail Run: any CSV file dropped into
+    results/ whose filename contains that race's prefix (see RACE_FILE_DEFS
+    below) is picked up automatically, e.g.:
         results/peelhill_2026.csv
         results/foxdale5_2026.csv
         results/ramsey10k-2026-final.csv
@@ -56,6 +58,9 @@ MARATHON_EVENT_ID = "381348"
 MARATHON_TAB = "results"
 MARATHON_SOURCE_URL = f"https://my.raceresult.com/{MARATHON_EVENT_ID}/"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+KILLER_MILE_RACE_ID = "2091"
+KILLER_MILE_SOURCE_URL = f"https://www.racetek-live.co.uk/website/public_results/{KILLER_MILE_RACE_ID}/complete_results/"
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".pdf"}
 
@@ -429,6 +434,40 @@ def fetch_10k_race(event_id, tab="results", use_cache=False):
     return entries
 
 
+def fetch_racetek_results(race_id):
+    """Fetch a completed race's results from a public racetek-live 'complete
+    results' feed (e.g. Killer Mile). Row shape is
+    [bib, first_name, surname, gender, age_cat, course, club, time, no_time],
+    pre-sorted by finish time; a row with no_time == "True" is a DNS/DNF (its
+    time field reads "DNS" instead of a duration) and is skipped."""
+    payload = requests.get(
+        f"https://www.racetek-live.co.uk/website/races/{race_id}/get_ajax_results/",
+        headers=HEADERS, timeout=30,
+    ).json()
+
+    entries = []
+    position = 0
+    for bib, first_name, surname, gender, age_cat, course, club, time_text, no_time in payload:
+        if no_time == "True":
+            continue
+        position += 1
+        name = f"{first_name.strip()} {surname.strip()}"
+        category = (age_cat or "").strip()
+        seconds = parse_time_to_seconds(time_text)
+        entries.append({
+            "position": position,
+            "name": name,
+            "category": category,
+            "club": (club or "").strip(),
+            "time": seconds_to_hms(seconds) if seconds is not None else time_text,
+            "seconds": seconds,
+            "key": normalize_name(resolve_alias(name)),
+            "gender": (gender or "").strip().upper()[:1] or None,
+            "age_group": category or None,
+        })
+    return entries
+
+
 def match_by_full_name(roster, entries, label):
     """Match `entries` (any race) onto the series roster by normalized full name.
 
@@ -672,7 +711,17 @@ def main():
     anomalies = list(roster_anomalies)
 
     for rdef in other_race_defs:
-        entries, meta, file_anomalies = load_file_race(rdef)
+        if rdef["key"] == "killer_mile":
+            entries = fetch_racetek_results(KILLER_MILE_RACE_ID)
+            meta = {
+                "label": rdef["label"],
+                "status": "complete",
+                "source": KILLER_MILE_SOURCE_URL,
+                "finishers": len(entries),
+            }
+            file_anomalies = []
+        else:
+            entries, meta, file_anomalies = load_file_race(rdef)
         other_races[rdef["key"]] = entries
         races_meta[rdef["key"]] = meta
         anomalies.extend(file_anomalies)
