@@ -570,12 +570,13 @@ def race_cell_text(entry, race_key, races_meta):
     return "00:00:00" if races_meta[race_key]["status"] == "pending" else "-"
 
 
-def write_league_pdf(league_key, entrants, races_ordered):
+def write_league_pdf(league_key, entrants, races_ordered, event_name="No Rest For the Wicked 2026", filename=None):
     """Render a printable leaderboard PDF for one league (Half Marathon or
     Marathon) into PDF_DIR, mirroring the columns shown on the webpage."""
     PDF_DIR.mkdir(exist_ok=True)
     league_label = LEAGUE_LABELS[league_key]
     race_order = list(races_ordered.keys())
+    filename = filename or f"{league_key}.pdf"
 
     headers = ["#", "Name", "TOTAL", "Club"]
     for rk in race_order:
@@ -590,7 +591,7 @@ def write_league_pdf(league_key, entrants, races_ordered):
         row.extend(race_cell_text(e, rk, races_ordered) for rk in race_order)
         data.append(row)
 
-    out_path = PDF_DIR / f"{league_key}.pdf"
+    out_path = PDF_DIR / filename
     doc = SimpleDocTemplate(
         str(out_path),
         pagesize=landscape(A4),
@@ -598,11 +599,11 @@ def write_league_pdf(league_key, entrants, races_ordered):
         rightMargin=14 * mm,
         topMargin=14 * mm,
         bottomMargin=14 * mm,
-        title=f"No Rest For the Wicked 2026 - {league_label} League",
+        title=f"{event_name} - {league_label} League",
     )
     styles = getSampleStyleSheet()
     story = [
-        Paragraph(f"No Rest For the Wicked 2026 &mdash; {league_label} League", styles["Title"]),
+        Paragraph(f"{event_name} &mdash; {league_label} League", styles["Title"]),
         Spacer(1, 8 * mm),
     ]
 
@@ -623,7 +624,7 @@ def write_league_pdf(league_key, entrants, races_ordered):
         story.append(Paragraph("No runners in this league yet.", styles["Normal"]))
 
     doc.build(story)
-    return f"pdfs/{league_key}.pdf"
+    return f"pdfs/{filename}"
 
 
 def main():

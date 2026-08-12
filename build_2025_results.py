@@ -35,7 +35,10 @@ from pull_results import (
     parse_time_to_seconds,
     resolve_alias,
     seconds_to_hms,
+    write_league_pdf,
 )
+
+EVENT_NAME = "Bell Burton No Rest For the Wicked 2025"
 
 BASE_DIR = Path(__file__).resolve().parent
 RESULTS_DIR = BASE_DIR / "results"
@@ -218,13 +221,18 @@ def main():
     races["ramsey_10k"]["finishers"] = len(ramsey_source_entries)
     races["ramsey_10k"]["source"] = f"https://my.raceresult.com/{RAMSEY_10K_EVENT_ID_2025}/"
 
+    league_pdfs = {
+        league_key: write_league_pdf(league_key, entrants_list, races, event_name=EVENT_NAME, filename=f"{league_key}_2025.pdf")
+        for league_key, entrants_list in [("marathon", marathon), ("half_marathon", half_marathon)]
+    }
+
     output = {
-        "event": "Bell Burton No Rest For the Wicked 2025",
+        "event": EVENT_NAME,
         "logo": "images/logo.jpg",
         "generated_at": generated_at,
         "races": races,
         "leagues": {"marathon": marathon, "half_marathon": half_marathon, "unassigned": []},
-        "league_pdfs": {},
+        "league_pdfs": league_pdfs,
     }
 
     OUTPUT_PATH.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")

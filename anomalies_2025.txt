@@ -1,4 +1,4 @@
-Bell Burton No Rest For the Wicked 2025 - anomalies as of 2026-08-12T14:52:43Z
+Bell Burton No Rest For the Wicked 2025 - anomalies as of 2026-08-12T15:03:51Z
 
 [total_mismatch] 'Ryan Archibald' (Half Marathon, position 24): the original 2025 spreadsheet's TOTAL (04:34:40) doesn't match the sum of the six race splits (04:34:45). Showing the recomputed sum so it matches the race times displayed; verify against the original spreadsheet if available.
 [total_mismatch] 'Peter Callin' (Half Marathon, position 25): the original 2025 spreadsheet's TOTAL (04:37:06) doesn't match the sum of the six race splits (04:36:58). Showing the recomputed sum so it matches the race times displayed; verify against the original spreadsheet if available.
