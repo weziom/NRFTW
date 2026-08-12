@@ -1,4 +1,4 @@
-No Rest For the Wicked 2026 - anomalies as of 2026-08-12T11:38:42Z
+No Rest For the Wicked 2026 - anomalies as of 2026-08-12T11:42:41Z
 
 [duplicate_name] 2 Marathon/Half Marathon entrants share the name 'David Williams'. Matched to the series roster by club name where possible.
 [no_result] Series entrant 'Harry Kneen' has no matching Marathon/Half Marathon result.
@@ -60,12 +60,10 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-12T11:38:42Z
 [no_result] Series entrant 'Fraiser Cunningham' has no matching Ramsey 10K result.
 [no_result] Series entrant 'Terry Foster' has no matching Ramsey 10K result.
 [removed_incomplete_series] 'Harry Kneen' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
-[removed_incomplete_series] 'Ryan Corrin' removed from the series - missing a result for: Marathon / Half Marathon.
 [removed_incomplete_series] 'Dan Richmond' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Oliver Harrison' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Chris Reynolds' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Tim Perry' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
-[removed_incomplete_series] 'Christa Cain' removed from the series - missing a result for: Marathon / Half Marathon.
 [removed_incomplete_series] 'Lloyd Taggart' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Nikki Arthur' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Samantha Perry' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
@@ -79,16 +77,18 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-12T11:38:42Z
 [removed_incomplete_series] 'Oscar Cadden' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Chris Hodgson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Geoff Quayle' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
-[removed_incomplete_series] 'Sophie Keen' removed from the series - missing a result for: Marathon / Half Marathon.
 [removed_incomplete_series] 'Peter Cooper' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Ian Callister' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Rosa Nelson-Rohrer' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
-[removed_incomplete_series] 'Bryony Barron' removed from the series - missing a result for: Marathon / Half Marathon.
 [removed_incomplete_series] 'John Watterson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
-[removed_incomplete_series] 'Huw Jones' removed from the series - missing a result for: Marathon / Half Marathon.
 [removed_incomplete_series] 'Troy Turner' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Fraiser Cunningham' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
 [removed_incomplete_series] 'Terry Foster' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K.
+[removed_incomplete_series] 'Ryan Corrin' removed from the series - missing a result for: Marathon / Half Marathon.
+[removed_incomplete_series] 'Christa Cain' removed from the series - missing a result for: Marathon / Half Marathon.
+[removed_incomplete_series] 'Sophie Keen' removed from the series - missing a result for: Marathon / Half Marathon.
+[removed_incomplete_series] 'Huw Jones' removed from the series - missing a result for: Marathon / Half Marathon.
+[removed_incomplete_series] 'Bryony Barron' removed from the series - missing a result for: Marathon / Half Marathon.
 [removed_incomplete_series] 'Tim Goldy' removed from the series - missing a result for: Ramsey 10K.
 [removed_incomplete_series] 'Richard Costain' removed from the series - missing a result for: Ramsey 10K.
 [removed_incomplete_series] 'David Hodgson' removed from the series - missing a result for: Ramsey 10K.

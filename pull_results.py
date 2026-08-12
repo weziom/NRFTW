@@ -95,6 +95,10 @@ def parse_time_to_seconds(text):
     if m:
         h, mnt, s = map(int, m.groups())
         return h * 3600 + mnt * 60 + s
+    m = re.match(r"^(\d+):(\d{2})$", text)
+    if m:
+        mnt, s = map(int, m.groups())
+        return mnt * 60 + s
     m = re.match(r"^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$", text)
     if m and any(m.groups()):
         h, mnt, s = (int(x) if x else 0 for x in m.groups())
@@ -177,13 +181,17 @@ def load_csv_entries(paths):
                 name = f"{row['first_name'].strip()} {row['last_name'].strip()}"
                 position = (row.get("position") or "").strip()
                 gender = (row.get("gender") or "").strip().upper()[:1] or None
+                seconds = parse_time_to_seconds(row["time"])
                 entries.append({
                     "position": int(position) if position else None,
                     "name": name,
                     "category": (row.get("category") or "").strip(),
                     "club": (row.get("club") or "").strip(),
-                    "time": row["time"].strip(),
-                    "seconds": parse_time_to_seconds(row["time"]),
+                    # Normalize to HH:MM:SS for display (CSVs may use MM:SS,
+                    # e.g. Ramsey 10K's "35:43") - fall back to the raw text
+                    # if it doesn't parse, so a bad row is visible, not blank.
+                    "time": seconds_to_hms(seconds) if seconds is not None else row["time"].strip(),
+                    "seconds": seconds,
                     "key": normalize_name(resolve_alias(name)),
                     "gender": gender,
                     "age_group": (row.get("category") or "").strip() or None,

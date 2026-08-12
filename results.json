@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-12T11:38:42Z",
+  "generated_at": "2026-08-12T11:42:41Z",
   "races": {
     "peel_hill": {
       "label": "Peel Hill",
@@ -63,7 +63,7 @@
           },
           "ramsey_10k": {
             "position": 2,
-            "time": "34:26",
+            "time": "00:34:26",
             "category": ""
           },
           "killer_mile": null,
@@ -71,8 +71,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 11562,
-        "cumulative_time": "03:12:42"
+        "cumulative_seconds": 13628,
+        "cumulative_time": "03:47:08"
       },
       {
         "name": "David Williams",
@@ -95,7 +95,7 @@
           },
           "ramsey_10k": {
             "position": 14,
-            "time": "37:04",
+            "time": "00:37:04",
             "category": ""
           },
           "killer_mile": null,
@@ -103,8 +103,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 11858,
-        "cumulative_time": "03:17:38"
+        "cumulative_seconds": 14082,
+        "cumulative_time": "03:54:42"
       },
       {
         "name": "Derek Jonathan Pugh",
@@ -127,7 +127,7 @@
           },
           "ramsey_10k": {
             "position": 38,
-            "time": "41:24",
+            "time": "00:41:24",
             "category": ""
           },
           "killer_mile": null,
@@ -135,40 +135,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 12719,
-        "cumulative_time": "03:31:59"
-      },
-      {
-        "name": "Stephen Dorricott",
-        "club": "Northern AC",
-        "gender": "M",
-        "age_group": "40-44",
-        "league": "marathon",
-        "races": {
-          "peel_hill": {
-            "position": 48,
-            "time": "00:26:02",
-            "category": "V40"
-          },
-          "marathon_half": {
-            "contest": "marathon",
-            "bib": "33",
-            "rank": "47th",
-            "time": "3h49m40s",
-            "category": "Men 40-44 (6th)"
-          },
-          "ramsey_10k": {
-            "position": 64,
-            "time": "46:48",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 15342,
-        "cumulative_time": "04:15:42"
+        "cumulative_seconds": 15203,
+        "cumulative_time": "04:13:23"
       },
       {
         "name": "Raymond Whitfield",
@@ -191,7 +159,7 @@
           },
           "ramsey_10k": {
             "position": 52,
-            "time": "44:28",
+            "time": "00:44:28",
             "category": ""
           },
           "killer_mile": null,
@@ -199,40 +167,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 15355,
-        "cumulative_time": "04:15:55"
-      },
-      {
-        "name": "Kieran Rowley",
-        "club": "",
-        "gender": "M",
-        "age_group": "Senior",
-        "league": "marathon",
-        "races": {
-          "peel_hill": {
-            "position": 41,
-            "time": "00:25:08",
-            "category": "SEN"
-          },
-          "marathon_half": {
-            "contest": "marathon",
-            "bib": "106",
-            "rank": "50th",
-            "time": "3h51m0s",
-            "category": "Senior Men (3rd)"
-          },
-          "ramsey_10k": {
-            "position": 60,
-            "time": "46:19",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 15368,
-        "cumulative_time": "04:16:08"
+        "cumulative_seconds": 18023,
+        "cumulative_time": "05:00:23"
       },
       {
         "name": "Antony Boyd",
@@ -255,7 +191,7 @@
           },
           "ramsey_10k": {
             "position": 48,
-            "time": "44:06",
+            "time": "00:44:06",
             "category": ""
           },
           "killer_mile": null,
@@ -263,8 +199,72 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 15476,
-        "cumulative_time": "04:17:56"
+        "cumulative_seconds": 18122,
+        "cumulative_time": "05:02:02"
+      },
+      {
+        "name": "Kieran Rowley",
+        "club": "",
+        "gender": "M",
+        "age_group": "Senior",
+        "league": "marathon",
+        "races": {
+          "peel_hill": {
+            "position": 41,
+            "time": "00:25:08",
+            "category": "SEN"
+          },
+          "marathon_half": {
+            "contest": "marathon",
+            "bib": "106",
+            "rank": "50th",
+            "time": "3h51m0s",
+            "category": "Senior Men (3rd)"
+          },
+          "ramsey_10k": {
+            "position": 60,
+            "time": "00:46:19",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 18147,
+        "cumulative_time": "05:02:27"
+      },
+      {
+        "name": "Stephen Dorricott",
+        "club": "Northern AC",
+        "gender": "M",
+        "age_group": "40-44",
+        "league": "marathon",
+        "races": {
+          "peel_hill": {
+            "position": 48,
+            "time": "00:26:02",
+            "category": "V40"
+          },
+          "marathon_half": {
+            "contest": "marathon",
+            "bib": "33",
+            "rank": "47th",
+            "time": "3h49m40s",
+            "category": "Men 40-44 (6th)"
+          },
+          "ramsey_10k": {
+            "position": 64,
+            "time": "00:46:48",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 18150,
+        "cumulative_time": "05:02:30"
       },
       {
         "name": "Jayne Farquhar",
@@ -287,7 +287,7 @@
           },
           "ramsey_10k": {
             "position": 75,
-            "time": "48:19",
+            "time": "00:48:19",
             "category": ""
           },
           "killer_mile": null,
@@ -295,8 +295,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 15531,
-        "cumulative_time": "04:18:51"
+        "cumulative_seconds": 18430,
+        "cumulative_time": "05:07:10"
       },
       {
         "name": "James Love",
@@ -319,7 +319,7 @@
           },
           "ramsey_10k": {
             "position": 63,
-            "time": "46:35",
+            "time": "00:46:35",
             "category": ""
           },
           "killer_mile": null,
@@ -327,8 +327,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 15888,
-        "cumulative_time": "04:24:48"
+        "cumulative_seconds": 18683,
+        "cumulative_time": "05:11:23"
       },
       {
         "name": "Gary Hurn",
@@ -351,7 +351,7 @@
           },
           "ramsey_10k": {
             "position": 76,
-            "time": "48:28",
+            "time": "00:48:28",
             "category": ""
           },
           "killer_mile": null,
@@ -359,8 +359,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 16385,
-        "cumulative_time": "04:33:05"
+        "cumulative_seconds": 19293,
+        "cumulative_time": "05:21:33"
       },
       {
         "name": "Katie Lawrence",
@@ -383,7 +383,7 @@
           },
           "ramsey_10k": {
             "position": 96,
-            "time": "51:28",
+            "time": "00:51:28",
             "category": ""
           },
           "killer_mile": null,
@@ -391,40 +391,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 16591,
-        "cumulative_time": "04:36:31"
-      },
-      {
-        "name": "Victoria Gallantree",
-        "club": "Framlingham Flyers",
-        "gender": "F",
-        "age_group": "50-54",
-        "league": "marathon",
-        "races": {
-          "peel_hill": {
-            "position": 124,
-            "time": "00:36:53",
-            "category": "V50"
-          },
-          "marathon_half": {
-            "contest": "marathon",
-            "bib": "44",
-            "rank": "65th",
-            "time": "4h3m5s",
-            "category": "Women 50-54 (2nd)"
-          },
-          "ramsey_10k": {
-            "position": 159,
-            "time": "66:22",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 16798,
-        "cumulative_time": "04:39:58"
+        "cumulative_seconds": 19679,
+        "cumulative_time": "05:27:59"
       },
       {
         "name": "Chris Colquitt",
@@ -447,7 +415,7 @@
           },
           "ramsey_10k": {
             "position": 62,
-            "time": "46:28",
+            "time": "00:46:28",
             "category": ""
           },
           "killer_mile": null,
@@ -455,8 +423,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 17266,
-        "cumulative_time": "04:47:46"
+        "cumulative_seconds": 20054,
+        "cumulative_time": "05:34:14"
+      },
+      {
+        "name": "Victoria Gallantree",
+        "club": "Framlingham Flyers",
+        "gender": "F",
+        "age_group": "50-54",
+        "league": "marathon",
+        "races": {
+          "peel_hill": {
+            "position": 124,
+            "time": "00:36:53",
+            "category": "V50"
+          },
+          "marathon_half": {
+            "contest": "marathon",
+            "bib": "44",
+            "rank": "65th",
+            "time": "4h3m5s",
+            "category": "Women 50-54 (2nd)"
+          },
+          "ramsey_10k": {
+            "position": 159,
+            "time": "01:06:22",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 20780,
+        "cumulative_time": "05:46:20"
       }
     ],
     "half_marathon": [
@@ -481,7 +481,7 @@
           },
           "ramsey_10k": {
             "position": 9,
-            "time": "35:43",
+            "time": "00:35:43",
             "category": ""
           },
           "killer_mile": null,
@@ -489,8 +489,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 5836,
-        "cumulative_time": "01:37:16"
+        "cumulative_seconds": 7979,
+        "cumulative_time": "02:12:59"
       },
       {
         "name": "Nicholas Colburn",
@@ -513,7 +513,7 @@
           },
           "ramsey_10k": {
             "position": 8,
-            "time": "35:42",
+            "time": "00:35:42",
             "category": ""
           },
           "killer_mile": null,
@@ -521,8 +521,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 5837,
-        "cumulative_time": "01:37:17"
+        "cumulative_seconds": 7979,
+        "cumulative_time": "02:12:59"
       },
       {
         "name": "Reggie Oasgood",
@@ -545,7 +545,7 @@
           },
           "ramsey_10k": {
             "position": 6,
-            "time": "35:38",
+            "time": "00:35:38",
             "category": ""
           },
           "killer_mile": null,
@@ -553,8 +553,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 5924,
-        "cumulative_time": "01:38:44"
+        "cumulative_seconds": 8062,
+        "cumulative_time": "02:14:22"
       },
       {
         "name": "Michael Garrett",
@@ -577,7 +577,7 @@
           },
           "ramsey_10k": {
             "position": 10,
-            "time": "35:45",
+            "time": "00:35:45",
             "category": ""
           },
           "killer_mile": null,
@@ -585,8 +585,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 5979,
-        "cumulative_time": "01:39:39"
+        "cumulative_seconds": 8124,
+        "cumulative_time": "02:15:24"
       },
       {
         "name": "Matt Callister",
@@ -609,7 +609,7 @@
           },
           "ramsey_10k": {
             "position": 13,
-            "time": "37:04",
+            "time": "00:37:04",
             "category": ""
           },
           "killer_mile": null,
@@ -617,8 +617,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6095,
-        "cumulative_time": "01:41:35"
+        "cumulative_seconds": 8319,
+        "cumulative_time": "02:18:39"
       },
       {
         "name": "Thomas Murray",
@@ -641,7 +641,7 @@
           },
           "ramsey_10k": {
             "position": 11,
-            "time": "36:58",
+            "time": "00:36:58",
             "category": ""
           },
           "killer_mile": null,
@@ -649,8 +649,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6238,
-        "cumulative_time": "01:43:58"
+        "cumulative_seconds": 8456,
+        "cumulative_time": "02:20:56"
       },
       {
         "name": "David James",
@@ -673,7 +673,7 @@
           },
           "ramsey_10k": {
             "position": 12,
-            "time": "37:00",
+            "time": "00:37:00",
             "category": ""
           },
           "killer_mile": null,
@@ -681,8 +681,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6301,
-        "cumulative_time": "01:45:01"
+        "cumulative_seconds": 8521,
+        "cumulative_time": "02:22:01"
       },
       {
         "name": "Kirsty Barber",
@@ -705,7 +705,7 @@
           },
           "ramsey_10k": {
             "position": 31,
-            "time": "40:02",
+            "time": "00:40:02",
             "category": ""
           },
           "killer_mile": null,
@@ -713,8 +713,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6445,
-        "cumulative_time": "01:47:25"
+        "cumulative_seconds": 8847,
+        "cumulative_time": "02:27:27"
       },
       {
         "name": "Jeffrey Moore",
@@ -737,7 +737,7 @@
           },
           "ramsey_10k": {
             "position": 30,
-            "time": "40:00",
+            "time": "00:40:00",
             "category": ""
           },
           "killer_mile": null,
@@ -745,40 +745,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6548,
-        "cumulative_time": "01:49:08"
-      },
-      {
-        "name": "Geoff Rice",
-        "club": "Western AC",
-        "gender": "M",
-        "age_group": "55-59",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 19,
-            "time": "00:21:55",
-            "category": "V55"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "570",
-            "rank": "21st",
-            "time": "1h28m9s",
-            "category": "Men 55-59 (2nd)"
-          },
-          "ramsey_10k": {
-            "position": 26,
-            "time": "39:46",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 6604,
-        "cumulative_time": "01:50:04"
+        "cumulative_seconds": 8948,
+        "cumulative_time": "02:29:08"
       },
       {
         "name": "Mark Corkish",
@@ -801,7 +769,7 @@
           },
           "ramsey_10k": {
             "position": 23,
-            "time": "39:02",
+            "time": "00:39:02",
             "category": ""
           },
           "killer_mile": null,
@@ -809,8 +777,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6630,
-        "cumulative_time": "01:50:30"
+        "cumulative_seconds": 8972,
+        "cumulative_time": "02:29:32"
+      },
+      {
+        "name": "Geoff Rice",
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "55-59",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 19,
+            "time": "00:21:55",
+            "category": "V55"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "570",
+            "rank": "21st",
+            "time": "1h28m9s",
+            "category": "Men 55-59 (2nd)"
+          },
+          "ramsey_10k": {
+            "position": 26,
+            "time": "00:39:46",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 8990,
+        "cumulative_time": "02:29:50"
       },
       {
         "name": "Ian Bulley",
@@ -833,7 +833,7 @@
           },
           "ramsey_10k": {
             "position": 22,
-            "time": "38:58",
+            "time": "00:38:58",
             "category": ""
           },
           "killer_mile": null,
@@ -841,8 +841,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6670,
-        "cumulative_time": "01:51:10"
+        "cumulative_seconds": 9008,
+        "cumulative_time": "02:30:08"
       },
       {
         "name": "Richard Highfield",
@@ -865,7 +865,7 @@
           },
           "ramsey_10k": {
             "position": 36,
-            "time": "41:10",
+            "time": "00:41:10",
             "category": ""
           },
           "killer_mile": null,
@@ -873,8 +873,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6728,
-        "cumulative_time": "01:52:08"
+        "cumulative_seconds": 9198,
+        "cumulative_time": "02:33:18"
       },
       {
         "name": "Elena Caley",
@@ -897,7 +897,7 @@
           },
           "ramsey_10k": {
             "position": 33,
-            "time": "40:45",
+            "time": "00:40:45",
             "category": ""
           },
           "killer_mile": null,
@@ -905,8 +905,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 6930,
-        "cumulative_time": "01:55:30"
+        "cumulative_seconds": 9375,
+        "cumulative_time": "02:36:15"
       },
       {
         "name": "Stephen Schuster",
@@ -929,7 +929,7 @@
           },
           "ramsey_10k": {
             "position": 35,
-            "time": "41:07",
+            "time": "00:41:07",
             "category": ""
           },
           "killer_mile": null,
@@ -937,8 +937,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7005,
-        "cumulative_time": "01:56:45"
+        "cumulative_seconds": 9472,
+        "cumulative_time": "02:37:52"
       },
       {
         "name": "Al Graham",
@@ -961,7 +961,7 @@
           },
           "ramsey_10k": {
             "position": 39,
-            "time": "41:27",
+            "time": "00:41:27",
             "category": ""
           },
           "killer_mile": null,
@@ -969,40 +969,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7063,
-        "cumulative_time": "01:57:43"
-      },
-      {
-        "name": "Martin Hall",
-        "club": "",
-        "gender": "M",
-        "age_group": "50-54",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 37,
-            "time": "00:24:32",
-            "category": "V50"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "396",
-            "rank": "36th",
-            "time": "1h34m22s",
-            "category": "Men 50-54 (3rd)"
-          },
-          "ramsey_10k": {
-            "position": 40,
-            "time": "41:32",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 7134,
-        "cumulative_time": "01:58:54"
+        "cumulative_seconds": 9550,
+        "cumulative_time": "02:39:10"
       },
       {
         "name": "James Grant",
@@ -1025,7 +993,7 @@
           },
           "ramsey_10k": {
             "position": 37,
-            "time": "41:21",
+            "time": "00:41:21",
             "category": ""
           },
           "killer_mile": null,
@@ -1033,31 +1001,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7135,
-        "cumulative_time": "01:58:55"
+        "cumulative_seconds": 9616,
+        "cumulative_time": "02:40:16"
       },
       {
-        "name": "Peter Callin",
-        "club": "Western AC",
+        "name": "Martin Hall",
+        "club": "",
         "gender": "M",
         "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 50,
-            "time": "00:26:08",
+            "position": 37,
+            "time": "00:24:32",
             "category": "V50"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "263",
-            "rank": "49th",
-            "time": "1h36m58s",
-            "category": "Men 50-54 (5th)"
+            "bib": "396",
+            "rank": "36th",
+            "time": "1h34m22s",
+            "category": "Men 50-54 (3rd)"
           },
           "ramsey_10k": {
-            "position": 128,
-            "time": "55:58",
+            "position": 40,
+            "time": "00:41:32",
             "category": ""
           },
           "killer_mile": null,
@@ -1065,8 +1033,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7386,
-        "cumulative_time": "02:03:06"
+        "cumulative_seconds": 9626,
+        "cumulative_time": "02:40:26"
       },
       {
         "name": "Michael Faid",
@@ -1089,7 +1057,7 @@
           },
           "ramsey_10k": {
             "position": 34,
-            "time": "40:58",
+            "time": "00:40:58",
             "category": ""
           },
           "killer_mile": null,
@@ -1097,72 +1065,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7397,
-        "cumulative_time": "02:03:17"
-      },
-      {
-        "name": "Tristen Bell",
-        "club": "",
-        "gender": "M",
-        "age_group": "45-49",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 45,
-            "time": "00:25:51",
-            "category": "V45"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "226",
-            "rank": "51st",
-            "time": "1h37m40s",
-            "category": "Men 45-49 (3rd)"
-          },
-          "ramsey_10k": {
-            "position": 55,
-            "time": "45:17",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 7411,
-        "cumulative_time": "02:03:31"
-      },
-      {
-        "name": "Thomas Kneen",
-        "club": "Western AC",
-        "gender": "M",
-        "age_group": "Senior",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 38,
-            "time": "00:24:33",
-            "category": "SEN"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "465",
-            "rank": "60th",
-            "time": "1h39m14s",
-            "category": "Senior Men (15th)"
-          },
-          "ramsey_10k": {
-            "position": 54,
-            "time": "45:04",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 7427,
-        "cumulative_time": "02:03:47"
+        "cumulative_seconds": 9855,
+        "cumulative_time": "02:44:15"
       },
       {
         "name": "Mark Murphy",
@@ -1185,7 +1089,7 @@
           },
           "ramsey_10k": {
             "position": 46,
-            "time": "43:58",
+            "time": "00:43:58",
             "category": ""
           },
           "killer_mile": null,
@@ -1193,8 +1097,72 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7437,
-        "cumulative_time": "02:03:57"
+        "cumulative_seconds": 10075,
+        "cumulative_time": "02:47:55"
+      },
+      {
+        "name": "Tristen Bell",
+        "club": "",
+        "gender": "M",
+        "age_group": "45-49",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 45,
+            "time": "00:25:51",
+            "category": "V45"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "226",
+            "rank": "51st",
+            "time": "1h37m40s",
+            "category": "Men 45-49 (3rd)"
+          },
+          "ramsey_10k": {
+            "position": 55,
+            "time": "00:45:17",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 10128,
+        "cumulative_time": "02:48:48"
+      },
+      {
+        "name": "Thomas Kneen",
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "Senior",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 38,
+            "time": "00:24:33",
+            "category": "SEN"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "465",
+            "rank": "60th",
+            "time": "1h39m14s",
+            "category": "Senior Men (15th)"
+          },
+          "ramsey_10k": {
+            "position": 54,
+            "time": "00:45:04",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 10131,
+        "cumulative_time": "02:48:51"
       },
       {
         "name": "Becky Watterson",
@@ -1217,7 +1185,7 @@
           },
           "ramsey_10k": {
             "position": 50,
-            "time": "44:25",
+            "time": "00:44:25",
             "category": ""
           },
           "killer_mile": null,
@@ -1225,40 +1193,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7504,
-        "cumulative_time": "02:05:04"
-      },
-      {
-        "name": "Kristian Edwards",
-        "club": "",
-        "gender": "M",
-        "age_group": "45-49",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 44,
-            "time": "00:25:48",
-            "category": "V45"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "340",
-            "rank": "74th",
-            "time": "1h42m11s",
-            "category": "Men 45-49 (6th)"
-          },
-          "ramsey_10k": {
-            "position": 58,
-            "time": "46:05",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 7679,
-        "cumulative_time": "02:07:59"
+        "cumulative_seconds": 10169,
+        "cumulative_time": "02:49:29"
       },
       {
         "name": "Tom Quirk",
@@ -1281,7 +1217,7 @@
           },
           "ramsey_10k": {
             "position": 45,
-            "time": "43:54",
+            "time": "00:43:54",
             "category": ""
           },
           "killer_mile": null,
@@ -1289,8 +1225,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7729,
-        "cumulative_time": "02:08:49"
+        "cumulative_seconds": 10363,
+        "cumulative_time": "02:52:43"
+      },
+      {
+        "name": "Kristian Edwards",
+        "club": "",
+        "gender": "M",
+        "age_group": "45-49",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 44,
+            "time": "00:25:48",
+            "category": "V45"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "340",
+            "rank": "74th",
+            "time": "1h42m11s",
+            "category": "Men 45-49 (6th)"
+          },
+          "ramsey_10k": {
+            "position": 58,
+            "time": "00:46:05",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 10444,
+        "cumulative_time": "02:54:04"
       },
       {
         "name": "Samantha Hall",
@@ -1313,7 +1281,7 @@
           },
           "ramsey_10k": {
             "position": 61,
-            "time": "46:23",
+            "time": "00:46:23",
             "category": ""
           },
           "killer_mile": null,
@@ -1321,104 +1289,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7791,
-        "cumulative_time": "02:09:51"
-      },
-      {
-        "name": "Daniel Lawrie",
-        "club": "",
-        "gender": "M",
-        "age_group": "Junior",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 40,
-            "time": "00:25:00",
-            "category": "JUN"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "469",
-            "rank": "101st",
-            "time": "1h46m35s",
-            "category": "Junior Men (6th)"
-          },
-          "ramsey_10k": {
-            "position": 67,
-            "time": "47:27",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 7895,
-        "cumulative_time": "02:11:35"
-      },
-      {
-        "name": "Paul Sayle",
-        "club": "Western AC",
-        "gender": "M",
-        "age_group": "45-49",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 63,
-            "time": "00:27:07",
-            "category": "V45"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "589",
-            "rank": "90th",
-            "time": "1h44m56s",
-            "category": "Men 45-49 (7th)"
-          },
-          "ramsey_10k": {
-            "position": 65,
-            "time": "47:04",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 7923,
-        "cumulative_time": "02:12:03"
-      },
-      {
-        "name": "Carrie Kelly",
-        "club": "",
-        "gender": "F",
-        "age_group": "Senior",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 70,
-            "time": "00:28:04",
-            "category": "SEN"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "458",
-            "rank": "85th",
-            "time": "1h44m19s",
-            "category": "Senior Women (6th)"
-          },
-          "ramsey_10k": {
-            "position": 69,
-            "time": "47:38",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 7943,
-        "cumulative_time": "02:12:23"
+        "cumulative_seconds": 10574,
+        "cumulative_time": "02:56:14"
       },
       {
         "name": "Richard Atherton",
@@ -1441,7 +1313,7 @@
           },
           "ramsey_10k": {
             "position": 57,
-            "time": "46:03",
+            "time": "00:46:03",
             "category": ""
           },
           "killer_mile": null,
@@ -1449,8 +1321,136 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7968,
-        "cumulative_time": "02:12:48"
+        "cumulative_seconds": 10731,
+        "cumulative_time": "02:58:51"
+      },
+      {
+        "name": "Daniel Lawrie",
+        "club": "",
+        "gender": "M",
+        "age_group": "Junior",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 40,
+            "time": "00:25:00",
+            "category": "JUN"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "469",
+            "rank": "101st",
+            "time": "1h46m35s",
+            "category": "Junior Men (6th)"
+          },
+          "ramsey_10k": {
+            "position": 67,
+            "time": "00:47:27",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 10742,
+        "cumulative_time": "02:59:02"
+      },
+      {
+        "name": "Peter Callin",
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "50-54",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 50,
+            "time": "00:26:08",
+            "category": "V50"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "263",
+            "rank": "49th",
+            "time": "1h36m58s",
+            "category": "Men 50-54 (5th)"
+          },
+          "ramsey_10k": {
+            "position": 128,
+            "time": "00:55:58",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 10744,
+        "cumulative_time": "02:59:04"
+      },
+      {
+        "name": "Paul Sayle",
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "45-49",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 63,
+            "time": "00:27:07",
+            "category": "V45"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "589",
+            "rank": "90th",
+            "time": "1h44m56s",
+            "category": "Men 45-49 (7th)"
+          },
+          "ramsey_10k": {
+            "position": 65,
+            "time": "00:47:04",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 10747,
+        "cumulative_time": "02:59:07"
+      },
+      {
+        "name": "Carrie Kelly",
+        "club": "",
+        "gender": "F",
+        "age_group": "Senior",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 70,
+            "time": "00:28:04",
+            "category": "SEN"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "458",
+            "rank": "85th",
+            "time": "1h44m19s",
+            "category": "Senior Women (6th)"
+          },
+          "ramsey_10k": {
+            "position": 69,
+            "time": "00:47:38",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 10801,
+        "cumulative_time": "03:00:01"
       },
       {
         "name": "Lesley Webb",
@@ -1473,7 +1473,7 @@
           },
           "ramsey_10k": {
             "position": 73,
-            "time": "48:08",
+            "time": "00:48:08",
             "category": ""
           },
           "killer_mile": null,
@@ -1481,8 +1481,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 7977,
-        "cumulative_time": "02:12:57"
+        "cumulative_seconds": 10865,
+        "cumulative_time": "03:01:05"
       },
       {
         "name": "Kathy Garrett",
@@ -1505,7 +1505,7 @@
           },
           "ramsey_10k": {
             "position": 70,
-            "time": "47:52",
+            "time": "00:47:52",
             "category": ""
           },
           "killer_mile": null,
@@ -1513,8 +1513,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8030,
-        "cumulative_time": "02:13:50"
+        "cumulative_seconds": 10902,
+        "cumulative_time": "03:01:42"
       },
       {
         "name": "Helen Murray",
@@ -1537,7 +1537,7 @@
           },
           "ramsey_10k": {
             "position": 72,
-            "time": "48:05",
+            "time": "00:48:05",
             "category": ""
           },
           "killer_mile": null,
@@ -1545,8 +1545,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8035,
-        "cumulative_time": "02:13:55"
+        "cumulative_seconds": 10920,
+        "cumulative_time": "03:02:00"
       },
       {
         "name": "Piotr Tkaczyk",
@@ -1569,7 +1569,7 @@
           },
           "ramsey_10k": {
             "position": 71,
-            "time": "48:02",
+            "time": "00:48:02",
             "category": ""
           },
           "killer_mile": null,
@@ -1577,8 +1577,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8039,
-        "cumulative_time": "02:13:59"
+        "cumulative_seconds": 10921,
+        "cumulative_time": "03:02:01"
       },
       {
         "name": "Danielle Grant",
@@ -1601,7 +1601,7 @@
           },
           "ramsey_10k": {
             "position": 79,
-            "time": "48:56",
+            "time": "00:48:56",
             "category": ""
           },
           "killer_mile": null,
@@ -1609,8 +1609,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8223,
-        "cumulative_time": "02:17:03"
+        "cumulative_seconds": 11159,
+        "cumulative_time": "03:05:59"
       },
       {
         "name": "Philip Cuthbert",
@@ -1633,7 +1633,7 @@
           },
           "ramsey_10k": {
             "position": 82,
-            "time": "49:14",
+            "time": "00:49:14",
             "category": ""
           },
           "killer_mile": null,
@@ -1641,8 +1641,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8226,
-        "cumulative_time": "02:17:06"
+        "cumulative_seconds": 11180,
+        "cumulative_time": "03:06:20"
       },
       {
         "name": "Ryan Surridge",
@@ -1665,7 +1665,7 @@
           },
           "ramsey_10k": {
             "position": 81,
-            "time": "49:06",
+            "time": "00:49:06",
             "category": ""
           },
           "killer_mile": null,
@@ -1673,8 +1673,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8279,
-        "cumulative_time": "02:17:59"
+        "cumulative_seconds": 11225,
+        "cumulative_time": "03:07:05"
       },
       {
         "name": "Toby Gadsby",
@@ -1697,7 +1697,7 @@
           },
           "ramsey_10k": {
             "position": 83,
-            "time": "49:18",
+            "time": "00:49:18",
             "category": ""
           },
           "killer_mile": null,
@@ -1705,40 +1705,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8293,
-        "cumulative_time": "02:18:13"
-      },
-      {
-        "name": "Brian Butler",
-        "club": "IoM Veteran Athletes'",
-        "gender": "M",
-        "age_group": "55-59",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 83,
-            "time": "00:29:35",
-            "category": "V55"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "256",
-            "rank": "108th",
-            "time": "1h48m41s",
-            "category": "Men 55-59 (8th)"
-          },
-          "ramsey_10k": {
-            "position": 87,
-            "time": "50:11",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8296,
-        "cumulative_time": "02:18:16"
+        "cumulative_seconds": 11251,
+        "cumulative_time": "03:07:31"
       },
       {
         "name": "Matt Cory",
@@ -1761,7 +1729,7 @@
           },
           "ramsey_10k": {
             "position": 77,
-            "time": "48:50",
+            "time": "00:48:50",
             "category": ""
           },
           "killer_mile": null,
@@ -1769,31 +1737,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8325,
-        "cumulative_time": "02:18:45"
+        "cumulative_seconds": 11255,
+        "cumulative_time": "03:07:35"
       },
       {
-        "name": "Matthew Jones",
-        "club": "",
+        "name": "Brian Butler",
+        "club": "IoM Veteran Athletes'",
         "gender": "M",
-        "age_group": "Senior",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 71,
-            "time": "00:28:24",
-            "category": "SEN"
+            "position": 83,
+            "time": "00:29:35",
+            "category": "V55"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "445",
-            "rank": "143rd",
-            "time": "1h53m43s",
-            "category": "Senior Men (30th)"
+            "bib": "256",
+            "rank": "108th",
+            "time": "1h48m41s",
+            "category": "Men 55-59 (8th)"
           },
           "ramsey_10k": {
-            "position": 113,
-            "time": "53:56",
+            "position": 87,
+            "time": "00:50:11",
             "category": ""
           },
           "killer_mile": null,
@@ -1801,8 +1769,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8527,
-        "cumulative_time": "02:22:07"
+        "cumulative_seconds": 11307,
+        "cumulative_time": "03:08:27"
       },
       {
         "name": "David Reeder",
@@ -1825,7 +1793,7 @@
           },
           "ramsey_10k": {
             "position": 92,
-            "time": "50:37",
+            "time": "00:50:37",
             "category": ""
           },
           "killer_mile": null,
@@ -1833,296 +1801,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8566,
-        "cumulative_time": "02:22:46"
-      },
-      {
-        "name": "Amy Coole",
-        "club": "",
-        "gender": "F",
-        "age_group": "45-49",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 99,
-            "time": "00:31:36",
-            "category": "V45"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "290",
-            "rank": "132nd",
-            "time": "1h52m15s",
-            "category": "Women 45-49 (6th)"
-          },
-          "ramsey_10k": {
-            "position": 102,
-            "time": "52:25",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8631,
-        "cumulative_time": "02:23:51"
-      },
-      {
-        "name": "Emma Jones",
-        "club": "",
-        "gender": "F",
-        "age_group": "40-44",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 90,
-            "time": "00:30:12",
-            "category": "V40"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "442",
-            "rank": "151st",
-            "time": "1h55m5s",
-            "category": "Women 40-44 (3rd)"
-          },
-          "ramsey_10k": {
-            "position": 101,
-            "time": "52:25",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8717,
-        "cumulative_time": "02:25:17"
-      },
-      {
-        "name": "Karen Sinkinson",
-        "club": "Manx Harriers",
-        "gender": "F",
-        "age_group": "65-69",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 103,
-            "time": "00:31:54",
-            "category": "V65"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "599",
-            "rank": "145th",
-            "time": "1h54m5s",
-            "category": "Women 65-69 (1st)"
-          },
-          "ramsey_10k": {
-            "position": 104,
-            "time": "52:30",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8759,
-        "cumulative_time": "02:25:59"
-      },
-      {
-        "name": "Jamie Pope",
-        "club": "Western AC",
-        "gender": "M",
-        "age_group": "50-54",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 73,
-            "time": "00:28:56",
-            "category": "V50"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "551",
-            "rank": "161st",
-            "time": "1h57m41s",
-            "category": "Men 50-54 (11th)"
-          },
-          "ramsey_10k": {
-            "position": 98,
-            "time": "52:07",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8797,
-        "cumulative_time": "02:26:37"
-      },
-      {
-        "name": "Stewart Jones",
-        "club": "Manx Fell Runners",
-        "gender": "M",
-        "age_group": "50-54",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 85,
-            "time": "00:29:47",
-            "category": "V50"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "446",
-            "rank": "172nd",
-            "time": "1h58m34s",
-            "category": "Men 50-54 (12th)"
-          },
-          "ramsey_10k": {
-            "position": 115,
-            "time": "54:07",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8901,
-        "cumulative_time": "02:28:21"
-      },
-      {
-        "name": "Eugene Martin",
-        "club": "Manx Fell Runners",
-        "gender": "M",
-        "age_group": "55-59",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 91,
-            "time": "00:30:18",
-            "category": "V55"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "493",
-            "rank": "165th",
-            "time": "1h58m9s",
-            "category": "Men 55-59 (11th)"
-          },
-          "ramsey_10k": {
-            "position": 109,
-            "time": "53:17",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8907,
-        "cumulative_time": "02:28:27"
-      },
-      {
-        "name": "Monika Martin",
-        "club": "Manx Fell Runners",
-        "gender": "F",
-        "age_group": "50-54",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 92,
-            "time": "00:30:19",
-            "category": "V50"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "81",
-            "rank": "164th",
-            "time": "1h58m9s",
-            "category": "Women 50-54 (3rd)"
-          },
-          "ramsey_10k": {
-            "position": 108,
-            "time": "53:17",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8908,
-        "cumulative_time": "02:28:28"
-      },
-      {
-        "name": "Tonton Bangero",
-        "club": "",
-        "gender": "M",
-        "age_group": "35-39",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 98,
-            "time": "00:30:57",
-            "category": "V35"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "217",
-            "rank": "162nd",
-            "time": "1h57m53s",
-            "category": "Men 35-39 (19th)"
-          },
-          "ramsey_10k": {
-            "position": 94,
-            "time": "50:59",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8930,
-        "cumulative_time": "02:28:50"
-      },
-      {
-        "name": "Kirin Gilmore",
-        "club": "Western AC",
-        "gender": "F",
-        "age_group": "55-59",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 89,
-            "time": "00:30:12",
-            "category": "V55"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "373",
-            "rank": "173rd",
-            "time": "1h58m48s",
-            "category": "Women 55-59 (3rd)"
-          },
-          "ramsey_10k": {
-            "position": 107,
-            "time": "52:44",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 8940,
-        "cumulative_time": "02:29:00"
+        "cumulative_seconds": 11603,
+        "cumulative_time": "03:13:23"
       },
       {
         "name": "Mark Terris",
@@ -2145,7 +1825,7 @@
           },
           "ramsey_10k": {
             "position": 53,
-            "time": "44:47",
+            "time": "00:44:47",
             "category": ""
           },
           "killer_mile": null,
@@ -2153,8 +1833,168 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8955,
-        "cumulative_time": "02:29:15"
+        "cumulative_seconds": 11642,
+        "cumulative_time": "03:14:02"
+      },
+      {
+        "name": "Matthew Jones",
+        "club": "",
+        "gender": "M",
+        "age_group": "Senior",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 71,
+            "time": "00:28:24",
+            "category": "SEN"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "445",
+            "rank": "143rd",
+            "time": "1h53m43s",
+            "category": "Senior Men (30th)"
+          },
+          "ramsey_10k": {
+            "position": 113,
+            "time": "00:53:56",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 11763,
+        "cumulative_time": "03:16:03"
+      },
+      {
+        "name": "Amy Coole",
+        "club": "",
+        "gender": "F",
+        "age_group": "45-49",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 99,
+            "time": "00:31:36",
+            "category": "V45"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "290",
+            "rank": "132nd",
+            "time": "1h52m15s",
+            "category": "Women 45-49 (6th)"
+          },
+          "ramsey_10k": {
+            "position": 102,
+            "time": "00:52:25",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 11776,
+        "cumulative_time": "03:16:16"
+      },
+      {
+        "name": "Emma Jones",
+        "club": "",
+        "gender": "F",
+        "age_group": "40-44",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 90,
+            "time": "00:30:12",
+            "category": "V40"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "442",
+            "rank": "151st",
+            "time": "1h55m5s",
+            "category": "Women 40-44 (3rd)"
+          },
+          "ramsey_10k": {
+            "position": 101,
+            "time": "00:52:25",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 11862,
+        "cumulative_time": "03:17:42"
+      },
+      {
+        "name": "Karen Sinkinson",
+        "club": "Manx Harriers",
+        "gender": "F",
+        "age_group": "65-69",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 103,
+            "time": "00:31:54",
+            "category": "V65"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "599",
+            "rank": "145th",
+            "time": "1h54m5s",
+            "category": "Women 65-69 (1st)"
+          },
+          "ramsey_10k": {
+            "position": 104,
+            "time": "00:52:30",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 11909,
+        "cumulative_time": "03:18:29"
+      },
+      {
+        "name": "Jamie Pope",
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "50-54",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 73,
+            "time": "00:28:56",
+            "category": "V50"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "551",
+            "rank": "161st",
+            "time": "1h57m41s",
+            "category": "Men 50-54 (11th)"
+          },
+          "ramsey_10k": {
+            "position": 98,
+            "time": "00:52:07",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 11924,
+        "cumulative_time": "03:18:44"
       },
       {
         "name": "Elliott Moore",
@@ -2177,7 +2017,7 @@
           },
           "ramsey_10k": {
             "position": 85,
-            "time": "49:25",
+            "time": "00:49:25",
             "category": ""
           },
           "killer_mile": null,
@@ -2185,31 +2025,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 8994,
-        "cumulative_time": "02:29:54"
+        "cumulative_seconds": 11959,
+        "cumulative_time": "03:19:19"
       },
       {
-        "name": "James Clark",
-        "club": "Manx Fell Runners",
+        "name": "Tonton Bangero",
+        "club": "",
         "gender": "M",
         "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 88,
-            "time": "00:30:05",
+            "position": 98,
+            "time": "00:30:57",
             "category": "V35"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "283",
-            "rank": "181st",
-            "time": "1h59m56s",
-            "category": "Men 35-39 (20th)"
+            "bib": "217",
+            "rank": "162nd",
+            "time": "1h57m53s",
+            "category": "Men 35-39 (19th)"
           },
           "ramsey_10k": {
-            "position": 114,
-            "time": "54:00",
+            "position": 94,
+            "time": "00:50:59",
             "category": ""
           },
           "killer_mile": null,
@@ -2217,31 +2057,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9001,
-        "cumulative_time": "02:30:01"
+        "cumulative_seconds": 11989,
+        "cumulative_time": "03:19:49"
       },
       {
-        "name": "Jo Hamilton",
+        "name": "Kirin Gilmore",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "45-49",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 108,
-            "time": "00:32:29",
-            "category": "V45"
+            "position": 89,
+            "time": "00:30:12",
+            "category": "V55"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "400",
-            "rank": "170th",
-            "time": "1h58m29s",
-            "category": "Women 45-49 (8th)"
+            "bib": "373",
+            "rank": "173rd",
+            "time": "1h58m48s",
+            "category": "Women 55-59 (3rd)"
           },
           "ramsey_10k": {
-            "position": 105,
-            "time": "52:31",
+            "position": 107,
+            "time": "00:52:44",
             "category": ""
           },
           "killer_mile": null,
@@ -2249,31 +2089,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9058,
-        "cumulative_time": "02:30:58"
+        "cumulative_seconds": 12104,
+        "cumulative_time": "03:21:44"
       },
       {
-        "name": "Caitlin Hammal",
-        "club": "",
-        "gender": "F",
-        "age_group": "45-49",
+        "name": "Eugene Martin",
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 107,
-            "time": "00:32:28",
-            "category": "V45"
+            "position": 91,
+            "time": "00:30:18",
+            "category": "V55"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "401",
-            "rank": "174th",
-            "time": "1h58m49s",
-            "category": "Women 45-49 (9th)"
+            "bib": "493",
+            "rank": "165th",
+            "time": "1h58m9s",
+            "category": "Men 55-59 (11th)"
           },
           "ramsey_10k": {
-            "position": 106,
-            "time": "52:32",
+            "position": 109,
+            "time": "00:53:17",
             "category": ""
           },
           "killer_mile": null,
@@ -2281,8 +2121,72 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9077,
-        "cumulative_time": "02:31:17"
+        "cumulative_seconds": 12104,
+        "cumulative_time": "03:21:44"
+      },
+      {
+        "name": "Monika Martin",
+        "club": "Manx Fell Runners",
+        "gender": "F",
+        "age_group": "50-54",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 92,
+            "time": "00:30:19",
+            "category": "V50"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "81",
+            "rank": "164th",
+            "time": "1h58m9s",
+            "category": "Women 50-54 (3rd)"
+          },
+          "ramsey_10k": {
+            "position": 108,
+            "time": "00:53:17",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 12105,
+        "cumulative_time": "03:21:45"
+      },
+      {
+        "name": "Stewart Jones",
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "50-54",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 85,
+            "time": "00:29:47",
+            "category": "V50"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "446",
+            "rank": "172nd",
+            "time": "1h58m34s",
+            "category": "Men 50-54 (12th)"
+          },
+          "ramsey_10k": {
+            "position": 115,
+            "time": "00:54:07",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 12148,
+        "cumulative_time": "03:22:28"
       },
       {
         "name": "Daniel Radcliffe",
@@ -2305,7 +2209,7 @@
           },
           "ramsey_10k": {
             "position": 91,
-            "time": "50:37",
+            "time": "00:50:37",
             "category": ""
           },
           "killer_mile": null,
@@ -2313,31 +2217,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9128,
-        "cumulative_time": "02:32:08"
+        "cumulative_seconds": 12165,
+        "cumulative_time": "03:22:45"
       },
       {
-        "name": "Michael Hayler",
-        "club": "Manx Fell Runners",
-        "gender": "M",
-        "age_group": "50-54",
+        "name": "Jo Hamilton",
+        "club": "Western AC",
+        "gender": "F",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 102,
-            "time": "00:31:54",
-            "category": "V50"
+            "position": 108,
+            "time": "00:32:29",
+            "category": "V45"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "406",
-            "rank": "197th",
-            "time": "2h1m43s",
-            "category": "Men 50-54 (13th)"
+            "bib": "400",
+            "rank": "170th",
+            "time": "1h58m29s",
+            "category": "Women 45-49 (8th)"
           },
           "ramsey_10k": {
-            "position": 122,
-            "time": "55:31",
+            "position": 105,
+            "time": "00:52:31",
             "category": ""
           },
           "killer_mile": null,
@@ -2345,63 +2249,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9217,
-        "cumulative_time": "02:33:37"
+        "cumulative_seconds": 12209,
+        "cumulative_time": "03:23:29"
       },
       {
-        "name": "Ashley Sandyford-Sykes",
-        "club": "Manx Fell Runners",
-        "gender": "M",
-        "age_group": "50-54",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 87,
-            "time": "00:29:58",
-            "category": "V50"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "585",
-            "rank": "214th",
-            "time": "2h4m0s",
-            "category": "Men 50-54 (15th)"
-          },
-          "ramsey_10k": {
-            "position": 123,
-            "time": "55:32",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 9238,
-        "cumulative_time": "02:33:58"
-      },
-      {
-        "name": "Rowenna Leneghan",
+        "name": "Caitlin Hammal",
         "club": "",
         "gender": "F",
-        "age_group": "40-44",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 113,
-            "time": "00:33:06",
-            "category": "V40"
+            "position": 107,
+            "time": "00:32:28",
+            "category": "V45"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "475",
-            "rank": "190th",
-            "time": "2h1m13s",
-            "category": "Women 40-44 (9th)"
+            "bib": "401",
+            "rank": "174th",
+            "time": "1h58m49s",
+            "category": "Women 45-49 (9th)"
           },
           "ramsey_10k": {
-            "position": 127,
-            "time": "55:45",
+            "position": 106,
+            "time": "00:52:32",
             "category": ""
           },
           "killer_mile": null,
@@ -2409,8 +2281,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9259,
-        "cumulative_time": "02:34:19"
+        "cumulative_seconds": 12229,
+        "cumulative_time": "03:23:49"
+      },
+      {
+        "name": "James Clark",
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "35-39",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 88,
+            "time": "00:30:05",
+            "category": "V35"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "283",
+            "rank": "181st",
+            "time": "1h59m56s",
+            "category": "Men 35-39 (20th)"
+          },
+          "ramsey_10k": {
+            "position": 114,
+            "time": "00:54:00",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 12241,
+        "cumulative_time": "03:24:01"
       },
       {
         "name": "Michelle Davies",
@@ -2433,7 +2337,7 @@
           },
           "ramsey_10k": {
             "position": 117,
-            "time": "54:36",
+            "time": "00:54:36",
             "category": ""
           },
           "killer_mile": null,
@@ -2441,31 +2345,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9270,
-        "cumulative_time": "02:34:30"
+        "cumulative_seconds": 12546,
+        "cumulative_time": "03:29:06"
       },
       {
-        "name": "Danny Taplin",
-        "club": "",
+        "name": "Michael Hayler",
+        "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "35-39",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 82,
-            "time": "00:29:34",
-            "category": "V35"
+            "position": 102,
+            "time": "00:31:54",
+            "category": "V50"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "614",
-            "rank": "237th",
-            "time": "2h7m24s",
-            "category": "Men 35-39 (32nd)"
+            "bib": "406",
+            "rank": "197th",
+            "time": "2h1m43s",
+            "category": "Men 50-54 (13th)"
           },
           "ramsey_10k": {
-            "position": 124,
-            "time": "55:35",
+            "position": 122,
+            "time": "00:55:31",
             "category": ""
           },
           "killer_mile": null,
@@ -2473,8 +2377,72 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9418,
-        "cumulative_time": "02:36:58"
+        "cumulative_seconds": 12548,
+        "cumulative_time": "03:29:08"
+      },
+      {
+        "name": "Ashley Sandyford-Sykes",
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "50-54",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 87,
+            "time": "00:29:58",
+            "category": "V50"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "585",
+            "rank": "214th",
+            "time": "2h4m0s",
+            "category": "Men 50-54 (15th)"
+          },
+          "ramsey_10k": {
+            "position": 123,
+            "time": "00:55:32",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 12570,
+        "cumulative_time": "03:29:30"
+      },
+      {
+        "name": "Rowenna Leneghan",
+        "club": "",
+        "gender": "F",
+        "age_group": "40-44",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 113,
+            "time": "00:33:06",
+            "category": "V40"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "475",
+            "rank": "190th",
+            "time": "2h1m13s",
+            "category": "Women 40-44 (9th)"
+          },
+          "ramsey_10k": {
+            "position": 127,
+            "time": "00:55:45",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 12604,
+        "cumulative_time": "03:30:04"
       },
       {
         "name": "Kailyn Mazzone",
@@ -2497,7 +2465,7 @@
           },
           "ramsey_10k": {
             "position": 112,
-            "time": "53:43",
+            "time": "00:53:43",
             "category": ""
           },
           "killer_mile": null,
@@ -2505,31 +2473,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9418,
-        "cumulative_time": "02:36:58"
+        "cumulative_seconds": 12641,
+        "cumulative_time": "03:30:41"
       },
       {
-        "name": "Rebecca Greatbatch",
-        "club": "Western AC",
-        "gender": "F",
-        "age_group": "Senior",
+        "name": "Danny Taplin",
+        "club": "",
+        "gender": "M",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 116,
-            "time": "00:33:47",
-            "category": "SEN"
+            "position": 82,
+            "time": "00:29:34",
+            "category": "V35"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "389",
-            "rank": "216th",
-            "time": "2h4m11s",
-            "category": "Senior Women (19th)"
+            "bib": "614",
+            "rank": "237th",
+            "time": "2h7m24s",
+            "category": "Men 35-39 (32nd)"
           },
           "ramsey_10k": {
-            "position": 130,
-            "time": "56:25",
+            "position": 124,
+            "time": "00:55:35",
             "category": ""
           },
           "killer_mile": null,
@@ -2537,8 +2505,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9478,
-        "cumulative_time": "02:37:58"
+        "cumulative_seconds": 12753,
+        "cumulative_time": "03:32:33"
       },
       {
         "name": "Andrew Wilson",
@@ -2561,7 +2529,7 @@
           },
           "ramsey_10k": {
             "position": 120,
-            "time": "55:26",
+            "time": "00:55:26",
             "category": ""
           },
           "killer_mile": null,
@@ -2569,31 +2537,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9505,
-        "cumulative_time": "02:38:25"
+        "cumulative_seconds": 12831,
+        "cumulative_time": "03:33:51"
       },
       {
-        "name": "Monica Goldie",
+        "name": "Rebecca Greatbatch",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "55-59",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 119,
-            "time": "00:34:22",
-            "category": "V55"
+            "position": 116,
+            "time": "00:33:47",
+            "category": "SEN"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "379",
-            "rank": "221st",
-            "time": "2h5m0s",
-            "category": "Women 55-59 (5th)"
+            "bib": "389",
+            "rank": "216th",
+            "time": "2h4m11s",
+            "category": "Senior Women (19th)"
           },
           "ramsey_10k": {
-            "position": 135,
-            "time": "58:07",
+            "position": 130,
+            "time": "00:56:25",
             "category": ""
           },
           "killer_mile": null,
@@ -2601,8 +2569,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9562,
-        "cumulative_time": "02:39:22"
+        "cumulative_seconds": 12863,
+        "cumulative_time": "03:34:23"
       },
       {
         "name": "Hannah Taplin",
@@ -2625,7 +2593,7 @@
           },
           "ramsey_10k": {
             "position": 125,
-            "time": "55:36",
+            "time": "00:55:36",
             "category": ""
           },
           "killer_mile": null,
@@ -2633,8 +2601,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9570,
-        "cumulative_time": "02:39:30"
+        "cumulative_seconds": 12906,
+        "cumulative_time": "03:35:06"
+      },
+      {
+        "name": "Monica Goldie",
+        "club": "Western AC",
+        "gender": "F",
+        "age_group": "55-59",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 119,
+            "time": "00:34:22",
+            "category": "V55"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "379",
+            "rank": "221st",
+            "time": "2h5m0s",
+            "category": "Women 55-59 (5th)"
+          },
+          "ramsey_10k": {
+            "position": 135,
+            "time": "00:58:07",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 13049,
+        "cumulative_time": "03:37:29"
       },
       {
         "name": "Emma Keig",
@@ -2657,7 +2657,7 @@
           },
           "ramsey_10k": {
             "position": 133,
-            "time": "56:58",
+            "time": "00:56:58",
             "category": ""
           },
           "killer_mile": null,
@@ -2665,40 +2665,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9736,
-        "cumulative_time": "02:42:16"
-      },
-      {
-        "name": "David Fisher",
-        "club": "Manx Fell Runners",
-        "gender": "M",
-        "age_group": "45-49",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 97,
-            "time": "00:30:55",
-            "category": "V45"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "356",
-            "rank": "256th",
-            "time": "2h11m25s",
-            "category": "Men 45-49 (23rd)"
-          },
-          "ramsey_10k": {
-            "position": 134,
-            "time": "57:37",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 9740,
-        "cumulative_time": "02:42:20"
+        "cumulative_seconds": 13154,
+        "cumulative_time": "03:39:14"
       },
       {
         "name": "Ean Costain",
@@ -2721,7 +2689,7 @@
           },
           "ramsey_10k": {
             "position": 132,
-            "time": "56:49",
+            "time": "00:56:49",
             "category": ""
           },
           "killer_mile": null,
@@ -2729,8 +2697,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9749,
-        "cumulative_time": "02:42:29"
+        "cumulative_seconds": 13158,
+        "cumulative_time": "03:39:18"
+      },
+      {
+        "name": "David Fisher",
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "45-49",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 97,
+            "time": "00:30:55",
+            "category": "V45"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "356",
+            "rank": "256th",
+            "time": "2h11m25s",
+            "category": "Men 45-49 (23rd)"
+          },
+          "ramsey_10k": {
+            "position": 134,
+            "time": "00:57:37",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 13197,
+        "cumulative_time": "03:39:57"
       },
       {
         "name": "Tracy McQuillan",
@@ -2753,7 +2753,7 @@
           },
           "ramsey_10k": {
             "position": 131,
-            "time": "56:36",
+            "time": "00:56:36",
             "category": ""
           },
           "killer_mile": null,
@@ -2761,8 +2761,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9808,
-        "cumulative_time": "02:43:28"
+        "cumulative_seconds": 13204,
+        "cumulative_time": "03:40:04"
       },
       {
         "name": "Neil Brown",
@@ -2785,7 +2785,7 @@
           },
           "ramsey_10k": {
             "position": 140,
-            "time": "59:13",
+            "time": "00:59:13",
             "category": ""
           },
           "killer_mile": null,
@@ -2793,72 +2793,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 9827,
-        "cumulative_time": "02:43:47"
-      },
-      {
-        "name": "Diane Pope",
-        "club": "Western AC",
-        "gender": "F",
-        "age_group": "45-49",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 118,
-            "time": "00:34:02",
-            "category": "V45"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "550",
-            "rank": "271st",
-            "time": "2h15m23s",
-            "category": "Women 45-49 (16th)"
-          },
-          "ramsey_10k": {
-            "position": 163,
-            "time": "68:52",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 10165,
-        "cumulative_time": "02:49:25"
-      },
-      {
-        "name": "Edward Anderson",
-        "club": "Manx Fell Runners",
-        "gender": "M",
-        "age_group": "55-59",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 120,
-            "time": "00:34:45",
-            "category": "V55"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "207",
-            "rank": "274th",
-            "time": "2h15m49s",
-            "category": "Men 55-59 (16th)"
-          },
-          "ramsey_10k": {
-            "position": 147,
-            "time": "60:40",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 10234,
-        "cumulative_time": "02:50:34"
+        "cumulative_seconds": 13380,
+        "cumulative_time": "03:43:00"
       },
       {
         "name": "Sophie McCallum",
@@ -2881,7 +2817,7 @@
           },
           "ramsey_10k": {
             "position": 136,
-            "time": "58:14",
+            "time": "00:58:14",
             "category": ""
           },
           "killer_mile": null,
@@ -2889,31 +2825,31 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 10341,
-        "cumulative_time": "02:52:21"
+        "cumulative_seconds": 13835,
+        "cumulative_time": "03:50:35"
       },
       {
-        "name": "Mike Devereau",
-        "club": "",
+        "name": "Edward Anderson",
+        "club": "Manx Fell Runners",
         "gender": "M",
         "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
-            "position": 94,
-            "time": "00:30:31",
+            "position": 120,
+            "time": "00:34:45",
             "category": "V55"
           },
           "marathon_half": {
             "contest": "half_marathon",
-            "bib": "326",
-            "rank": "299th",
-            "time": "2h24m21s",
-            "category": "Men 55-59 (17th)"
+            "bib": "207",
+            "rank": "274th",
+            "time": "2h15m49s",
+            "category": "Men 55-59 (16th)"
           },
           "ramsey_10k": {
-            "position": 151,
-            "time": "61:35",
+            "position": 147,
+            "time": "01:00:40",
             "category": ""
           },
           "killer_mile": null,
@@ -2921,40 +2857,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 10492,
-        "cumulative_time": "02:54:52"
-      },
-      {
-        "name": "Moira Hall",
-        "club": "Western AC",
-        "gender": "F",
-        "age_group": "70+",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 125,
-            "time": "00:37:09",
-            "category": "V75"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "397",
-            "rank": "282nd",
-            "time": "2h18m32s",
-            "category": "Women 70+ (1st)"
-          },
-          "ramsey_10k": {
-            "position": 164,
-            "time": "68:52",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 10541,
-        "cumulative_time": "02:55:41"
+        "cumulative_seconds": 13874,
+        "cumulative_time": "03:51:14"
       },
       {
         "name": "Ruth Baxendale",
@@ -2977,7 +2881,7 @@
           },
           "ramsey_10k": {
             "position": 138,
-            "time": "59:06",
+            "time": "00:59:06",
             "category": ""
           },
           "killer_mile": null,
@@ -2985,8 +2889,72 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 10548,
-        "cumulative_time": "02:55:48"
+        "cumulative_seconds": 14094,
+        "cumulative_time": "03:54:54"
+      },
+      {
+        "name": "Mike Devereau",
+        "club": "",
+        "gender": "M",
+        "age_group": "55-59",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 94,
+            "time": "00:30:31",
+            "category": "V55"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "326",
+            "rank": "299th",
+            "time": "2h24m21s",
+            "category": "Men 55-59 (17th)"
+          },
+          "ramsey_10k": {
+            "position": 151,
+            "time": "01:01:35",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 14187,
+        "cumulative_time": "03:56:27"
+      },
+      {
+        "name": "Diane Pope",
+        "club": "Western AC",
+        "gender": "F",
+        "age_group": "45-49",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 118,
+            "time": "00:34:02",
+            "category": "V45"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "550",
+            "rank": "271st",
+            "time": "2h15m23s",
+            "category": "Women 45-49 (16th)"
+          },
+          "ramsey_10k": {
+            "position": 163,
+            "time": "01:08:52",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 14297,
+        "cumulative_time": "03:58:17"
       },
       {
         "name": "Amanda Ansermoz",
@@ -3009,7 +2977,7 @@
           },
           "ramsey_10k": {
             "position": 155,
-            "time": "64:13",
+            "time": "01:04:13",
             "category": ""
           },
           "killer_mile": null,
@@ -3017,8 +2985,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 10661,
-        "cumulative_time": "02:57:41"
+        "cumulative_seconds": 14514,
+        "cumulative_time": "04:01:54"
+      },
+      {
+        "name": "Moira Hall",
+        "club": "Western AC",
+        "gender": "F",
+        "age_group": "70+",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 125,
+            "time": "00:37:09",
+            "category": "V75"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "397",
+            "rank": "282nd",
+            "time": "2h18m32s",
+            "category": "Women 70+ (1st)"
+          },
+          "ramsey_10k": {
+            "position": 164,
+            "time": "01:08:52",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 14673,
+        "cumulative_time": "04:04:33"
       },
       {
         "name": "Barbara Watt",
@@ -3041,7 +3041,7 @@
           },
           "ramsey_10k": {
             "position": 153,
-            "time": "62:25",
+            "time": "01:02:25",
             "category": ""
           },
           "killer_mile": null,
@@ -3049,40 +3049,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 11131,
-        "cumulative_time": "03:05:31"
-      },
-      {
-        "name": "Jim Caley",
-        "club": "Manx Fell Runners",
-        "gender": "M",
-        "age_group": "55-59",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 123,
-            "time": "00:36:50",
-            "category": "V55"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "262",
-            "rank": "314th",
-            "time": "2h35m25s",
-            "category": "Men 55-59 (20th)"
-          },
-          "ramsey_10k": {
-            "position": 169,
-            "time": "76:46",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 11535,
-        "cumulative_time": "03:12:15"
+        "cumulative_seconds": 14876,
+        "cumulative_time": "04:07:56"
       },
       {
         "name": "Max Talavera",
@@ -3105,7 +3073,7 @@
           },
           "ramsey_10k": {
             "position": 119,
-            "time": "54:58",
+            "time": "00:54:58",
             "category": ""
           },
           "killer_mile": null,
@@ -3113,8 +3081,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 11649,
-        "cumulative_time": "03:14:09"
+        "cumulative_seconds": 14947,
+        "cumulative_time": "04:09:07"
       },
       {
         "name": "Max Byrne",
@@ -3137,7 +3105,7 @@
           },
           "ramsey_10k": {
             "position": 157,
-            "time": "65:45",
+            "time": "01:05:45",
             "category": ""
           },
           "killer_mile": null,
@@ -3145,8 +3113,40 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 11860,
-        "cumulative_time": "03:17:40"
+        "cumulative_seconds": 15805,
+        "cumulative_time": "04:23:25"
+      },
+      {
+        "name": "Jim Caley",
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "55-59",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 123,
+            "time": "00:36:50",
+            "category": "V55"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "262",
+            "rank": "314th",
+            "time": "2h35m25s",
+            "category": "Men 55-59 (20th)"
+          },
+          "ramsey_10k": {
+            "position": 169,
+            "time": "01:16:46",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 16141,
+        "cumulative_time": "04:29:01"
       },
       {
         "name": "Vernon Thomas",
@@ -3169,7 +3169,7 @@
           },
           "ramsey_10k": {
             "position": 166,
-            "time": "72:35",
+            "time": "01:12:35",
             "category": ""
           },
           "killer_mile": null,
@@ -3177,8 +3177,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 12172,
-        "cumulative_time": "03:22:52"
+        "cumulative_seconds": 16527,
+        "cumulative_time": "04:35:27"
       },
       {
         "name": "Jason Foster",
@@ -3201,7 +3201,7 @@
           },
           "ramsey_10k": {
             "position": 165,
-            "time": "70:28",
+            "time": "01:10:28",
             "category": ""
           },
           "killer_mile": null,
@@ -3209,72 +3209,8 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 12325,
-        "cumulative_time": "03:25:25"
-      },
-      {
-        "name": "Fi Goody",
-        "club": "IoM Veteran Athletes'",
-        "gender": "F",
-        "age_group": "45-49",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 133,
-            "time": "00:49:50",
-            "category": "V45"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "383",
-            "rank": "338th",
-            "time": "2h56m15s",
-            "category": "Women 45-49 (18th)"
-          },
-          "ramsey_10k": {
-            "position": 168,
-            "time": "76:46",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 13565,
-        "cumulative_time": "03:46:05"
-      },
-      {
-        "name": "Angie Goody",
-        "club": "IoM Veteran Athletes'",
-        "gender": "F",
-        "age_group": "50-54",
-        "league": "half_marathon",
-        "races": {
-          "peel_hill": {
-            "position": 134,
-            "time": "00:49:50",
-            "category": "V50"
-          },
-          "marathon_half": {
-            "contest": "half_marathon",
-            "bib": "382",
-            "rank": "339th",
-            "time": "2h56m15s",
-            "category": "Women 50-54 (9th)"
-          },
-          "ramsey_10k": {
-            "position": 167,
-            "time": "76:46",
-            "category": ""
-          },
-          "killer_mile": null,
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 3,
-        "cumulative_seconds": 13565,
-        "cumulative_time": "03:46:05"
+        "cumulative_seconds": 16553,
+        "cumulative_time": "04:35:53"
       },
       {
         "name": "Colin Crooks",
@@ -3297,7 +3233,7 @@
           },
           "ramsey_10k": {
             "position": 161,
-            "time": "68:18",
+            "time": "01:08:18",
             "category": ""
           },
           "killer_mile": null,
@@ -3305,8 +3241,72 @@
           "trail_run": null
         },
         "races_completed": 3,
-        "cumulative_seconds": 13614,
-        "cumulative_time": "03:46:54"
+        "cumulative_seconds": 17712,
+        "cumulative_time": "04:55:12"
+      },
+      {
+        "name": "Fi Goody",
+        "club": "IoM Veteran Athletes'",
+        "gender": "F",
+        "age_group": "45-49",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 133,
+            "time": "00:49:50",
+            "category": "V45"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "383",
+            "rank": "338th",
+            "time": "2h56m15s",
+            "category": "Women 45-49 (18th)"
+          },
+          "ramsey_10k": {
+            "position": 168,
+            "time": "01:16:46",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 18171,
+        "cumulative_time": "05:02:51"
+      },
+      {
+        "name": "Angie Goody",
+        "club": "IoM Veteran Athletes'",
+        "gender": "F",
+        "age_group": "50-54",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 134,
+            "time": "00:49:50",
+            "category": "V50"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "382",
+            "rank": "339th",
+            "time": "2h56m15s",
+            "category": "Women 50-54 (9th)"
+          },
+          "ramsey_10k": {
+            "position": 167,
+            "time": "01:16:46",
+            "category": ""
+          },
+          "killer_mile": null,
+          "foxdale_5": null,
+          "trail_run": null
+        },
+        "races_completed": 3,
+        "cumulative_seconds": 18171,
+        "cumulative_time": "05:02:51"
       }
     ],
     "unassigned": []
