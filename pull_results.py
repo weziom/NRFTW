@@ -563,8 +563,9 @@ def main():
         "finishers": len(marathon_half),
     }
 
-    # Fixed race column order: peel_hill, marathon_half, then the rest as declared above.
-    races_ordered = {"peel_hill": races_meta["peel_hill"], "marathon_half": races_meta["marathon_half"]}
+    # Fixed race column order: marathon_half is always shown first (it's the
+    # series-opening event), then peel_hill, then the rest as declared above.
+    races_ordered = {"marathon_half": races_meta["marathon_half"], "peel_hill": races_meta["peel_hill"]}
     for rdef in other_race_defs:
         races_ordered[rdef["key"]] = races_meta[rdef["key"]]
 

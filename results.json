@@ -1,19 +1,19 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-12T11:45:34Z",
+  "generated_at": "2026-08-12T14:04:36Z",
   "races": {
-    "peel_hill": {
-      "label": "Peel Hill",
-      "status": "complete",
-      "source": "peelhill_2026.csv",
-      "finishers": 135
-    },
     "marathon_half": {
       "label": "Marathon / Half Marathon",
       "status": "complete",
       "source": "https://my.raceresult.com/381348/",
       "finishers": 447
+    },
+    "peel_hill": {
+      "label": "Peel Hill",
+      "status": "complete",
+      "source": "peelhill_2026.csv",
+      "finishers": 135
     },
     "ramsey_10k": {
       "label": "Ramsey 10K",

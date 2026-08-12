@@ -271,7 +271,7 @@
 <div class="wrap">
   <header class="site">
     <img class="logo" src="images/logo.jpg" alt="No Rest For the Wicked logo">
-    <h1>No Rest For the Wicked 2026</h1>
+    <h1 id="eventName">No Rest For the Wicked 2026</h1>
   </header>
 
   <div class="controls">
@@ -279,6 +279,10 @@
     <div class="controls-right">
       <a class="download-pdf" id="downloadPdf" href="#" download hidden>⬇ PDF</a>
       <input type="search" id="searchInput" placeholder="Search name or club…" aria-label="Search runners">
+      <label class="sortby">
+        Year
+        <select id="yearSelect"></select>
+      </label>
       <label class="sortby">
         Gender
         <select id="genderFilterSelect"></select>
@@ -331,7 +335,13 @@
     { key: "m", label: "Male" },
   ];
 
+  const YEARS = [
+    { key: "2026", label: "2026", file: "results.json" },
+    { key: "2025", label: "2025", file: "2025.json" },
+  ];
+
   let DATA = null;
+  let activeYear = YEARS[0].key;
   let activeLeague = "half_marathon";
   let sortState = { col: "cumulative_seconds", dir: "asc" };
   let genderFilter = "all";
@@ -538,6 +548,22 @@
     select.value = genderFilter;
   }
 
+  function buildYearSelect() {
+    const select = document.getElementById("yearSelect");
+    if (!select.options.length) {
+      YEARS.forEach((opt) => {
+        const el = document.createElement("option");
+        el.value = opt.key;
+        el.textContent = opt.label;
+        select.appendChild(el);
+      });
+      select.addEventListener("change", () => {
+        loadYear(select.value);
+      });
+    }
+    select.value = activeYear;
+  }
+
   document.getElementById("searchInput").addEventListener("input", () => {
     if (DATA) buildRows();
   });
@@ -556,6 +582,9 @@
   }
 
   function render() {
+    document.getElementById("eventName").textContent = DATA.event;
+    document.title = DATA.event + " — Leaderboard";
+    buildYearSelect();
     buildTabs();
     buildGenderFilterSelect();
     buildSortSelect();
@@ -565,22 +594,28 @@
     document.getElementById("generatedAt").textContent = "Last updated " + new Date(DATA.generated_at).toLocaleString();
   }
 
-  fetch("results.json")
-    .then((r) => {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-    })
-    .then((data) => {
-      DATA = data;
-      render();
-    })
-    .catch((err) => {
-      document.querySelector(".wrap").insertAdjacentHTML(
-        "afterbegin",
-        '<p style="color:#b3122a;font-weight:600">Could not load results.json (' + err.message + '). ' +
-        "If you opened this file directly, serve the folder over HTTP instead, e.g. <code>python -m http.server</code>, then open http://localhost:8000/.</p>"
-      );
-    });
+  function loadYear(yearKey) {
+    const year = YEARS.find((y) => y.key === yearKey) || YEARS[0];
+    fetch(year.file)
+      .then((r) => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then((data) => {
+        DATA = data;
+        activeYear = year.key;
+        render();
+      })
+      .catch((err) => {
+        document.querySelector(".wrap").insertAdjacentHTML(
+          "afterbegin",
+          '<p style="color:#b3122a;font-weight:600">Could not load ' + year.file + " (" + err.message + '). ' +
+          "If you opened this file directly, serve the folder over HTTP instead, e.g. <code>python -m http.server</code>, then open http://localhost:8000/.</p>"
+        );
+      });
+  }
+
+  loadYear(activeYear);
 })();
 </script>
 </body>
