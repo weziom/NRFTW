@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .DS_Store
 Page Requirements.txt
+raceresult_cache/

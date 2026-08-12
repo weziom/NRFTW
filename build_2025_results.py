@@ -43,7 +43,8 @@ EVENT_NAME = "Bell Burton No Rest For the Wicked 2025"
 BASE_DIR = Path(__file__).resolve().parent
 RESULTS_DIR = BASE_DIR / "results"
 OUTPUT_PATH = BASE_DIR / "2025.json"
-ANOMALIES_PATH = BASE_DIR / "anomalies_2025.txt"
+ANOMALIES_DIR = BASE_DIR / "anomalies"
+ANOMALIES_PATH = ANOMALIES_DIR / "2025.txt"
 
 MARATHON_HALF_EVENT_ID_2025 = "327247"
 RAMSEY_10K_EVENT_ID_2025 = "351414"
@@ -176,9 +177,9 @@ def main():
     )
 
     print(f"Fetching 2025 Marathon/Half Marathon from raceresult event {MARATHON_HALF_EVENT_ID_2025}...")
-    mh_source_entries = fetch_marathon_half(event_id=MARATHON_HALF_EVENT_ID_2025)
+    mh_source_entries = fetch_marathon_half(event_id=MARATHON_HALF_EVENT_ID_2025, use_cache=True)
     print(f"Fetching 2025 Ramsey 10K from raceresult event {RAMSEY_10K_EVENT_ID_2025}...")
-    ramsey_source_entries = fetch_10k_race(event_id=RAMSEY_10K_EVENT_ID_2025)
+    ramsey_source_entries = fetch_10k_race(event_id=RAMSEY_10K_EVENT_ID_2025, use_cache=True)
 
     mh_matched, mh_anomalies = match_by_full_name(entries, mh_source_entries, "Marathon/Half Marathon (raceresult 2025)")
     ramsey_matched, ramsey_anomalies = match_by_full_name(entries, ramsey_source_entries, "Ramsey 10K (raceresult 2025)")
@@ -240,6 +241,7 @@ def main():
     anomaly_lines = [f"Bell Burton No Rest For the Wicked 2025 - anomalies as of {generated_at}", ""]
     for a in anomalies:
         anomaly_lines.append(f"[{a['type']}] {a['detail']}")
+    ANOMALIES_DIR.mkdir(exist_ok=True)
     ANOMALIES_PATH.write_text("\n".join(anomaly_lines) + "\n", encoding="utf-8")
 
     print(f"Wrote {OUTPUT_PATH}")

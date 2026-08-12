@@ -54,13 +54,13 @@ def build_year(year, mh_event_id, ramsey_event_id):
     anomalies = []
 
     print(f"[{year}] Fetching Marathon/Half from raceresult event {mh_event_id}...")
-    roster = [e for e in fetch_marathon_half(event_id=mh_event_id) if e["contest"] in ("marathon", "half_marathon")]
+    roster = [e for e in fetch_marathon_half(event_id=mh_event_id, use_cache=True) if e["contest"] in ("marathon", "half_marathon")]
 
     ramsey_matched = {}
     ramsey_source_entries = []
     if ramsey_event_id:
         print(f"[{year}] Fetching 10K from raceresult event {ramsey_event_id}...")
-        ramsey_source_entries = fetch_10k_race(event_id=ramsey_event_id)
+        ramsey_source_entries = fetch_10k_race(event_id=ramsey_event_id, use_cache=True)
         ramsey_matched, ramsey_anomalies = match_by_full_name(roster, ramsey_source_entries, "10K")
         # Unlike the live pipeline, most Marathon/Half runners were never
         # expected to also run the standalone 10K - "no_result" here just
@@ -144,13 +144,14 @@ def build_year(year, mh_event_id, ramsey_event_id):
     }
 
     output_path = BASE_DIR / f"{year}.json"
-    anomalies_path = BASE_DIR / f"anomalies_{year}.txt"
+    anomalies_path = BASE_DIR / "anomalies" / f"{year}.txt"
 
     output_path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
 
     anomaly_lines = [f"No Rest For the Wicked {year} (incomplete archive) - anomalies as of {generated_at}", ""]
     for a in anomalies:
         anomaly_lines.append(f"[{a['type']}] {a['detail']}")
+    anomalies_path.parent.mkdir(exist_ok=True)
     anomalies_path.write_text("\n".join(anomaly_lines) + "\n", encoding="utf-8")
 
     print(f"[{year}] Wrote {output_path}")

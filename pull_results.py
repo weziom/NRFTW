@@ -45,8 +45,10 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, Tabl
 BASE_DIR = Path(__file__).resolve().parent
 RESULTS_DIR = BASE_DIR / "results"
 PDF_DIR = BASE_DIR / "pdfs"
+CACHE_DIR = BASE_DIR / "raceresult_cache"
 OUTPUT_PATH = BASE_DIR / "results.json"
-ANOMALIES_PATH = BASE_DIR / "anomalies.txt"
+ANOMALIES_DIR = BASE_DIR / "anomalies"
+ANOMALIES_PATH = ANOMALIES_DIR / "2026.txt"
 
 LEAGUE_LABELS = {"half_marathon": "Half Marathon", "marathon": "Marathon"}
 
@@ -230,6 +232,26 @@ def load_file_race(race_def):
     return entries, meta, anomalies
 
 
+def _cache_path(event_id, tab, kind):
+    return CACHE_DIR / f"{event_id}_{tab}_{kind}.json"
+
+
+def _get_json(session, url, cache_path=None, params=None):
+    """GET a JSON endpoint. When cache_path is given: if it already exists,
+    read the raw response from disk instead of hitting the network; otherwise
+    fetch normally and save the raw response there. Only historic/frozen
+    events should pass a cache_path - the live current-season event is
+    fetched fresh every run (no cache_path) since its results change during
+    the event."""
+    if cache_path and cache_path.exists():
+        return json.loads(cache_path.read_text(encoding="utf-8"))
+    data = session.get(url, params=params, timeout=30).json()
+    if cache_path:
+        cache_path.parent.mkdir(exist_ok=True)
+        cache_path.write_text(json.dumps(data), encoding="utf-8")
+    return data
+
+
 def _raceresult_list_name(config):
     """Find the 'Result Overall' list name. Newer raceresult events put list
     definitions at Tab.Config.Lists; some older events (seen on a 2021 event)
@@ -256,14 +278,14 @@ def _find_col(col, *candidates):
     return None
 
 
-def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
+def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB, use_cache=False):
     session = requests.Session()
     session.headers.update(HEADERS)
 
-    config = session.get(
-        f"https://my.raceresult.com/{event_id}/{tab}/config",
-        timeout=30,
-    ).json()
+    config = _get_json(
+        session, f"https://my.raceresult.com/{event_id}/{tab}/config",
+        cache_path=_cache_path(event_id, tab, "config") if use_cache else None,
+    )
     server = config["server"]
     key = config["key"]
 
@@ -282,11 +304,11 @@ def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
         "openedGroups": "{}",
         "term": "",
     }
-    payload = session.get(
-        f"https://{server}/{event_id}/{tab}/list",
+    payload = _get_json(
+        session, f"https://{server}/{event_id}/{tab}/list",
+        cache_path=_cache_path(event_id, tab, "list") if use_cache else None,
         params=params,
-        timeout=30,
-    ).json()
+    )
 
     col = {field: i for i, field in enumerate(payload["DataFields"])}
     name_col = _find_col(col, "NamePlusBib", "DisplayName")
@@ -335,7 +357,7 @@ def fetch_marathon_half(event_id=MARATHON_EVENT_ID, tab=MARATHON_TAB):
     return entries
 
 
-def fetch_10k_race(event_id, tab="results"):
+def fetch_10k_race(event_id, tab="results", use_cache=False):
     """Fetch a standalone raceresult 10K-style event (e.g. a historic Ramsey
     10K) - same API shape as fetch_marathon_half, but these events use
     different field names (CLUB instead of ResolvedAffiliatedClubName,
@@ -346,7 +368,10 @@ def fetch_10k_race(event_id, tab="results"):
     session = requests.Session()
     session.headers.update(HEADERS)
 
-    config = session.get(f"https://my.raceresult.com/{event_id}/{tab}/config", timeout=30).json()
+    config = _get_json(
+        session, f"https://my.raceresult.com/{event_id}/{tab}/config",
+        cache_path=_cache_path(event_id, tab, "config") if use_cache else None,
+    )
     server = config["server"]
     key = config["key"]
 
@@ -365,7 +390,11 @@ def fetch_10k_race(event_id, tab="results"):
         "openedGroups": "{}",
         "term": "",
     }
-    payload = session.get(f"https://{server}/{event_id}/{tab}/list", params=params, timeout=30).json()
+    payload = _get_json(
+        session, f"https://{server}/{event_id}/{tab}/list",
+        cache_path=_cache_path(event_id, tab, "list") if use_cache else None,
+        params=params,
+    )
 
     col = {field: i for i, field in enumerate(payload["DataFields"])}
     name_col = _find_col(col, "NamePlusBib", "DisplayName")
@@ -695,6 +724,7 @@ def main():
         anomaly_lines.append(f"[{a['type']}] {a['detail']}")
     if not anomalies:
         anomaly_lines.append("(none)")
+    ANOMALIES_DIR.mkdir(exist_ok=True)
     ANOMALIES_PATH.write_text("\n".join(anomaly_lines) + "\n", encoding="utf-8")
 
     print(f"Wrote {OUTPUT_PATH}")
