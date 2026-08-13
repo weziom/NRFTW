@@ -62,6 +62,12 @@ HEADERS = {"User-Agent": "Mozilla/5.0"}
 KILLER_MILE_RACE_ID = "2091"
 KILLER_MILE_SOURCE_URL = f"https://www.racetek-live.co.uk/website/public_results/{KILLER_MILE_RACE_ID}/complete_results/"
 
+# These races publish results automatically (fetched live every run) rather
+# than waiting on a manually-uploaded CSV, so the webpage never needs to show
+# them as overdue - the cutoff_time/"Results pending" state below only
+# applies to races that aren't in this set.
+LIVE_FEED_RACE_KEYS = {"marathon_half", "killer_mile"}
+
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".pdf"}
 
 # raceresult's dynamic-format expression that colors women's rows pink - the
@@ -70,13 +76,16 @@ GENDER_FIELD_EXPR = 'if([SEX]="f";"C(#E858A0)";"")'
 
 # Order here is the display/column order used in results.json. The series
 # opens with the Marathon/Half Marathon on 2026-08-09, then each race below
-# runs daily thereafter, all starting at 7pm.
+# runs daily thereafter, all starting at 7pm. cutoff_time is when the
+# webpage gives up waiting and shows "Results pending" if a CSV still
+# hasn't been dropped in (races with a live feed are exempt - see
+# LIVE_FEED_RACE_KEYS).
 RACE_FILE_DEFS = [
-    {"key": "peel_hill", "label": "Peel Hill", "prefix": "peelhill", "start_time": "7:00 PM", "date": "2026-08-10"},
-    {"key": "ramsey_10k", "label": "Ramsey 10K", "prefix": "ramsey10k", "start_time": "7:00 PM", "date": "2026-08-11"},
-    {"key": "killer_mile", "label": "Killer Mile", "prefix": "killermile", "start_time": "7:00 PM", "date": "2026-08-12"},
-    {"key": "foxdale_5", "label": "Foxdale 5", "prefix": "foxdale5", "start_time": "7:00 PM", "date": "2026-08-13"},
-    {"key": "trail_run", "label": "Trail", "prefix": "trailrun", "start_time": "7:00 PM", "date": "2026-08-14"},
+    {"key": "peel_hill", "label": "Peel Hill", "prefix": "peelhill", "start_time": "7:00 PM", "date": "2026-08-10", "cutoff_time": "8:00 PM"},
+    {"key": "ramsey_10k", "label": "Ramsey 10K", "prefix": "ramsey10k", "start_time": "7:00 PM", "date": "2026-08-11", "cutoff_time": "8:30 PM"},
+    {"key": "killer_mile", "label": "Killer Mile", "prefix": "killermile", "start_time": "7:00 PM", "date": "2026-08-12", "cutoff_time": "8:30 PM"},
+    {"key": "foxdale_5", "label": "Foxdale 5", "prefix": "foxdale5", "start_time": "7:00 PM", "date": "2026-08-13", "cutoff_time": "8:30 PM"},
+    {"key": "trail_run", "label": "Trail", "prefix": "trailrun", "start_time": "7:00 PM", "date": "2026-08-14", "cutoff_time": "8:30 PM"},
 ]
 
 # Known spelling/format variants of a runner's name as it appears in a race's
@@ -237,6 +246,7 @@ def load_file_race(race_def):
         "finishers": len(entries),
         "start_time": race_def["start_time"],
         "date": race_def["date"],
+        "cutoff_time": race_def["cutoff_time"],
     }
     return entries, meta, anomalies
 
@@ -747,6 +757,9 @@ def main():
     races_ordered = {"marathon_half": races_meta["marathon_half"], "peel_hill": races_meta["peel_hill"]}
     for rdef in other_race_defs:
         races_ordered[rdef["key"]] = races_meta[rdef["key"]]
+
+    for key, meta in races_ordered.items():
+        meta["live_feed"] = key in LIVE_FEED_RACE_KEYS
 
     entrants, match_anomalies = build_leaderboard(roster, marathon_half, other_races)
     anomalies.extend(match_anomalies)

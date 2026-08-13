@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-13T17:16:46Z",
+  "generated_at": "2026-08-13T17:50:45Z",
   "races": {
     "marathon_half": {
       "label": "Marathon / Half Marathon",
@@ -12,7 +12,8 @@
         "marathon": "8:30 AM",
         "half_marathon": "9:00 AM"
       },
-      "date": "2026-08-09"
+      "date": "2026-08-09",
+      "live_feed": true
     },
     "peel_hill": {
       "label": "Peel Hill",
@@ -20,7 +21,9 @@
       "source": "peelhill_2026.csv",
       "finishers": 135,
       "start_time": "7:00 PM",
-      "date": "2026-08-10"
+      "date": "2026-08-10",
+      "cutoff_time": "8:00 PM",
+      "live_feed": false
     },
     "ramsey_10k": {
       "label": "Ramsey 10K",
@@ -28,7 +31,9 @@
       "source": "ramsey10k_2026.csv",
       "finishers": 169,
       "start_time": "7:00 PM",
-      "date": "2026-08-11"
+      "date": "2026-08-11",
+      "cutoff_time": "8:30 PM",
+      "live_feed": false
     },
     "killer_mile": {
       "label": "Killer Mile",
@@ -36,7 +41,8 @@
       "source": "https://www.racetek-live.co.uk/website/public_results/2091/complete_results/",
       "finishers": 138,
       "start_time": "7:00 PM",
-      "date": "2026-08-12"
+      "date": "2026-08-12",
+      "live_feed": true
     },
     "foxdale_5": {
       "label": "Foxdale 5",
@@ -44,7 +50,9 @@
       "source": null,
       "finishers": 0,
       "start_time": "7:00 PM",
-      "date": "2026-08-13"
+      "date": "2026-08-13",
+      "cutoff_time": "8:30 PM",
+      "live_feed": false
     },
     "trail_run": {
       "label": "Trail",
@@ -52,7 +60,9 @@
       "source": null,
       "finishers": 0,
       "start_time": "7:00 PM",
-      "date": "2026-08-14"
+      "date": "2026-08-14",
+      "cutoff_time": "8:30 PM",
+      "live_feed": false
     }
   },
   "leagues": {

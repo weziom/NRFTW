@@ -305,7 +305,7 @@
     <span class="next-race-icon" aria-hidden="true">🏁</span>
     <span class="next-race-label" id="nextRaceLabel">Next race</span>
     <span class="next-race-name" id="nextRaceName"></span>
-    <span class="next-race-label starts">Starts</span>
+    <span class="next-race-label starts" id="nextRaceStartsLabel">Starts</span>
     <span class="next-race-time-value" id="nextRaceTime"></span>
   </div>
 
@@ -623,6 +623,15 @@
     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   }
 
+  function parseRaceDateTime(dateStr, timeStr) {
+    const m = (timeStr || "").match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+    if (!dateStr || !m) return null;
+    let hours = parseInt(m[1], 10) % 12;
+    if (m[3].toUpperCase() === "PM") hours += 12;
+    const [y, mo, d] = dateStr.split("-").map(Number);
+    return new Date(y, mo - 1, d, hours, parseInt(m[2], 10), 0);
+  }
+
   function updateNextRace() {
     const banner = document.getElementById("nextRaceBanner");
     const nextKey = RACE_ORDER.find((rk) => DATA.races[rk] && DATA.races[rk].status === "pending");
@@ -639,8 +648,24 @@
     if (time && typeof time === "object") {
       time = time[activeLeague] || time.marathon || time.half_marathon;
     }
-    document.getElementById("nextRaceLabel").textContent = nextKey === RACE_ORDER[RACE_ORDER.length - 1] ? "Finale" : "Next race";
+    // Once the scheduled start time has passed but results aren't in yet
+    // (status still "pending"), show "In progress" instead of a start time -
+    // and if it drags on past the cutoff, "Results pending" instead. Races
+    // with a live feed fetch fresh every run and never sit stuck pending, so
+    // they're exempt from the cutoff/"Results pending" state.
+    const startDateTime = parseRaceDateTime(race.date, time);
+    const inProgress = startDateTime && new Date() >= startDateTime;
+    const cutoffDateTime = !race.live_feed && parseRaceDateTime(race.date, race.cutoff_time);
+    const resultsPending = cutoffDateTime && new Date() >= cutoffDateTime;
+
+    document.getElementById("nextRaceLabel").textContent = resultsPending
+      ? "Results pending"
+      : inProgress
+      ? "In progress"
+      : nextKey === RACE_ORDER[RACE_ORDER.length - 1] ? "Finale" : "Next race";
     document.getElementById("nextRaceName").textContent = race.label;
+    document.getElementById("nextRaceStartsLabel").hidden = inProgress;
+    document.getElementById("nextRaceTime").hidden = inProgress;
     document.getElementById("nextRaceTime").textContent = time || "TBC";
     banner.hidden = false;
   }
