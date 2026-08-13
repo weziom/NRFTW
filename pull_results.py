@@ -68,13 +68,14 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".pdf"}
 # most reliable gender signal available in the Marathon/Half Marathon feed.
 GENDER_FIELD_EXPR = 'if([SEX]="f";"C(#E858A0)";"")'
 
-# Order here is the display/column order used in results.json.
+# Order here is the display/column order used in results.json. Every race
+# after the Marathon/Half Marathon opener starts at 7pm.
 RACE_FILE_DEFS = [
-    {"key": "peel_hill", "label": "Peel Hill", "prefix": "peelhill"},
-    {"key": "ramsey_10k", "label": "Ramsey 10K", "prefix": "ramsey10k"},
-    {"key": "killer_mile", "label": "Killer Mile", "prefix": "killermile"},
-    {"key": "foxdale_5", "label": "Foxdale 5", "prefix": "foxdale5"},
-    {"key": "trail_run", "label": "Trail", "prefix": "trailrun"},
+    {"key": "peel_hill", "label": "Peel Hill", "prefix": "peelhill", "start_time": "7:00 PM"},
+    {"key": "ramsey_10k", "label": "Ramsey 10K", "prefix": "ramsey10k", "start_time": "7:00 PM"},
+    {"key": "killer_mile", "label": "Killer Mile", "prefix": "killermile", "start_time": "7:00 PM"},
+    {"key": "foxdale_5", "label": "Foxdale 5", "prefix": "foxdale5", "start_time": "7:00 PM"},
+    {"key": "trail_run", "label": "Trail", "prefix": "trailrun", "start_time": "7:00 PM"},
 ]
 
 # Known spelling/format variants of a runner's name as it appears in a race's
@@ -233,6 +234,7 @@ def load_file_race(race_def):
         "status": status,
         "source": ", ".join(p.name for p in csv_files) if csv_files else None,
         "finishers": len(entries),
+        "start_time": race_def["start_time"],
     }
     return entries, meta, anomalies
 
@@ -718,6 +720,7 @@ def main():
                 "status": "complete",
                 "source": KILLER_MILE_SOURCE_URL,
                 "finishers": len(entries),
+                "start_time": rdef["start_time"],
             }
             file_anomalies = []
         else:
@@ -732,6 +735,7 @@ def main():
         "status": "complete",
         "source": MARATHON_SOURCE_URL,
         "finishers": len(marathon_half),
+        "start_time": {"marathon": "8:30 AM", "half_marathon": "9:00 AM"},
     }
 
     # Fixed race column order: marathon_half is always shown first (it's the

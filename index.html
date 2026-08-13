@@ -103,20 +103,61 @@
     line-height: 1;
   }
 
-  .controls {
+  .next-race {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
+    gap: 14px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), #7a0c1c);
+    box-shadow: var(--shadow);
+    color: var(--accent-ink);
   }
-  .controls nav.tabs { margin-bottom: 0; }
+  .next-race[hidden] { display: none; }
+  .next-race-icon {
+    font-size: 1.7rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .next-race-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .next-race-label, .next-race-time-label {
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.82;
+  }
+  .next-race-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .next-race-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    margin-left: auto;
+    padding-left: 18px;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+  }
+  .next-race-time-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
   .controls-right {
     display: flex;
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
+    margin-bottom: 16px;
   }
   #searchInput {
     font-size: 0.85rem;
@@ -255,10 +296,21 @@
     header.site h1 { font-size: 1.15rem; }
     nav.tabs button { padding: 14px 18px; font-size: 0.95rem; min-width: 0; flex: 1 1 auto; }
     nav.tabs button .bg-distance { font-size: 1.7rem; right: 8px; bottom: -4px; }
-    .controls { justify-content: center; }
     .controls-right { width: 100%; justify-content: center; }
     #searchInput { flex: 1 1 100%; max-width: none; }
     label.sortby { flex: 1 1 auto; justify-content: center; }
+    a.download-pdf { flex: 1 1 auto; justify-content: center; }
+    .next-race { flex-wrap: wrap; justify-content: center; text-align: center; }
+    .next-race-body { align-items: center; }
+    .next-race-time {
+      margin-left: 0;
+      align-items: center;
+      padding-left: 0;
+      border-left: none;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.35);
+      width: 100%;
+    }
     table { font-size: 0.8rem; }
     thead th, tbody td { padding: 8px 8px; }
     /* Club is column 4 (#, Name, Cumulative, Club, ...races) - drop it on
@@ -274,24 +326,35 @@
     <h1 id="eventName">No Rest For the Wicked 2026</h1>
   </header>
 
-  <div class="controls">
-    <nav class="tabs" id="tabs" role="tablist" aria-label="League"></nav>
-    <div class="controls-right">
-      <a class="download-pdf" id="downloadPdf" href="#" download hidden>⬇ PDF</a>
-      <input type="search" id="searchInput" placeholder="Search name or club…" aria-label="Search runners">
-      <label class="sortby">
-        Year
-        <select id="yearSelect"></select>
-      </label>
-      <label class="sortby">
-        Gender
-        <select id="genderFilterSelect"></select>
-      </label>
-      <label class="sortby">
-        Sort by
-        <select id="sortBySelect"></select>
-      </label>
+  <div class="next-race" id="nextRaceBanner" hidden>
+    <span class="next-race-icon" aria-hidden="true">🏁</span>
+    <div class="next-race-body">
+      <span class="next-race-label">Next race</span>
+      <span class="next-race-name" id="nextRaceName"></span>
     </div>
+    <div class="next-race-time">
+      <span class="next-race-time-label">Starts</span>
+      <span class="next-race-time-value" id="nextRaceTime"></span>
+    </div>
+  </div>
+
+  <nav class="tabs" id="tabs" role="tablist" aria-label="League"></nav>
+
+  <div class="controls-right">
+    <input type="search" id="searchInput" placeholder="Search name or club…" aria-label="Search runners">
+    <label class="sortby">
+      Year
+      <select id="yearSelect"></select>
+    </label>
+    <label class="sortby">
+      Gender
+      <select id="genderFilterSelect"></select>
+    </label>
+    <label class="sortby">
+      Sort by
+      <select id="sortBySelect"></select>
+    </label>
+    <a class="download-pdf" id="downloadPdf" href="#" download hidden>⬇ PDF</a>
   </div>
 
   <div class="panel">
@@ -584,11 +647,29 @@
     }
   }
 
+  function updateNextRace() {
+    const banner = document.getElementById("nextRaceBanner");
+    const nextKey = RACE_ORDER.find((rk) => DATA.races[rk] && DATA.races[rk].status === "pending");
+    if (!nextKey) {
+      banner.hidden = true;
+      return;
+    }
+    const race = DATA.races[nextKey];
+    let time = race.start_time;
+    if (time && typeof time === "object") {
+      time = time[activeLeague] || time.marathon || time.half_marathon;
+    }
+    document.getElementById("nextRaceName").textContent = race.label;
+    document.getElementById("nextRaceTime").textContent = time || "TBC";
+    banner.hidden = false;
+  }
+
   function render() {
     document.getElementById("eventName").textContent = DATA.event;
     document.title = DATA.event + " — Leaderboard";
     buildYearSelect();
     buildTabs();
+    updateNextRace();
     buildGenderFilterSelect();
     buildSortSelect();
     buildHead();
