@@ -303,7 +303,7 @@
 
   <div class="next-race" id="nextRaceBanner" hidden>
     <span class="next-race-icon" aria-hidden="true">🏁</span>
-    <span class="next-race-label">Next race</span>
+    <span class="next-race-label" id="nextRaceLabel">Next race</span>
     <span class="next-race-name" id="nextRaceName"></span>
     <span class="next-race-label starts">Starts</span>
     <span class="next-race-time-value" id="nextRaceTime"></span>
@@ -639,6 +639,7 @@
     if (time && typeof time === "object") {
       time = time[activeLeague] || time.marathon || time.half_marathon;
     }
+    document.getElementById("nextRaceLabel").textContent = nextKey === RACE_ORDER[RACE_ORDER.length - 1] ? "Finale" : "Next race";
     document.getElementById("nextRaceName").textContent = race.label;
     document.getElementById("nextRaceTime").textContent = time || "TBC";
     banner.hidden = false;
