@@ -618,14 +618,23 @@
     }
   }
 
+  function todayISODate() {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  }
+
   function updateNextRace() {
     const banner = document.getElementById("nextRaceBanner");
     const nextKey = RACE_ORDER.find((rk) => DATA.races[rk] && DATA.races[rk].status === "pending");
-    if (!nextKey) {
+    const race = nextKey && DATA.races[nextKey];
+    // Only show the banner on the next pending race's own day - once its
+    // results are processed (status flips to "complete"), the search moves
+    // on to the following race, whose date won't match today, so the banner
+    // disappears for the rest of the day instead of jumping ahead early.
+    if (!race || race.date !== todayISODate()) {
       banner.hidden = true;
       return;
     }
-    const race = DATA.races[nextKey];
     let time = race.start_time;
     if (time && typeof time === "object") {
       time = time[activeLeague] || time.marathon || time.half_marathon;
