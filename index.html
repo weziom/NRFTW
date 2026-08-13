@@ -105,8 +105,9 @@
 
   .next-race {
     display: flex;
-    align-items: center;
-    gap: 14px;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 10px;
     padding: 14px 20px;
     margin-bottom: 20px;
     border-radius: 14px;
@@ -116,39 +117,23 @@
   }
   .next-race[hidden] { display: none; }
   .next-race-icon {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     line-height: 1;
     flex-shrink: 0;
+    align-self: center;
   }
-  .next-race-body {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .next-race-label, .next-race-time-label {
+  .next-race-label {
     font-size: 0.66rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     opacity: 0.82;
   }
-  .next-race-name {
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-  }
-  .next-race-time {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 2px;
-    margin-left: auto;
-    padding-left: 18px;
-    border-left: 1px solid rgba(255, 255, 255, 0.35);
-  }
-  .next-race-time-value {
+  .next-race-label.starts { margin-left: 8px; }
+  .next-race-name, .next-race-time-value {
     font-size: 1.15rem;
     font-weight: 800;
+    letter-spacing: -0.01em;
     font-variant-numeric: tabular-nums;
   }
 
@@ -300,17 +285,7 @@
     #searchInput { flex: 1 1 100%; max-width: none; }
     label.sortby { flex: 1 1 auto; justify-content: center; }
     a.download-pdf { flex: 1 1 auto; justify-content: center; }
-    .next-race { flex-wrap: wrap; justify-content: center; text-align: center; }
-    .next-race-body { align-items: center; }
-    .next-race-time {
-      margin-left: 0;
-      align-items: center;
-      padding-left: 0;
-      border-left: none;
-      padding-top: 8px;
-      border-top: 1px solid rgba(255, 255, 255, 0.35);
-      width: 100%;
-    }
+    .next-race { justify-content: center; text-align: center; }
     table { font-size: 0.8rem; }
     thead th, tbody td { padding: 8px 8px; }
     /* Club is column 4 (#, Name, Cumulative, Club, ...races) - drop it on
@@ -328,14 +303,10 @@
 
   <div class="next-race" id="nextRaceBanner" hidden>
     <span class="next-race-icon" aria-hidden="true">🏁</span>
-    <div class="next-race-body">
-      <span class="next-race-label">Next race</span>
-      <span class="next-race-name" id="nextRaceName"></span>
-    </div>
-    <div class="next-race-time">
-      <span class="next-race-time-label">Starts</span>
-      <span class="next-race-time-value" id="nextRaceTime"></span>
-    </div>
+    <span class="next-race-label">Next race</span>
+    <span class="next-race-name" id="nextRaceName"></span>
+    <span class="next-race-label starts">Starts</span>
+    <span class="next-race-time-value" id="nextRaceTime"></span>
   </div>
 
   <nav class="tabs" id="tabs" role="tablist" aria-label="League"></nav>
