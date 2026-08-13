@@ -94,6 +94,13 @@ RACE_FILE_DEFS = [
 # Keys are matched case-insensitively against the name as read from the file.
 NAME_ALIASES = {
     "jeffrey m moore": "Jeffrey Moore",
+    "nick colburn": "Nicholas Colburn",
+    "mike garrett": "Michael Garrett",
+    "piotr tkaizyk": "Piotr Tkaczyk",
+    "elliot moore": "Elliott Moore",
+    "jonathan pugh": "Derek Jonathan Pugh",
+    "keiren rowley": "Kieran Rowley",
+    "max burn": "Max Byrne",
 }
 
 
