@@ -578,6 +578,9 @@ def build_leaderboard(roster, marathon_half_entries, other_races):
         seconds_total = ph["seconds"]
         club = ph["club"]
         gender = None
+        # "First event wins" - the Marathon/Half Marathon is the series
+        # opener, so its age group takes priority; other races only fill the
+        # gap if the roster/Marathon-Half didn't have one.
         age_group = ph["category"] or None
 
         mh = marathon_match.get(ph["key"])
@@ -595,7 +598,8 @@ def build_leaderboard(roster, marathon_half_entries, other_races):
             if mh["club"]:
                 club = mh["club"]
             gender = mh["gender"]
-            age_group = mh["age_group"] or age_group
+            if mh["age_group"]:
+                age_group = mh["age_group"]
         else:
             races["marathon_half"] = None
             league = "unassigned"
@@ -612,7 +616,7 @@ def build_leaderboard(roster, marathon_half_entries, other_races):
                     seconds_total += match["seconds"]
                 if gender is None and match.get("gender"):
                     gender = match["gender"]
-                if match.get("age_group"):
+                if not age_group and match.get("age_group"):
                     age_group = match["age_group"]
             else:
                 races[race_key] = None
@@ -667,17 +671,26 @@ def write_league_pdf(league_key, entrants, races_ordered, event_name="No Rest Fo
     race_order = list(races_ordered.keys())
     filename = filename or f"{league_key}.pdf"
 
-    headers = ["#", "Name", "TOTAL", "Club"]
+    headers = ["#", "Name", "Club", "Gender", "Age Group"]
     for rk in race_order:
         label = races_ordered[rk]["label"]
         if rk == "marathon_half":
             label = league_label
         headers.append(label)
+    headers.append("TOTAL")
 
     data = [headers]
     for i, e in enumerate(entrants, start=1):
-        row = [str(i), e["name"], e["cumulative_time"] or "-", e["club"] or "-"]
+        gender = e.get("gender")
+        row = [
+            str(i),
+            e["name"],
+            e["club"] or "-",
+            gender if gender in ("M", "F") else "-",
+            e.get("age_group") if e.get("age_group") and e["age_group"] != "Unknown" else "-",
+        ]
         row.extend(race_cell_text(e, rk, races_ordered) for rk in race_order)
+        row.append(e["cumulative_time"] or "-")
         data.append(row)
 
     out_path = PDF_DIR / filename

@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-13T22:51:06Z",
+  "generated_at": "2026-08-14T09:34:37Z",
   "races": {
     "marathon_half": {
       "label": "Marathon / Half Marathon",
@@ -71,7 +71,7 @@
         "name": "James Read",
         "club": "",
         "gender": "M",
-        "age_group": "U23",
+        "age_group": "Senior",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -111,7 +111,7 @@
         "name": "David Williams",
         "club": "IoM Veteran Athletes'",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -151,7 +151,7 @@
         "name": "Derek Jonathan Pugh",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -191,7 +191,7 @@
         "name": "Raymond Whitfield",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -231,7 +231,7 @@
         "name": "Kieran Rowley",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -271,7 +271,7 @@
         "name": "Antony Boyd",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -311,7 +311,7 @@
         "name": "Stephen Dorricott",
         "club": "Northern AC",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -351,7 +351,7 @@
         "name": "Jayne Farquhar",
         "club": "Manx Harriers",
         "gender": "F",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -391,7 +391,7 @@
         "name": "James Love",
         "club": "100 marathon club",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -431,7 +431,7 @@
         "name": "Gary Hurn",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -471,7 +471,7 @@
         "name": "Katie Lawrence",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -511,7 +511,7 @@
         "name": "Chris Colquitt",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -551,7 +551,7 @@
         "name": "Victoria Gallantree",
         "club": "Framlingham Flyers",
         "gender": "F",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "marathon",
         "races": {
           "peel_hill": {
@@ -593,7 +593,7 @@
         "name": "Liam Parker",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -633,7 +633,7 @@
         "name": "Nicholas Colburn",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -673,7 +673,7 @@
         "name": "Reggie Oasgood",
         "club": "",
         "gender": "M",
-        "age_group": "U23",
+        "age_group": "Junior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -713,7 +713,7 @@
         "name": "Michael Garrett",
         "club": "IoM Veteran Athletes'",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -753,7 +753,7 @@
         "name": "Matt Callister",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -793,7 +793,7 @@
         "name": "Thomas Murray",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -833,7 +833,7 @@
         "name": "David James",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -873,7 +873,7 @@
         "name": "Kirsty Barber",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -913,7 +913,7 @@
         "name": "Mark Corkish",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -953,7 +953,7 @@
         "name": "Ian Bulley",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -993,7 +993,7 @@
         "name": "Jeffrey Moore",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1033,7 +1033,7 @@
         "name": "Geoff Rice",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1073,7 +1073,7 @@
         "name": "Richard Highfield",
         "club": "Northern AC",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1113,7 +1113,7 @@
         "name": "Elena Caley",
         "club": "Manx Harriers",
         "gender": "F",
-        "age_group": "U23",
+        "age_group": "Junior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1153,7 +1153,7 @@
         "name": "Stephen Schuster",
         "club": "IoM Veteran Athletes'",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1193,7 +1193,7 @@
         "name": "Al Graham",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1233,7 +1233,7 @@
         "name": "James Grant",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1273,7 +1273,7 @@
         "name": "Martin Hall",
         "club": "",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1313,7 +1313,7 @@
         "name": "Michael Faid",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1353,7 +1353,7 @@
         "name": "Mark Murphy",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1393,7 +1393,7 @@
         "name": "Tristen Bell",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1433,7 +1433,7 @@
         "name": "Becky Watterson",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1473,7 +1473,7 @@
         "name": "Thomas Kneen",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1513,7 +1513,7 @@
         "name": "Tom Quirk",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1553,7 +1553,7 @@
         "name": "Kristian Edwards",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1593,7 +1593,7 @@
         "name": "Samantha Hall",
         "club": "",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1633,7 +1633,7 @@
         "name": "Daniel Lawrie",
         "club": "",
         "gender": "M",
-        "age_group": "U23",
+        "age_group": "Junior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1673,7 +1673,7 @@
         "name": "Richard Atherton",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1713,7 +1713,7 @@
         "name": "Paul Sayle",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1753,7 +1753,7 @@
         "name": "Carrie Kelly",
         "club": "",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1793,7 +1793,7 @@
         "name": "Piotr Tkaczyk",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1833,7 +1833,7 @@
         "name": "Kathy Garrett",
         "club": "IoM Veteran Athletes'",
         "gender": "F",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1873,7 +1873,7 @@
         "name": "Lesley Webb",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1913,7 +1913,7 @@
         "name": "Helen Murray",
         "club": "",
         "gender": "F",
-        "age_group": "V60",
+        "age_group": "60-64",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1953,7 +1953,7 @@
         "name": "Danielle Grant",
         "club": "",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -1993,7 +1993,7 @@
         "name": "Toby Gadsby",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2033,7 +2033,7 @@
         "name": "Matt Cory",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2073,7 +2073,7 @@
         "name": "Ryan Surridge",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2113,7 +2113,7 @@
         "name": "Peter Callin",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2153,7 +2153,7 @@
         "name": "Mark Terris",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2193,7 +2193,7 @@
         "name": "Philip Cuthbert",
         "club": "Wallasey AC",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2233,7 +2233,7 @@
         "name": "Brian Butler",
         "club": "IoM Veteran Athletes'",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2273,7 +2273,7 @@
         "name": "David Reeder",
         "club": "",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2313,7 +2313,7 @@
         "name": "Matthew Jones",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2353,7 +2353,7 @@
         "name": "Elliott Moore",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2393,7 +2393,7 @@
         "name": "Amy Coole",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2433,7 +2433,7 @@
         "name": "Jamie Pope",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2473,7 +2473,7 @@
         "name": "Tonton Bangero",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2513,7 +2513,7 @@
         "name": "Karen Sinkinson",
         "club": "Manx Harriers",
         "gender": "F",
-        "age_group": "V60",
+        "age_group": "65-69",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2553,7 +2553,7 @@
         "name": "Emma Jones",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2593,7 +2593,7 @@
         "name": "Daniel Radcliffe",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2633,7 +2633,7 @@
         "name": "Kirin Gilmore",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2673,7 +2673,7 @@
         "name": "Eugene Martin",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2713,7 +2713,7 @@
         "name": "Monika Martin",
         "club": "Manx Fell Runners",
         "gender": "F",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2753,7 +2753,7 @@
         "name": "James Clark",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2793,7 +2793,7 @@
         "name": "Caitlin Hammal",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2833,7 +2833,7 @@
         "name": "Stewart Jones",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2873,7 +2873,7 @@
         "name": "Jo Hamilton",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2913,7 +2913,7 @@
         "name": "Ashley Sandyford-Sykes",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2953,7 +2953,7 @@
         "name": "Michael Hayler",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -2993,7 +2993,7 @@
         "name": "Kailyn Mazzone",
         "club": "",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3033,7 +3033,7 @@
         "name": "Michelle Davies",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3073,7 +3073,7 @@
         "name": "Rowenna Leneghan",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3113,7 +3113,7 @@
         "name": "Andrew Wilson",
         "club": "IoM Veteran Athletes'",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3153,7 +3153,7 @@
         "name": "Hannah Taplin",
         "club": "",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3193,7 +3193,7 @@
         "name": "Rebecca Greatbatch",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3233,7 +3233,7 @@
         "name": "Ean Costain",
         "club": "",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3273,7 +3273,7 @@
         "name": "Monica Goldie",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3313,7 +3313,7 @@
         "name": "Emma Keig",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3353,7 +3353,7 @@
         "name": "David Fisher",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3393,7 +3393,7 @@
         "name": "Tracy McQuillan",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3433,7 +3433,7 @@
         "name": "Neil Brown",
         "club": "Western AC",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3473,7 +3473,7 @@
         "name": "Sophie McCallum",
         "club": "",
         "gender": "F",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3513,7 +3513,7 @@
         "name": "Edward Anderson",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3553,7 +3553,7 @@
         "name": "Mike Devereau",
         "club": "",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3593,7 +3593,7 @@
         "name": "Ruth Baxendale",
         "club": "IoM Veteran Athletes'",
         "gender": "F",
-        "age_group": "V60",
+        "age_group": "65-69",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3633,7 +3633,7 @@
         "name": "Diane Pope",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3673,7 +3673,7 @@
         "name": "Max Talavera",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3713,7 +3713,7 @@
         "name": "Amanda Ansermoz",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "V60",
+        "age_group": "60-64",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3753,7 +3753,7 @@
         "name": "Barbara Watt",
         "club": "",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3793,7 +3793,7 @@
         "name": "Moira Hall",
         "club": "Western AC",
         "gender": "F",
-        "age_group": "V70",
+        "age_group": "70+",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3833,7 +3833,7 @@
         "name": "Max Byrne",
         "club": "",
         "gender": "M",
-        "age_group": "Open",
+        "age_group": "Senior",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3873,7 +3873,7 @@
         "name": "Jim Caley",
         "club": "Manx Fell Runners",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3913,7 +3913,7 @@
         "name": "Vernon Thomas",
         "club": "Greenwich Tritons",
         "gender": "M",
-        "age_group": "V80",
+        "age_group": "70+",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3953,7 +3953,7 @@
         "name": "Colin Crooks",
         "club": "Western",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -3993,7 +3993,7 @@
         "name": "Jason Foster",
         "club": "",
         "gender": "M",
-        "age_group": "V50",
+        "age_group": "55-59",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -4033,7 +4033,7 @@
         "name": "Angie Goody",
         "club": "IoM Veteran Athletes'",
         "gender": "F",
-        "age_group": "V50",
+        "age_group": "50-54",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
@@ -4073,7 +4073,7 @@
         "name": "Fi Goody",
         "club": "IoM Veteran Athletes'",
         "gender": "F",
-        "age_group": "V40",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "peel_hill": {
