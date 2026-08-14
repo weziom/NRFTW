@@ -671,7 +671,7 @@ def write_league_pdf(league_key, entrants, races_ordered, event_name="No Rest Fo
     race_order = list(races_ordered.keys())
     filename = filename or f"{league_key}.pdf"
 
-    headers = ["#", "Name", "Club", "Gender", "Age Group"]
+    headers = ["Position", "Name", "Club", "Gender", "Age Group"]
     for rk in race_order:
         label = races_ordered[rk]["label"]
         if rk == "marathon_half":
