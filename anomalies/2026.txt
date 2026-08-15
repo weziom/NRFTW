@@ -1,4 +1,4 @@
-No Rest For the Wicked 2026 - anomalies as of 2026-08-14T09:36:13Z
+No Rest For the Wicked 2026 - anomalies as of 2026-08-15T12:44:33Z
 
 [duplicate_name] 2 Marathon/Half Marathon entrants share the name 'David Williams'. Matched to the series roster by club name where possible.
 [no_result] Series entrant 'Harry Kneen' has no matching Marathon/Half Marathon result.
@@ -117,37 +117,72 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-14T09:36:13Z
 [no_result] Series entrant 'John Watterson' has no matching Foxdale 5 result.
 [no_result] Series entrant 'Troy Turner' has no matching Foxdale 5 result.
 [no_result] Series entrant 'Fraiser Cunningham' has no matching Foxdale 5 result.
-[removed_incomplete_series] 'Dan Richmond' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Oliver Harrison' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Chris Reynolds' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Tim Perry' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Lloyd Taggart' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Nikki Arthur' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Samantha Perry' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Nigel Armstrong' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Aalish Atkinson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Harry Kneen' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5.
-[removed_incomplete_series] 'Dan Phair' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Peter Bradley' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Chris Hodgson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Geoff Quayle' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Peter Cooper' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Ian Callister' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Rosa Nelson-Rohrer' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Paul Kneen' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5.
-[removed_incomplete_series] 'John Watterson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Emily Bridson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5.
-[removed_incomplete_series] 'Oscar Cadden' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5.
-[removed_incomplete_series] 'Aalin Atherton' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5.
-[removed_incomplete_series] 'Troy Turner' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Fraiser Cunningham' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Ryan Corrin' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Sophie Keen' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Christa Cain' removed from the series - missing a result for: Marathon / Half Marathon.
-[removed_incomplete_series] 'Tim Goldy' removed from the series - missing a result for: Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Richard Costain' removed from the series - missing a result for: Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Terry Foster' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile.
-[removed_incomplete_series] 'David Hodgson' removed from the series - missing a result for: Ramsey 10K, Killer Mile, Foxdale 5.
-[removed_incomplete_series] 'Huw Jones' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile.
+[no_result] Series entrant 'Harry Kneen' has no matching Trail Run result.
+[no_result] Series entrant 'Ryan Corrin' has no matching Trail Run result.
+[no_result] Series entrant 'Dan Richmond' has no matching Trail Run result.
+[no_result] Series entrant 'Oliver Harrison' has no matching Trail Run result.
+[no_result] Series entrant 'Chris Reynolds' has no matching Trail Run result.
+[no_result] Series entrant 'Tim Perry' has no matching Trail Run result.
+[no_result] Series entrant 'Christa Cain' has no matching Trail Run result.
+[no_result] Series entrant 'Lloyd Taggart' has no matching Trail Run result.
+[no_result] Series entrant 'Nikki Arthur' has no matching Trail Run result.
+[no_result] Series entrant 'Tim Goldy' has no matching Trail Run result.
+[no_result] Series entrant 'Samantha Perry' has no matching Trail Run result.
+[no_result] Series entrant 'Al Graham' has no matching Trail Run result.
+[no_result] Series entrant 'Paul Kneen' has no matching Trail Run result.
+[no_result] Series entrant 'Nigel Armstrong' has no matching Trail Run result.
+[no_result] Series entrant 'Emily Bridson' has no matching Trail Run result.
+[no_result] Series entrant 'Aalish Atkinson' has no matching Trail Run result.
+[no_result] Series entrant 'Dan Phair' has no matching Trail Run result.
+[no_result] Series entrant 'Peter Bradley' has no matching Trail Run result.
+[no_result] Series entrant 'Aalin Atherton' has no matching Trail Run result.
+[no_result] Series entrant 'Richard Costain' has no matching Trail Run result.
+[no_result] Series entrant 'Oscar Cadden' has no matching Trail Run result.
+[no_result] Series entrant 'Chris Hodgson' has no matching Trail Run result.
+[no_result] Series entrant 'Geoff Quayle' has no matching Trail Run result.
+[no_result] Series entrant 'Sophie Keen' has no matching Trail Run result.
+[no_result] Series entrant 'David Hodgson' has no matching Trail Run result.
+[no_result] Series entrant 'Danny Taplin' has no matching Trail Run result.
+[no_result] Series entrant 'Peter Cooper' has no matching Trail Run result.
+[no_result] Series entrant 'Ian Callister' has no matching Trail Run result.
+[no_result] Series entrant 'Rosa Nelson-Rohrer' has no matching Trail Run result.
+[no_result] Series entrant 'John Watterson' has no matching Trail Run result.
+[no_result] Series entrant 'Huw Jones' has no matching Trail Run result.
+[no_result] Series entrant 'Troy Turner' has no matching Trail Run result.
+[no_result] Series entrant 'Fraiser Cunningham' has no matching Trail Run result.
+[no_result] Series entrant 'Terry Foster' has no matching Trail Run result.
+[removed_incomplete_series] 'Dan Richmond' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Oliver Harrison' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Chris Reynolds' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Tim Perry' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Lloyd Taggart' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Nikki Arthur' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Samantha Perry' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Nigel Armstrong' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Aalish Atkinson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Harry Kneen' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5, Trail.
+[removed_incomplete_series] 'Dan Phair' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Peter Bradley' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Chris Hodgson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Geoff Quayle' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Peter Cooper' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Ian Callister' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Rosa Nelson-Rohrer' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Paul Kneen' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5, Trail.
+[removed_incomplete_series] 'John Watterson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Emily Bridson' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5, Trail.
+[removed_incomplete_series] 'Oscar Cadden' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5, Trail.
+[removed_incomplete_series] 'Aalin Atherton' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Foxdale 5, Trail.
+[removed_incomplete_series] 'Troy Turner' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Fraiser Cunningham' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Ryan Corrin' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Sophie Keen' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Christa Cain' removed from the series - missing a result for: Marathon / Half Marathon, Trail.
+[removed_incomplete_series] 'Tim Goldy' removed from the series - missing a result for: Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Richard Costain' removed from the series - missing a result for: Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Terry Foster' removed from the series - missing a result for: Marathon / Half Marathon, Ramsey 10K, Killer Mile, Trail.
+[removed_incomplete_series] 'David Hodgson' removed from the series - missing a result for: Ramsey 10K, Killer Mile, Foxdale 5, Trail.
+[removed_incomplete_series] 'Huw Jones' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile, Trail.
+[removed_incomplete_series] 'Al Graham' removed from the series - missing a result for: Trail.
+[removed_incomplete_series] 'Danny Taplin' removed from the series - missing a result for: Killer Mile, Foxdale 5, Trail.
 [removed_incomplete_series] 'Bryony Barron' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile.
-[removed_incomplete_series] 'Danny Taplin' removed from the series - missing a result for: Killer Mile, Foxdale 5.
