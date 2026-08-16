@@ -45,13 +45,13 @@ RACE_ORDER = ["marathon_half", "peel_hill", "ramsey_10k", "killer_mile", "foxdal
 
 # year -> (marathon/half event id, 10K event id or None)
 YEARS = {
-    "2024": ("274541", None),
-    # 2021/2022 used to be built here from raceresult's Marathon/Half Marathon
-    # event alone (Peel Hill etc marked "unavailable") - superseded by the
-    # full 6-race data in build_2020_2023_results.py, transcribed from the
-    # club's own season-tracking spreadsheets. Left out of this dict so a
-    # future re-run of this script doesn't overwrite 2021.json/2022.json
-    # with the thinner version.
+    # 2021/2022/2024 used to be built here from raceresult's Marathon/Half
+    # Marathon event alone (Peel Hill etc marked "unavailable") - superseded
+    # by the full 6-race data in build_2020_2023_results.py/
+    # build_2024_results.py, transcribed from the club's own
+    # season-tracking spreadsheets. Left out of this dict so a future
+    # re-run of this script doesn't overwrite their .json with the thinner
+    # raceresult-only version.
 }
 
 

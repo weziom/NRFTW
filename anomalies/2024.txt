@@ -1,3 +1,30 @@
-No Rest For the Wicked 2024 (incomplete archive) - anomalies as of 2026-08-16T10:49:32Z
+No Rest For the Wicked 2024 - archive import notes
 
-[incomplete_roster] No Peel Hill source exists for 2024, so there's no official series roster - the roster here is simply everyone who ran the Marathon or Half Marathon that year. Peel Hill, Killer Mile, Foxdale 5 and Trail Run have no source at all for this year (marked 'unavailable') and don't count toward cumulative time. Published with '(partial results)' in the event title rather than held back, since it's still genuine Marathon/Half Marathon (and, where available, Ramsey 10K) data.
+Source: results/2024_half_results.jpg (73 ranked), results/2024_marathon_result.jpg
+(9 ranked). Full season-tracking spreadsheets, replacing the earlier
+raceresult-API-only "(partial results)" 2024.json built by
+build_historic_results.py (Marathon/Half Marathon + nothing else) - this
+is the full 6-race season.
+
+The half marathon sheet has no Category column (First/Surname/Club/times
+only), so gender/age_group are unknown for half marathon entrants this
+year - same situation as 2021.
+
+[transcription_fixes] Routine fixes caught via each row's own printed
+Total not matching on first pass: Richard Shipway's Trail time (misread
+as 00:43:16, corrected to 00:43:50), Stephen Dorricott's Peel Hill time in
+the marathon sheet (00:26:30 -> 00:26:33), Neil Brown's Killer Mile time
+(00:11:54 -> 00:12:04), Catherine Cuthbert's Foxdale 5 time (00:52:34 ->
+00:52:32).
+
+[clipped_cells] Two names and two club names were clipped by a cell
+border in the source image, cutting off the last few characters. Resolved
+via cross-reference against the same runners' names/clubs already present
+in the existing raceresult-sourced 2024.json (now superseded) rather than
+guessed:
+  - "Ashley Sandyford-S..." -> Ashley Sandyford-Sykes
+  - "...ndra Rogalewsk..." -> Aleksandra Rogalewska (not the visually
+    similar "Rogalewski" - that's Marek Rogalewski's, a different entrant
+    in the same field)
+  - "N Devon RoadR..." -> North Devon Road Runners (Rebecca Kyle)
+  - "Fareham Runnin..." -> Fareham Running Club (Sarah Deller)

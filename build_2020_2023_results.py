@@ -38,6 +38,7 @@ CLUB_EXPANSIONS = {
     "NA": "Unattached",
     "na": "Unattached",
     "un": "Unattached",
+    "UN": "Unattached",
     "Unattached": "Unattached",
     "IOM Vets": "IOMVAC",
     "IOM VAC": "IOMVAC",
@@ -134,9 +135,14 @@ def _build_entrant(name, gender, age_group, club, league, race_times):
     }
 
 
-def build_year(year, half_rows, marathon_rows, builder, race_status, foxdale_label="Foxdale", trail_label="Trail"):
-    half_entrants = [builder(r, "half_marathon") for r in half_rows]
-    marathon_entrants = [builder(r, "marathon") for r in marathon_rows]
+def build_year(year, half_rows, marathon_rows, builder, race_status, foxdale_label="Foxdale", trail_label="Trail",
+                half_builder=None, marathon_builder=None):
+    """`builder` is used for both leagues unless a league needs its own row
+    shape (e.g. 2024's half sheet has a Club column but no Category one,
+    while its marathon sheet has both) - pass half_builder/marathon_builder
+    to override per league in that case."""
+    half_entrants = [(half_builder or builder)(r, "half_marathon") for r in half_rows]
+    marathon_entrants = [(marathon_builder or builder)(r, "marathon") for r in marathon_rows]
 
     half_entrants.sort(key=lambda e: e["cumulative_seconds"])
     marathon_entrants.sort(key=lambda e: e["cumulative_seconds"])
