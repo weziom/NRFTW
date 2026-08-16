@@ -1,0 +1,14 @@
+No Rest For the Wicked 2015 - archive import notes
+
+Source: results/2015_half_results.jpg, results/2015_marathon_results.jpg
+(full season-tracking spreadsheets, not raw per-race exports). No club or
+age/gender category data was present in either sheet.
+
+[excluded_incomplete] 4 names at the bottom of the half marathon sheet had
+only 1-2 individual race times each and no series total printed - not
+enough of the series completed to rank. Excluded from 2015.json rather
+than shown with a partial/zero total:
+  - Geoff Hall (Half Marathon, Peel Hill, Foxdale 6 only)
+  - Rosie Whittington (Half Marathon only)
+  - Andy Walton (Peel Hill, Ramsey 10k, Foxdale 6 only)
+  - Jonny Killey (Killer Mile, Foxdale 6, Heritage Trail only)

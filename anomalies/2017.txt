@@ -1,0 +1,21 @@
+No Rest For the Wicked 2017 - archive import notes
+
+Source: results/2017_half_results_1 (the full, final standings - all 46
+runners with every race filled in) and results/2017_marathon_results (7
+runners). Category column combines gender (M/L - Ladies) with age band or
+"Open".
+
+[superseded_source_files] results/2017_half_results_1.jpg, _2.jpg, and
+20117_half_results_3.jpg (sic) are all parts of one earlier, incomplete
+mid-season snapshot (every race but the Half Marathon leg itself still
+shows 00:00:00, and the roster differs slightly - e.g. John Quaye, Paul
+Rodgers, Sonia Blake, Voirrey Cashin, Ann-Marie Clucas, Aalish Garrod,
+Adam Huxham, Dominic Murphy, and a second "Becky Watterson" entry appear
+there but not in the final standings). Not used - results/2017_half_results_1
+(no file extension) is the complete/final sheet and is the one imported.
+
+[unusual_value] Andy Walton's Heritage Trail time is printed as 01:05:21 -
+markedly slower than his pace in every other race that year (all
+sub-50-minutes) and slower than most runners well behind him overall.
+Kept as printed; possibly a data-entry error in the original spreadsheet,
+but not corrected here.

@@ -1,0 +1,35 @@
+No Rest For the Wicked 2018 - archive import notes
+
+Source: results/2018_half_results_1 + 2018_half_results_2 (45 ranked
+runners), results/2018_marathon_results.jpg (6 runners). Category column
+combines gender (M/W) with age band, or "Senior"/"Junior" with gender
+(e.g. "Senior M", "W45-49").
+
+[duplicate_source_file] results/2018_half_resulls_1 (note the typo) is a
+byte-for-byte duplicate of results/2018_half_results_1 - ignored.
+
+[excluded_incomplete] 9 names at the bottom of the half marathon sheet had
+only 1-2 race times each (several with explicit 00:00:00 placeholders) and
+no position number/series rank - not enough of the series completed to
+rank. Excluded from 2018.json: Jerzy Matuszewski, Alan Pilling, Svetlin
+Krastev, Sharon Page, Amy Killip, Jennifer Houghton, Adam Fretwell, Eric
+Lee, Sarah Bromily.
+
+[truncated_club_names] Some club names are cut off by the source
+spreadsheet's column width and are shown here exactly as printed, not
+guessed at: "IOMV" (almost certainly IOMVAC, per every other year's data,
+but left untouched), "Widnes R", "Runnymed".
+
+[zero_result_kept] Lucy Fern (marathon league) has Heritage Trail printed
+as 00:00:00 - no result recorded for that race. Kept as printed; her
+series total (08:02:49) is exactly the sum of her other 5 race times, i.e.
+the sheet itself treats the 00:00:00 as contributing nothing rather than
+as a real (very fast) time.
+
+[suspicious_duplicate_rows] Denise Bridson and Nikki Salmon (half
+marathon, positions 42-43) have identical Peel Hill, Ramsey 10k, Foxdale 6,
+and Heritage Trail times, and nearly identical Half Marathon times
+(02:28:38 vs 02:28:39) - only Killer Mile differs (00:18:07 vs 00:20:02).
+Possibly a copy/paste artifact in the original spreadsheet (or they
+genuinely ran much of the series together), but both are kept as printed
+rather than guessing which is correct.
