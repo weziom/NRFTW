@@ -463,8 +463,10 @@
     { key: "2026", label: "2026", file: "results.json" },
     { key: "2025", label: "2025", file: "2025.json" },
     { key: "2024", label: "2024", file: "2024.json" },
+    { key: "2023", label: "2023", file: "2023.json" },
     { key: "2022", label: "2022", file: "2022.json" },
     { key: "2021", label: "2021", file: "2021.json" },
+    { key: "2020", label: "2020", file: "2020.json" },
     { key: "2019", label: "2019", file: "2019.json" },
     { key: "2018", label: "2018", file: "2018.json" },
     { key: "2017", label: "2017", file: "2017.json" },
@@ -485,6 +487,7 @@
   const RUNNER_ALIASES = {
     "geoff rice": "geoffrey rice",
     "wez lee": "lee cook",
+    "kathy lane": "kathy garrett",
   };
   function canonicalRunnerKey(name) {
     const key = name.trim().toLowerCase();
@@ -516,7 +519,7 @@
     RACE_ORDER.forEach((rk) => {
       let label = DATA.races[rk].label;
       if (rk === "marathon_half") {
-        label = activeLeague === "half_marathon" ? "Half Marathon" : "Marathon";
+        label = activeLeague === "half_marathon" ? "Half" : "Marathon";
       }
       cols.push({ key: "race:" + rk, label: label, sortable: true });
     });

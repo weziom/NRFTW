@@ -1,3 +1,17 @@
-No Rest For the Wicked 2021 (incomplete archive) - anomalies as of 2026-08-16T10:49:34Z
+No Rest For the Wicked 2021 - archive import notes
 
-[incomplete_roster] No Peel Hill source exists for 2021, so there's no official series roster - the roster here is simply everyone who ran the Marathon or Half Marathon that year. Peel Hill, Killer Mile, Foxdale 5 and Trail Run have no source at all for this year (marked 'unavailable') and don't count toward cumulative time. Published with '(partial results)' in the event title rather than held back, since it's still genuine Marathon/Half Marathon (and, where available, Ramsey 10K) data.
+Source: results/2021_half_marathon_result.jpeg (72 ranked),
+results/2021_marathon_result.jpeg (14 ranked). Full season-tracking
+spreadsheets ("Bell Burton Associates No Rest For the Wicked" branding),
+replacing the earlier raceresult-API-only "(partial results)" 2021.json
+built by build_historic_results.py (which only had Marathon/Half Marathon
++ Ramsey 10K, everything else marked unavailable) - this is the full
+6-race season.
+
+No club or gender/age category data in either sheet (same gap as 2015).
+
+[name_spelling_variant] Kathy Lane (marathon, position 7) is the same
+person as Kathy Garrett, who appears under that surname in other years
+(e.g. 2016, 2022) - handled via index.html's RUNNER_ALIASES rather than
+renamed here, since both are genuine spellings used in different years'
+official records.

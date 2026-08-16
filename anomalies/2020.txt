@@ -1,0 +1,12 @@
+No Rest For the Wicked 2020 - archive import notes
+
+Source: results/2020_half_marathon_result.jpeg (74 ranked + 13 DNS/DNF),
+results/2020_marathon_result.jpeg (17 ranked). Full season-tracking
+spreadsheets, not raw per-race exports.
+
+[excluded_incomplete] 13 names at the bottom of the half marathon sheet
+are marked DNS ("Did Not Start") or DNF ("Did Not Finish") for most races,
+with only 1-2 partial results each - excluded from 2020.json: Caryl
+Anstead, James Brown, Steve Callaghan, Cameron Comley, Rebecca Harding,
+Jennifer Houghton, Amy Killip, Alison King, Amber Macdonald, Dan Pownall,
+Anne-Marie Rivers.

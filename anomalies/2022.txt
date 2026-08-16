@@ -1,3 +1,11 @@
-No Rest For the Wicked 2022 (incomplete archive) - anomalies as of 2026-08-16T10:49:33Z
+No Rest For the Wicked 2022 - archive import notes
 
-[incomplete_roster] No Peel Hill source exists for 2022, so there's no official series roster - the roster here is simply everyone who ran the Marathon or Half Marathon that year. Peel Hill, Killer Mile, Foxdale 5 and Trail Run have no source at all for this year (marked 'unavailable') and don't count toward cumulative time. Published with '(partial results)' in the event title rather than held back, since it's still genuine Marathon/Half Marathon (and, where available, Ramsey 10K) data.
+Source: results/2022_half_marathon_results.jpeg (60 ranked),
+results/2022_marathon_result.jpeg (8 ranked). Full season-tracking
+spreadsheets, replacing the earlier raceresult-API-only "(partial
+results)" 2022.json built by build_historic_results.py (Marathon/Half
+Marathon + Ramsey 10K only) - this is the full 6-race season.
+
+No anomalies found beyond routine transcription fixes (all caught via each
+row's own printed Total not matching on first pass, then corrected against
+the source image).

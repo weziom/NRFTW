@@ -1,0 +1,22 @@
+No Rest For the Wicked 2023 - archive import notes
+
+Source: results/2023_half_marathon_incomplete.jpg (66 ranked). The
+filename says it all - Ramsey 10K, Killer Mile, Foxdale and Trail have no
+data at all for this year (blank for every entrant, not just missing for
+some), so only the Half Marathon leg and Peel Hill count toward the total.
+No marathon-league sheet was provided for 2023, so that league is empty
+this year rather than guessed at.
+
+The sheet's own in-image title reads "2023 - MARATHON" despite the
+filename and the data itself (mixed men's/women's field, ~66 finishers)
+being the Half Marathon league - treated as Half Marathon, consistent with
+the filename and with prior years' occasional title/column mislabeling
+(e.g. 2019, 2020).
+
+[excluded_incomplete] 16 names at the bottom of the sheet have no position
+number and mostly only a Half Marathon time (a few have neither time at
+all, one - Paul Rodgers - has only a Peel Hill time and no Half Marathon
+time): Sarah Campbell, Ashley Jermy, Hilary Walsgrove, Jerrica Jansen Van,
+Josh Knights, Dominic Chapman, Mike Hayler, Kristian Edwards, Ian Hughes,
+Colette Corlett, Stewart Jones, Amy Killip, Paul Rodgers, Adrienne Rogers,
+Chris Wade, Andy Walton.
