@@ -1,28 +1,63 @@
 No Rest For the Wicked 2023 - archive import notes
 
-Source: results/2023_half_marathon_incomplete.jpg (66 ranked). The
-filename says it all - Ramsey 10K, Killer Mile, Foxdale and Trail have no
-data at all for this year (blank for every entrant, not just missing for
-some), so only the Half Marathon leg and Peel Hill count toward the total.
-No marathon-league sheet was provided for 2023, so that league is empty
-this year rather than guessed at.
+Source: results/2023_half_marathon_incomplete.jpg (66 ranked), later joined
+by results/2023_marathon_incomplete.jpg (14 ranked) for the Marathon
+league. Both filenames say it all - Ramsey 10K, Killer Mile, Foxdale and
+Trail had no data at all in either sheet (blank for every entrant, not
+just missing for some) until backfilled separately from independent
+sources below.
 
-The sheet's own in-image title reads "2023 - MARATHON" despite the
-filename and the data itself (mixed men's/women's field, ~66 finishers)
-being the Half Marathon league - treated as Half Marathon, consistent with
-the filename and with prior years' occasional title/column mislabeling
-(e.g. 2019, 2020).
+The Half Marathon sheet's own in-image title reads "2023 - MARATHON"
+despite the filename and the data itself (mixed men's/women's field, ~66
+finishers) being the Half Marathon league - treated as Half Marathon,
+consistent with the filename and with prior years' occasional
+title/column mislabeling (e.g. 2019, 2020).
 
-[excluded_incomplete] 16 names at the bottom of the sheet have no position
-number and mostly only a Half Marathon time (a few have neither time at
-all, one - Paul Rodgers - has only a Peel Hill time and no Half Marathon
-time): Sarah Campbell, Ashley Jermy, Hilary Walsgrove, Jerrica Jansen Van,
-Josh Knights, Dominic Chapman, Mike Hayler, Kristian Edwards, Ian Hughes,
-Colette Corlett, Stewart Jones, Amy Killip, Paul Rodgers, Adrienne Rogers,
-Chris Wade, Andy Walton.
+[excluded_incomplete] 16 names at the bottom of the Half Marathon sheet
+have no position number and mostly only a Half Marathon time (a few have
+neither time at all, one - Paul Rodgers - has only a Peel Hill time and no
+Half Marathon time): Sarah Campbell, Ashley Jermy, Hilary Walsgrove,
+Jerrica Jansen Van, Josh Knights, Dominic Chapman, Mike Hayler, Kristian
+Edwards, Ian Hughes, Colette Corlett, Stewart Jones, Amy Killip, Paul
+Rodgers, Adrienne Rogers, Chris Wade, Andy Walton.
 
-[ramsey_10k_killer_mile_backfill] Ramsey 10K and Killer Mile backfilled after the fact from independent sources (https://my.raceresult.com/255883/, results/killer_mile_2023.pdf) and matched onto the existing Half Marathon/Peel Hill roster by name - most entrants in both sources were one-off local/junior runners never on the series roster, not logged here. Matched 62/62 roster entrants for both. Foxdale 5 and Trail Run still have no source for 2023 and remain unavailable.
+[excluded_incomplete_marathon] Two rows at the bottom of the Marathon
+sheet likewise have no position number and are missing one of the two
+recorded races entirely (printed as 00:00:00): John Quaye (IOMVAC, M40,
+Marathon 03:02:19, no Peel Hill time) and Patrice Lhomme (M40, no Marathon
+time, Peel Hill 00:30:49 only). Excluded, same convention as
+excluded_incomplete above. Two rows print category as "Snr M" (age class
+before gender) rather than this sheet's usual gender-first "M40"/"W50"
+style - normalized to "MSnr" to match the site's convention; same
+category, just reordered in the source.
 
-[foxdale5_backfill] Foxdale 5 backfilled from the club's official results PDF (results/FOXDALE 5 2023 RESULTS.pdf (club results PDF)) and matched onto the existing series roster by name - most entrants in that source were one-off local runners never on the series roster, not logged here. Matched 62/62 roster entrants. The source PDF's row 75 prints the name as 'Marek Orgalewski' - clearly a typo/OCR error for 'Marek Rogalewski' (who ran every other 2023 race and every other year under that spelling) - corrected during transcription so it matches. Trail Run still has no 2023 source and remains unavailable.
+[ramsey_10k_killer_mile_backfill] Ramsey 10K and Killer Mile backfilled
+after the fact from independent sources (https://my.raceresult.com/255883/,
+results/killer_mile_2023.pdf) and matched onto the existing series roster
+(both leagues) by name - most entrants in both sources were one-off
+local/junior runners never on the series roster, not logged here. Matched
+76/76 roster entrants for both.
 
-[excluded_incomplete_v2] After the Ramsey 10K/Killer Mile/Foxdale 5 backfills above, 4 entrants who had Half Marathon + Peel Hill were still missing exactly one of the other five races each (source has no data for them in that one race, unlike the rest of the field): Jessica Bryan (no Foxdale 5 - DNF), Ali Stennett (no Ramsey 10K), Lucy Kinrade (no Ramsey 10K), Sharon Shimmin (no Killer Mile). Removed from the leaderboard for not having a fully comparable total, same reasoning as [excluded_incomplete] above - removed from historic_2020_2023_data.py's HALF_2023 directly rather than filtered post-hoc, so a rebuild reproduces the same 62-entrant roster.
+[foxdale5_backfill] Foxdale 5 backfilled from the club's official results
+PDF (results/FOXDALE 5 2023 RESULTS.pdf) and matched onto the existing
+series roster (both leagues) by name - most entrants in that source were
+one-off local runners never on the series roster, not logged here. Matched
+76/76 roster entrants. The source PDF's row 75 prints the name as "Marek
+Orgalewski" - clearly a typo/OCR error for "Marek Rogalewski" (who ran
+every other 2023 race and every other year under that spelling) -
+corrected during transcription so it matches.
+
+[excluded_incomplete_v2] After the three backfills above, 4 Half Marathon
+entrants who had Half Marathon + Peel Hill were still missing exactly one
+of the other five races each, unlike the rest of the field which now has
+all five: Jessica Bryan (no Foxdale 5 - DNF), Ali Stennett (no Ramsey
+10K), Lucy Kinrade (no Ramsey 10K), Sharon Shimmin (no Killer Mile).
+Removed from the leaderboard for not having a fully comparable total, same
+reasoning as excluded_incomplete above - removed from
+historic_2020_2023_data.py's HALF_2023 directly rather than filtered
+post-hoc, so a rebuild reproduces the same roster. All 14 Marathon league
+entrants had complete data in all three backfill sources, so no further
+exclusions were needed there.
+
+Trail Run still has no 2023 source for either league and remains
+unavailable.

@@ -353,3 +353,32 @@ HALF_2023 = [
 # field which has all five): Jessica Bryan (no Foxdale 5 - DNF), Ali
 # Stennett (no Ramsey 10K), Lucy Kinrade (no Ramsey 10K), Sharon Shimmin
 # (no Killer Mile).
+
+# Marathon league, from results/2023_marathon_incomplete.jpg - like
+# HALF_2023, only Marathon + Peel Hill were ever recorded for this year
+# (Ramsey 10K/Killer Mile/Foxdale 5 backfilled separately, same as the
+# Half Marathon league). Two rows in the source have no position number
+# and are missing one of the two recorded races entirely (shown as
+# 00:00:00) - excluded, same convention as HALF_2023's excluded_incomplete
+# list: John Quaye (IOMVAC, M40, Marathon 03:02:19, no Peel Hill time) and
+# Patrice Lhomme (M40, no Marathon time, Peel Hill 00:30:49 only). Two
+# rows print category as "Snr M" (age class before gender) rather than
+# this sheet's usual gender-first "M40"/"W50" style - normalized to
+# "MSnr" here to match the convention used everywhere else on the site;
+# same category, just reordered in the source.
+MARATHON_2023 = [
+    ("Paul Jennings", "M40", "Unaffiliated", "02:58:30", "00:21:30"),
+    ("Harry Weatherill", "M35", "MFR", "03:02:40", "00:19:16"),
+    ("Tim Quayle", "MSnr", "MFR", "03:04:23", "00:21:29"),
+    ("Jonathan Pugh", "M45", "WAC", "03:07:24", "00:23:35"),
+    ("Geoff Rice", "M55", "WAC", "03:19:52", "00:22:01"),
+    ("Richard Costain", "MSnr", "Penny Lane Striders", "03:18:53", "00:25:20"),
+    ("David Williams", "M35", "Unaffiliated", "03:25:38", "00:25:59"),
+    ("David Sargent", "M35", "Lancaster Runners", "03:35:04", "00:24:26"),
+    ("Michael Deller", "M35", "Denmead Striders", "04:06:28", "00:26:42"),
+    ("Jayne Farquhar", "W50", "MH", "04:04:20", "00:30:21"),
+    ("Stephen Dorricott", "M40", "NAC", "04:16:12", "00:27:23"),
+    ("Edward Anderson", "M50", "Unaffiliated", "04:10:48", "00:34:24"),
+    ("Simon Cooper", "M50", "WAC", "04:34:07", "00:30:10"),
+    ("Betty Lhomme", "W40", "", "04:48:37", "00:35:46"),
+]

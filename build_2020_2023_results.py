@@ -39,6 +39,7 @@ CLUB_EXPANSIONS = {
     "na": "Unattached",
     "un": "Unattached",
     "UN": "Unattached",
+    "Unaffiliated": "Unattached",
     "Unattached": "Unattached",
     "IOM Vets": "IOMVAC",
     "IOM VAC": "IOMVAC",
@@ -193,14 +194,14 @@ def main():
         HALF_2020, MARATHON_2020,
         HALF_2021, MARATHON_2021,
         HALF_2022, MARATHON_2022,
-        HALF_2023,
+        HALF_2023, MARATHON_2023,
     )
 
     years = [
         ("2020", HALF_2020, MARATHON_2020, build_entrant_6race, FULL, "Foxdale 6", "Heritage"),
         ("2021", HALF_2021, MARATHON_2021, build_entrant_no_category, FULL, "Foxdale", "Trail"),
         ("2022", HALF_2022, MARATHON_2022, build_entrant_6race, FULL, "Foxdale", "Trail"),
-        ("2023", HALF_2023, [], build_entrant_2race, TWO_RACE_ONLY, "Foxdale", "Trail"),
+        ("2023", HALF_2023, MARATHON_2023, build_entrant_2race, TWO_RACE_ONLY, "Foxdale", "Trail"),
     ]
     for year, half_rows, marathon_rows, builder, race_status, foxdale_label, trail_label in years:
         data = build_year(year, half_rows, marathon_rows, builder, race_status, foxdale_label, trail_label)
