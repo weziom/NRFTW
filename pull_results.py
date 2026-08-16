@@ -101,6 +101,9 @@ NAME_ALIASES = {
     "jonathan pugh": "Derek Jonathan Pugh",
     "keiren rowley": "Kieran Rowley",
     "max burn": "Max Byrne",
+    "belindie ferreira": "Belindie Ferrario",
+    "johan ferreira": "Johan Ferrario",
+    "ola rogalewska": "Ola Rogalewski",
 }
 
 
