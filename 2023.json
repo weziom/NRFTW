@@ -1,13 +1,13 @@
 {
   "event": "No Rest For the Wicked 2023 (partial results)",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-16T15:20:21Z",
+  "generated_at": "2026-08-16T20:12:17Z",
   "races": {
     "marathon_half": {
       "label": "Marathon / Half Marathon",
       "status": "complete",
       "source": "2023 archive spreadsheet",
-      "finishers": 66
+      "finishers": 62
     },
     "peel_hill": {
       "label": "Peel Hill",
@@ -119,40 +119,6 @@
         "cumulative_time": "02:45:03"
       },
       {
-        "name": "Jessica Bryan",
-        "club": "Manx Fell Runners",
-        "gender": "F",
-        "age_group": "Snr",
-        "league": "half_marathon",
-        "races": {
-          "marathon_half": {
-            "position": null,
-            "time": "01:36:15",
-            "category": null
-          },
-          "peel_hill": {
-            "position": null,
-            "time": "00:23:03",
-            "category": null
-          },
-          "ramsey_10k": {
-            "position": 27,
-            "time": "00:43:11",
-            "category": "Senior Women"
-          },
-          "killer_mile": {
-            "position": 22,
-            "time": "00:08:08",
-            "category": "Snr W"
-          },
-          "foxdale_5": null,
-          "trail_run": null
-        },
-        "races_completed": 4,
-        "cumulative_seconds": 10237,
-        "cumulative_time": "02:50:37"
-      },
-      {
         "name": "Joel Smith",
         "club": "",
         "gender": "M",
@@ -189,40 +155,6 @@
         "races_completed": 5,
         "cumulative_seconds": 10264,
         "cumulative_time": "02:51:04"
-      },
-      {
-        "name": "Ali Stennett",
-        "club": "Northern AC",
-        "gender": "M",
-        "age_group": "45",
-        "league": "half_marathon",
-        "races": {
-          "marathon_half": {
-            "position": null,
-            "time": "01:39:31",
-            "category": null
-          },
-          "peel_hill": {
-            "position": null,
-            "time": "00:24:59",
-            "category": null
-          },
-          "ramsey_10k": null,
-          "killer_mile": {
-            "position": 33,
-            "time": "00:08:36",
-            "category": "M45"
-          },
-          "foxdale_5": {
-            "position": 59,
-            "time": "00:38:41",
-            "category": "M45"
-          },
-          "trail_run": null
-        },
-        "races_completed": 4,
-        "cumulative_seconds": 10307,
-        "cumulative_time": "02:51:47"
       },
       {
         "name": "Richard Shipway",
@@ -1175,40 +1107,6 @@
         "cumulative_time": "04:00:53"
       },
       {
-        "name": "Lucy Kinrade",
-        "club": "",
-        "gender": "F",
-        "age_group": "Snr",
-        "league": "half_marathon",
-        "races": {
-          "marathon_half": {
-            "position": null,
-            "time": "02:30:04",
-            "category": null
-          },
-          "peel_hill": {
-            "position": null,
-            "time": "00:32:50",
-            "category": null
-          },
-          "ramsey_10k": null,
-          "killer_mile": {
-            "position": 99,
-            "time": "00:12:18",
-            "category": "Snr W"
-          },
-          "foxdale_5": {
-            "position": 93,
-            "time": "00:46:34",
-            "category": "SW"
-          },
-          "trail_run": null
-        },
-        "races_completed": 4,
-        "cumulative_seconds": 14506,
-        "cumulative_time": "04:01:46"
-      },
-      {
         "name": "Richard Gilliland",
         "club": "",
         "gender": "M",
@@ -1283,40 +1181,6 @@
         "races_completed": 5,
         "cumulative_seconds": 14787,
         "cumulative_time": "04:06:27"
-      },
-      {
-        "name": "Sharon Shimmin",
-        "club": "",
-        "gender": "F",
-        "age_group": "50",
-        "league": "half_marathon",
-        "races": {
-          "marathon_half": {
-            "position": null,
-            "time": "01:58:12",
-            "category": null
-          },
-          "peel_hill": {
-            "position": null,
-            "time": "00:30:55",
-            "category": null
-          },
-          "ramsey_10k": {
-            "position": 65,
-            "time": "00:53:35",
-            "category": "Women 50-54"
-          },
-          "killer_mile": null,
-          "foxdale_5": {
-            "position": 85,
-            "time": "00:44:22",
-            "category": "W50"
-          },
-          "trail_run": null
-        },
-        "races_completed": 4,
-        "cumulative_seconds": 14824,
-        "cumulative_time": "04:07:04"
       },
       {
         "name": "David Smith",

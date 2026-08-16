@@ -286,11 +286,9 @@ HALF_2023 = [
     ("Ryan Hampson", "MSnr", "", "01:26:42", "00:22:46"),
     ("Rebekah Pate", "FSnr", "MFR", "01:30:37", "00:23:32"),
     ("Becky Watterson", "F35", "MH", "01:34:35", "00:24:08"),
-    ("Jessica Bryan", "FSnr", "MFR", "01:36:15", "00:23:03"),
     ("Aaron Schade", "M45", "WAC", "01:35:29", "00:24:35"),
     ("Graham Lawrence", "M45", "Barton & District", "01:37:41", "00:24:41"),
     ("Stephen Corlett", "MSnr", "", "01:39:58", "00:24:20"),
-    ("Ali Stennett", "M45", "NAC", "01:39:31", "00:24:59"),
     ("Joanne Schade", "M55", "WAC", "01:38:31", "00:26:27"),
     ("Nik Cain", "MSnr", "MFR", "01:39:56", "00:26:15"),
     ("Jenna Singer", "FSnr", "", "01:40:23", "00:26:17"),
@@ -312,7 +310,6 @@ HALF_2023 = [
     ("David Smith", "M55", "MFR", "01:53:48", "00:29:07"),
     ("Richard Gilliland", "M40", "", "01:55:08", "00:29:12"),
     ("Rowenna Tucker", "F40", "", "01:58:37", "00:30:29"),
-    ("Sharon Shimmin", "F50", "", "01:58:12", "00:30:55"),
     ("Paula Garland", "F50", "MFR", "02:02:57", "00:30:52"),
     ("Agata Maliszak", "F45", "", "02:02:57", "00:31:12"),
     ("Rebecca Kyle", "FSnr", "", "02:01:16", "00:34:00"),
@@ -331,7 +328,6 @@ HALF_2023 = [
     ("Belindie Ferrario", "F55", "IOMVAC", "02:20:41", "00:35:04"),
     ("Katie McAleer", "F40", "WAC", "02:19:08", "00:40:56"),
     ("Michelle Sherry", "F50", "WAC", "02:25:29", "00:37:04"),
-    ("Lucy Kinrade", "FSnr", "", "02:30:04", "00:32:50"),
     ("Kevin Holmes", "M40", "MFR", "02:36:34", "00:27:47"),
     ("Johan Ferrario", "M60", "IOMVAC", "02:29:52", "00:34:39"),
     ("Steven Ferrario", "M35", "", "02:30:53", "00:36:53"),
@@ -350,3 +346,10 @@ HALF_2023 = [
 # Dominic Chapman, Mike Hayler, Kristian Edwards, Ian Hughes, Colette
 # Corlett, Stewart Jones, Amy Killip, Paul Rodgers (has only a Peel Hill
 # time, no Half Marathon), Adrienne Rogers, Chris Wade, Andy Walton.
+#
+# Also excluded (had Half Marathon + Peel Hill, but incomplete once Ramsey
+# 10K/Killer Mile/Foxdale 5 were backfilled from independent sources -
+# missing exactly one of those five races each, unlike the rest of the
+# field which has all five): Jessica Bryan (no Foxdale 5 - DNF), Ali
+# Stennett (no Ramsey 10K), Lucy Kinrade (no Ramsey 10K), Sharon Shimmin
+# (no Killer Mile).
