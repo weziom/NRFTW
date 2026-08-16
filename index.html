@@ -507,6 +507,17 @@
     return [h, m, s].map((v, i) => (i === 0 ? String(v) : String(v).padStart(2, "0"))).join(":");
   }
 
+  function ordinal(n) {
+    const rem100 = n % 100;
+    if (rem100 >= 11 && rem100 <= 13) return `${n}th`;
+    switch (n % 10) {
+      case 1: return `${n}st`;
+      case 2: return `${n}nd`;
+      case 3: return `${n}rd`;
+      default: return `${n}th`;
+    }
+  }
+
   function raceCellValue(entry, raceKey) {
     const r = entry.races[raceKey];
     return r ? (r.time || null) : null;
@@ -592,12 +603,16 @@
       datasets.forEach((data, i) => {
         if (!data) return;
         LEAGUES.forEach((lg) => {
-          (data.leagues[lg.key] || []).forEach((entry) => {
+          // Already sorted by cumulative time ascending (same order the
+          // main table's rank column uses), so array position = that
+          // year's overall finishing position in this league.
+          (data.leagues[lg.key] || []).forEach((entry, idx) => {
             appearances.push({
               year: YEARS[i].label,
               league: lg.key,
               name: entry.name,
               races: entry.races,
+              position: entry.cumulative_seconds === null ? null : idx + 1,
               // That year's own race labels (e.g. "Foxdale 6" vs "Foxdale 5")
               // - carried per-appearance rather than read from the
               // currently-viewed year, since the two are usually different.
@@ -635,7 +650,16 @@
       const matches = appearances.filter((a) => canonicalRunnerKey(a.name) === key);
       const halfCount = matches.filter((a) => a.league === "half_marathon").length;
       const marathonCount = matches.filter((a) => a.league === "marathon").length;
-      const years = [...new Set(matches.map((m) => m.year))].sort((a, b) => b - a);
+      const yearsMap = new Map();
+      matches.forEach((m) => {
+        const existing = yearsMap.get(m.year);
+        if (!existing || (m.position !== null && (existing.position === null || m.position < existing.position))) {
+          yearsMap.set(m.year, { position: m.position, league: m.league });
+        }
+      });
+      const years = [...yearsMap.entries()]
+        .sort((a, b) => b[0] - a[0])
+        .map(([year, { position, league }]) => ({ year, position, league }));
 
       function bestAmong(rowMatches, raceKey) {
         let best = null;
@@ -709,7 +733,13 @@
       document.getElementById("runnerModalSummary").textContent =
         `Competed in the series ${history.totalCount} time${history.totalCount === 1 ? "" : "s"}` +
         (parts.length ? ` (${parts.join(", ")})` : "");
-      document.getElementById("runnerModalYears").textContent = history.years.join(", ");
+      document.getElementById("runnerModalYears").textContent = history.years
+        .map(({ year, position, league }) => {
+          const leagueLabel = LEAGUES.find((lg) => lg.key === league);
+          const leagueText = leagueLabel ? leagueLabel.label : league;
+          return position ? `${year} (${leagueText}, ${ordinal(position)} overall)` : `${year} (${leagueText})`;
+        })
+        .join(", ");
 
       const tbody = document.getElementById("runnerModalRows");
       history.rows.forEach((row) => {
