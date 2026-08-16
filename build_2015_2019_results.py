@@ -195,7 +195,7 @@ def main():
     )
 
     years = [
-        ("2015", HALF_2015, MARATHON_2015, "none"),
+        ("2015", HALF_2015, MARATHON_2015, "2016_2017"),
         ("2016", HALF_2016, MARATHON_2016, "2016_2017"),
         ("2017", HALF_2017, MARATHON_2017, "2016_2017"),
         ("2018", HALF_2018, MARATHON_2018, "2018"),

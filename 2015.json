@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2015",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-16T10:17:10Z",
+  "generated_at": "2026-08-16T10:24:00Z",
   "races": {
     "marathon_half": {
       "label": "Marathon / Half Marathon",
@@ -44,9 +44,9 @@
     "half_marathon": [
       {
         "name": "Nigel Armstrong",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Harriers",
+        "gender": "M",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -86,9 +86,9 @@
       },
       {
         "name": "Martin Kneen",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -128,9 +128,9 @@
       },
       {
         "name": "Jack Okell",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Harriers",
+        "gender": "M",
+        "age_group": "Junior",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -170,9 +170,9 @@
       },
       {
         "name": "Neil Brogan",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "Open",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -212,9 +212,9 @@
       },
       {
         "name": "Nikki Boyde",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Northern AC",
+        "gender": "F",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -254,9 +254,9 @@
       },
       {
         "name": "Tom Melvin",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Northern AC",
+        "gender": "M",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -296,9 +296,9 @@
       },
       {
         "name": "Elissa Morris",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Unattached",
+        "gender": "F",
+        "age_group": "Open",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -338,9 +338,9 @@
       },
       {
         "name": "Stephen Caley",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "Open",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -380,9 +380,9 @@
       },
       {
         "name": "Oliver O'Meara",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Tri",
+        "gender": "M",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -422,9 +422,9 @@
       },
       {
         "name": "Barry Moore",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -464,9 +464,9 @@
       },
       {
         "name": "Amy Barker",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Unattached",
+        "gender": "F",
+        "age_group": "Open",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -506,9 +506,9 @@
       },
       {
         "name": "Andrew Falconer",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Unattached",
+        "gender": "M",
+        "age_group": "Open",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -548,9 +548,9 @@
       },
       {
         "name": "Juan Owens",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Unattached",
+        "gender": "M",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -590,9 +590,9 @@
       },
       {
         "name": "Brian Butler",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "IOMVAC",
+        "gender": "M",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -632,9 +632,9 @@
       },
       {
         "name": "Nick Watterson",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "IOMVAC",
+        "gender": "M",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -674,9 +674,9 @@
       },
       {
         "name": "Dawn Yates",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Harriers",
+        "gender": "F",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -716,9 +716,9 @@
       },
       {
         "name": "Andrew Wilkinson",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Northern AC",
+        "gender": "M",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -758,9 +758,9 @@
       },
       {
         "name": "Ellen Kneen",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "F",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -800,9 +800,9 @@
       },
       {
         "name": "Christine O'Hanlon",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Unattached",
+        "gender": "F",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -842,9 +842,9 @@
       },
       {
         "name": "Sharen Gardner",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "F",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -884,9 +884,9 @@
       },
       {
         "name": "Dave Lawrie",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "IOMVAC",
+        "gender": "M",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -926,9 +926,9 @@
       },
       {
         "name": "Stephen Kennaugh",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -968,9 +968,9 @@
       },
       {
         "name": "Vivian Toro",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Unattached",
+        "gender": "F",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1010,9 +1010,9 @@
       },
       {
         "name": "Michael Tait",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1052,9 +1052,9 @@
       },
       {
         "name": "Jill Bunyan",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "F",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1094,9 +1094,9 @@
       },
       {
         "name": "Lucy Fern",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Nimrod Runners",
+        "gender": "F",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1136,9 +1136,9 @@
       },
       {
         "name": "Jackie Moore",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "F",
+        "age_group": "45-49",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1178,9 +1178,9 @@
       },
       {
         "name": "Ric Adams",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Unattached",
+        "gender": "M",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1220,9 +1220,9 @@
       },
       {
         "name": "Emma Campbell",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Northern AC",
+        "gender": "F",
+        "age_group": "35-39",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1262,9 +1262,9 @@
       },
       {
         "name": "Moira Hall",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "F",
+        "age_group": "60-69",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1304,9 +1304,9 @@
       },
       {
         "name": "Eric Lee",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1346,9 +1346,9 @@
       },
       {
         "name": "Paul Killey",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "50-59",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1388,9 +1388,9 @@
       },
       {
         "name": "Colin Crooks",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "40-44",
         "league": "half_marathon",
         "races": {
           "marathon_half": {
@@ -1432,9 +1432,9 @@
     "marathon": [
       {
         "name": "Richard Shipway",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "45-49",
         "league": "marathon",
         "races": {
           "marathon_half": {
@@ -1474,9 +1474,9 @@
       },
       {
         "name": "Matthew David",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "100 Marathon Club",
+        "gender": "M",
+        "age_group": "35-39",
         "league": "marathon",
         "races": {
           "marathon_half": {
@@ -1516,9 +1516,9 @@
       },
       {
         "name": "Grant Dawson",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "Open",
         "league": "marathon",
         "races": {
           "marathon_half": {
@@ -1558,9 +1558,9 @@
       },
       {
         "name": "Paul Rodgers",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Fell Runners",
+        "gender": "M",
+        "age_group": "35-39",
         "league": "marathon",
         "races": {
           "marathon_half": {
@@ -1600,9 +1600,9 @@
       },
       {
         "name": "Geoffrey Rice",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Western AC",
+        "gender": "M",
+        "age_group": "45-49",
         "league": "marathon",
         "races": {
           "marathon_half": {
@@ -1642,9 +1642,9 @@
       },
       {
         "name": "Alex Parkes",
-        "club": "",
-        "gender": null,
-        "age_group": null,
+        "club": "Manx Tri",
+        "gender": "M",
+        "age_group": "45-49",
         "league": "marathon",
         "races": {
           "marathon_half": {
