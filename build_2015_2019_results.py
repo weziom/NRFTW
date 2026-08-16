@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-time build of the 2015-2018 archive files, transcribed from the
+"""One-time build of the 2015-2019 archive files, transcribed from the
 results/*_half_results*.jpg and *_marathon_results.jpg screenshots - full
 season-tracking spreadsheets (already merged across all 6 races), not raw
 single-race exports, so there's no roster-matching step here the way
@@ -64,6 +64,24 @@ def _parse_category_2016_2017(category):
     return gender, age_group
 
 
+def _parse_category_2019(category):
+    """"M40-44" / "W40-44" / "Senior Men" / "Senior Wom[en]" -> (gender,
+    age_group). Unlike 2018, the Senior/Junior word comes first and is
+    followed by a full (or truncated) gender word, not a bare letter."""
+    if not category:
+        return None, None
+    if category.startswith("Senior "):
+        prefix, rest = category.split(" ", 1)
+        gender = rest.strip()[0]
+        age_group = prefix
+    else:
+        gender = category[0]
+        age_group = category[1:].strip() or None
+    if gender == "W":
+        gender = "F"
+    return gender, age_group
+
+
 def _parse_category_2018(category):
     """"M35-39" / "Senior M" / "W45-49" / "Junior M" -> (gender, age_group).
     W (Women) maps to F; Senior/Junior appear as a word before the gender
@@ -85,6 +103,7 @@ CATEGORY_PARSERS = {
     "none": lambda c: (None, None),
     "2016_2017": _parse_category_2016_2017,
     "2018": _parse_category_2018,
+    "2019": _parse_category_2019,
 }
 
 
@@ -167,11 +186,12 @@ def build_year(year, half_rows, marathon_rows, category_style):
 
 
 def main():
-    from historic_2015_2018_data import (
+    from historic_2015_2019_data import (
         HALF_2015, MARATHON_2015,
         HALF_2016, MARATHON_2016,
         HALF_2017, MARATHON_2017,
         HALF_2018, MARATHON_2018,
+        HALF_2019, MARATHON_2019,
     )
 
     years = [
@@ -179,6 +199,7 @@ def main():
         ("2016", HALF_2016, MARATHON_2016, "2016_2017"),
         ("2017", HALF_2017, MARATHON_2017, "2016_2017"),
         ("2018", HALF_2018, MARATHON_2018, "2018"),
+        ("2019", HALF_2019, MARATHON_2019, "2019"),
     ]
     for year, half_rows, marathon_rows, style in years:
         data = build_year(year, half_rows, marathon_rows, style)

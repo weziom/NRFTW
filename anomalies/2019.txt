@@ -1,0 +1,23 @@
+No Rest For the Wicked 2019 - archive import notes
+
+Source: results/2019_result_final.jpg (45 ranked half marathon runners),
+results/2019_result_final_marathon.jpg (7 ranked marathon runners). Both
+sheets also carry a Town column (not imported - no other year's data has
+an equivalent field) showing several non-IOM visiting runners (Belfast,
+Widnes, Rhiweceilog/Wales, Orchies/France, Barnet/Herts).
+
+[mislabeled_column] The half marathon sheet's own column header reads
+"Marathon" for what is unambiguously the Half Marathon leg time (the
+sheet's title is "HALF-MARATHON 2019", and the value lines up with every
+other race's pace). Treated as the Half Marathon time; not corrected in
+the transcription, just not taken literally.
+
+[excluded_incomplete] Several names at the bottom of each sheet had no
+position/rank and mostly 00:00:00 placeholders - excluded from 2019.json:
+  - Half marathon: Yoan Redmann, Nicholas Bradley, Alan Pilling, Amy Lace,
+    Nigel Armstrong, Jerzy Matuszewski.
+  - Marathon: Alan Manach (France), Richard Costain, Svetlin Krastev.
+
+[truncated_club_names] "Widnes Run" (Rob Lloyd) and "Sandhurst Jo" (Ed
+Wilson) are cut off by the source spreadsheet's column width - shown as
+printed rather than guessed at.
