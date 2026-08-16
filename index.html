@@ -328,7 +328,8 @@
   }
   .runner-modal-close:hover { color: var(--text); }
   #runnerModalName { margin: 0 32px 6px 0; font-size: 1.2rem; word-break: break-word; }
-  .runner-modal-summary { margin: 0 0 16px; color: var(--muted); font-size: 0.88rem; }
+  .runner-modal-summary { margin: 0 0 4px; color: var(--muted); font-size: 0.88rem; }
+  .runner-modal-years { margin: 0 0 16px; color: var(--muted); font-size: 0.82rem; }
   .runner-modal-table {
     width: 100%;
     min-width: 0;
@@ -350,7 +351,8 @@
     .runner-modal { padding: 18px 14px; border-radius: 12px; max-height: 90vh; }
     #runnerModalName { font-size: 1.05rem; margin-right: 28px; }
     .runner-modal-close { top: 10px; right: 10px; }
-    .runner-modal-summary { font-size: 0.82rem; margin-bottom: 12px; }
+    .runner-modal-summary { font-size: 0.82rem; margin-bottom: 3px; }
+    .runner-modal-years { font-size: 0.76rem; margin-bottom: 12px; }
     .runner-modal-table { font-size: 0.78rem; }
     .runner-modal-table th, .runner-modal-table td { padding: 6px 4px; }
   }
@@ -429,6 +431,7 @@
     <button class="runner-modal-close" id="runnerModalClose" aria-label="Close">&times;</button>
     <h2 id="runnerModalName"></h2>
     <p class="runner-modal-summary" id="runnerModalSummary"></p>
+    <p class="runner-modal-years" id="runnerModalYears"></p>
     <table class="runner-modal-table" id="runnerModalTable">
       <thead><tr><th>Course</th><th>Best time</th><th>Year</th></tr></thead>
       <tbody id="runnerModalRows"></tbody>
@@ -593,6 +596,10 @@
               league: lg.key,
               name: entry.name,
               races: entry.races,
+              // That year's own race labels (e.g. "Foxdale 6" vs "Foxdale 5")
+              // - carried per-appearance rather than read from the
+              // currently-viewed year, since the two are usually different.
+              raceLabels: data.races,
             });
           });
         });
@@ -600,6 +607,20 @@
       return appearances;
     });
     return runnerIndexPromise;
+  }
+
+  // Races whose key stayed the same across years but whose real-world
+  // course didn't - grouped into separate rows by that year's own label
+  // instead of one merged "best", the same reasoning as the Half
+  // Marathon/Marathon split below (Foxdale 5 and Foxdale 6 are different
+  // distances, not just a renamed sponsor).
+  const LABEL_SPLIT_RACE_KEYS = ["foxdale_5"];
+  // It was "Foxdale 6" through 2020, became "Foxdale 5" from 2021 on - a
+  // few years' sheets (2021-2023) just say "Foxdale" with no number,
+  // which is this same post-2021 course, not a third distance.
+  const RACE_LABEL_ALIASES = { "Foxdale": "Foxdale 5" };
+  function canonicalRaceLabel(label) {
+    return RACE_LABEL_ALIASES[label] || label;
   }
 
   // RACE_ORDER's "marathon_half" slot is really two different courses
@@ -612,11 +633,11 @@
       const matches = appearances.filter((a) => canonicalRunnerKey(a.name) === key);
       const halfCount = matches.filter((a) => a.league === "half_marathon").length;
       const marathonCount = matches.filter((a) => a.league === "marathon").length;
+      const years = [...new Set(matches.map((m) => m.year))].sort((a, b) => b - a);
 
-      function bestFor(raceKey, leagueFilter) {
+      function bestAmong(rowMatches, raceKey) {
         let best = null;
-        matches.forEach((m) => {
-          if (leagueFilter && m.league !== leagueFilter) return;
+        rowMatches.forEach((m) => {
           const r = m.races[raceKey];
           if (!r || !r.time) return;
           const secs = parseTimeToSeconds(r.time);
@@ -627,14 +648,40 @@
       }
 
       const rows = [];
-      if (halfCount > 0) rows.push({ label: "Half Marathon", best: bestFor("marathon_half", "half_marathon") });
-      if (marathonCount > 0) rows.push({ label: "Marathon", best: bestFor("marathon_half", "marathon") });
+      if (halfCount > 0) {
+        rows.push({ label: "Half Marathon", best: bestAmong(matches.filter((m) => m.league === "half_marathon"), "marathon_half") });
+      }
+      if (marathonCount > 0) {
+        rows.push({ label: "Marathon", best: bestAmong(matches.filter((m) => m.league === "marathon"), "marathon_half") });
+      }
       RACE_ORDER.filter((rk) => rk !== "marathon_half").forEach((rk) => {
-        const label = DATA.races[rk] ? DATA.races[rk].label : rk;
-        rows.push({ label, best: bestFor(rk, null) });
+        if (LABEL_SPLIT_RACE_KEYS.includes(rk)) {
+          // Group this runner's own appearances by whatever that year
+          // itself called the race, so e.g. "Foxdale 6" years and
+          // "Foxdale 5" years get their own best-time row apiece.
+          const byLabel = new Map();
+          matches.forEach((m) => {
+            if (!m.races[rk] || !m.races[rk].time) return;
+            const rawLabel = (m.raceLabels[rk] && m.raceLabels[rk].label) || rk;
+            const label = canonicalRaceLabel(rawLabel);
+            if (!byLabel.has(label)) byLabel.set(label, []);
+            byLabel.get(label).push(m);
+          });
+          if (byLabel.size === 0) {
+            const label = DATA.races[rk] ? DATA.races[rk].label : rk;
+            rows.push({ label, best: null });
+          } else {
+            byLabel.forEach((rowMatches, label) => {
+              rows.push({ label, best: bestAmong(rowMatches, rk) });
+            });
+          }
+        } else {
+          const label = DATA.races[rk] ? DATA.races[rk].label : rk;
+          rows.push({ label, best: bestAmong(matches, rk) });
+        }
       });
 
-      return { name: displayName, totalCount: matches.length, halfCount, marathonCount, rows };
+      return { name: displayName, totalCount: matches.length, halfCount, marathonCount, years, rows };
     });
   }
 
@@ -644,6 +691,7 @@
     const table = document.getElementById("runnerModalTable");
     document.getElementById("runnerModalName").textContent = name;
     document.getElementById("runnerModalSummary").textContent = "";
+    document.getElementById("runnerModalYears").textContent = "";
     document.getElementById("runnerModalRows").innerHTML = "";
     table.hidden = true;
     loading.hidden = false;
@@ -659,6 +707,7 @@
       document.getElementById("runnerModalSummary").textContent =
         `Competed in the series ${history.totalCount} time${history.totalCount === 1 ? "" : "s"}` +
         (parts.length ? ` (${parts.join(", ")})` : "");
+      document.getElementById("runnerModalYears").textContent = history.years.join(", ");
 
       const tbody = document.getElementById("runnerModalRows");
       history.rows.forEach((row) => {
