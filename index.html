@@ -330,6 +330,8 @@
   #runnerModalName { margin: 0 32px 6px 0; font-size: 1.2rem; word-break: break-word; }
   .runner-modal-summary { margin: 0 0 4px; color: var(--muted); font-size: 0.88rem; }
   .runner-modal-years { margin: 0 0 16px; color: var(--muted); font-size: 0.82rem; }
+  .runner-modal-years-line { margin: 0 0 3px; }
+  .runner-modal-years-line:last-child { margin-bottom: 0; }
   .runner-modal-table {
     width: 100%;
     min-width: 0;
@@ -431,7 +433,7 @@
     <button class="runner-modal-close" id="runnerModalClose" aria-label="Close">&times;</button>
     <h2 id="runnerModalName"></h2>
     <p class="runner-modal-summary" id="runnerModalSummary"></p>
-    <p class="runner-modal-years" id="runnerModalYears"></p>
+    <div class="runner-modal-years" id="runnerModalYears"></div>
     <table class="runner-modal-table" id="runnerModalTable">
       <thead><tr><th>Course</th><th>Best time</th><th>Year</th></tr></thead>
       <tbody id="runnerModalRows"></tbody>
@@ -717,7 +719,7 @@
     const table = document.getElementById("runnerModalTable");
     document.getElementById("runnerModalName").textContent = name;
     document.getElementById("runnerModalSummary").textContent = "";
-    document.getElementById("runnerModalYears").textContent = "";
+    document.getElementById("runnerModalYears").innerHTML = "";
     document.getElementById("runnerModalRows").innerHTML = "";
     table.hidden = true;
     loading.hidden = false;
@@ -727,19 +729,29 @@
       loading.hidden = true;
       table.hidden = false;
 
-      const parts = [];
-      if (history.halfCount) parts.push(`${history.halfCount} Half Marathon`);
-      if (history.marathonCount) parts.push(`${history.marathonCount} Marathon`);
       document.getElementById("runnerModalSummary").textContent =
-        `Competed in the series ${history.totalCount} time${history.totalCount === 1 ? "" : "s"}` +
-        (parts.length ? ` (${parts.join(", ")})` : "");
-      document.getElementById("runnerModalYears").textContent = history.years
-        .map(({ year, position, league }) => {
-          const leagueLabel = LEAGUES.find((lg) => lg.key === league);
-          const leagueText = leagueLabel ? leagueLabel.label : league;
-          return position ? `${year} (${leagueText}, ${ordinal(position)} overall)` : `${year} (${leagueText})`;
-        })
-        .join(", ");
+        `Competed in the series ${history.totalCount} time${history.totalCount === 1 ? "" : "s"}`;
+
+      const yearsContainer = document.getElementById("runnerModalYears");
+      function yearsLine(labelText, league) {
+        const yearsForLeague = history.years.filter((y) => y.league === league);
+        if (yearsForLeague.length === 0) return null;
+        const p = document.createElement("p");
+        p.className = "runner-modal-years-line";
+        const strong = document.createElement("strong");
+        strong.textContent = `${labelText}: `;
+        p.appendChild(strong);
+        p.appendChild(document.createTextNode(
+          yearsForLeague
+            .map(({ year, position }) => (position ? `${year} (${ordinal(position)} overall)` : `${year}`))
+            .join(", ")
+        ));
+        return p;
+      }
+      const marathonLine = yearsLine("Marathon", "marathon");
+      const halfLine = yearsLine("Half Marathon", "half_marathon");
+      if (marathonLine) yearsContainer.appendChild(marathonLine);
+      if (halfLine) yearsContainer.appendChild(halfLine);
 
       const tbody = document.getElementById("runnerModalRows");
       history.rows.forEach((row) => {
