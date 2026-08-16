@@ -241,6 +241,20 @@
   tbody tr:hover { background: var(--row-hover); }
 
   td.name { white-space: normal; min-width: 140px; font-weight: 600; }
+  .name-link {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    font-weight: 600;
+    color: var(--link);
+    cursor: pointer;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.1s;
+  }
+  .name-link:hover, .name-link:focus-visible { text-decoration-color: currentColor; }
   td.club { color: var(--muted); white-space: normal; min-width: 120px; }
   td.rank { color: var(--muted); font-weight: 600; }
   td.cumulative { font-weight: 700; color: var(--accent); }
@@ -275,6 +289,51 @@
     margin-top: 28px;
   }
   footer.site a { color: var(--link); }
+
+  .runner-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 32, 27, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 50;
+  }
+  .runner-modal-overlay[hidden] { display: none; }
+  .runner-modal {
+    position: relative;
+    background: var(--panel);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 24px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .runner-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: 0;
+    background: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 4px;
+  }
+  .runner-modal-close:hover { color: var(--text); }
+  #runnerModalName { margin: 0 32px 6px 0; font-size: 1.2rem; }
+  .runner-modal-summary { margin: 0 0 16px; color: var(--muted); font-size: 0.88rem; }
+  .runner-modal-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  .runner-modal-table th, .runner-modal-table td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); }
+  .runner-modal-table th { font-size: 0.68rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.03em; }
+  .runner-modal-table td.best-time { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .runner-modal-table td.no-time { color: var(--muted); }
+  .runner-modal-loading { color: var(--muted); font-size: 0.86rem; margin: 8px 0 0; }
+  .runner-modal-loading[hidden] { display: none; }
 
   @media (max-width: 600px) {
     header.site img.logo { width: 96px; height: 96px; }
@@ -345,6 +404,19 @@
   </footer>
 </div>
 
+<div class="runner-modal-overlay" id="runnerModalOverlay" hidden>
+  <div class="runner-modal" role="dialog" aria-modal="true" aria-labelledby="runnerModalName">
+    <button class="runner-modal-close" id="runnerModalClose" aria-label="Close">&times;</button>
+    <h2 id="runnerModalName"></h2>
+    <p class="runner-modal-summary" id="runnerModalSummary"></p>
+    <table class="runner-modal-table" id="runnerModalTable">
+      <thead><tr><th>Course</th><th>Best time</th><th>Year</th></tr></thead>
+      <tbody id="runnerModalRows"></tbody>
+    </table>
+    <p class="runner-modal-loading" id="runnerModalLoading">Loading history…</p>
+  </div>
+</div>
+
 <script>
 (function () {
   // Marathon / Half Marathon is the first event of the series and is always
@@ -382,6 +454,19 @@
   let activeLeague = "half_marathon";
   let sortState = { col: "cumulative_seconds", dir: "asc" };
   let genderFilter = "all";
+
+  // Same runner, different spelling in different years' source data - keys
+  // and values are both lowercased before lookup, so casing doesn't matter
+  // here. Used only to group a runner's history together across years;
+  // never changes what name is shown on any given year's own leaderboard.
+  const RUNNER_ALIASES = {
+    "geoff rice": "geoffrey rice",
+    "wez lee": "lee cook",
+  };
+  function canonicalRunnerKey(name) {
+    const key = name.trim().toLowerCase();
+    return RUNNER_ALIASES[key] || key;
+  }
 
   function fmtTime(sec) {
     if (sec === null || sec === undefined) return null;
@@ -456,6 +541,135 @@
     return Infinity;
   }
 
+  // Runner history modal: this page only ever has one year's results.json
+  // loaded at a time, so "how many times has this person run the series"
+  // needs every year's file fetched at once - done lazily on first click
+  // and cached (as a promise, so a second click while the first fetch is
+  // still in flight doesn't kick off a duplicate one).
+  let runnerIndexPromise = null;
+
+  function loadRunnerIndex() {
+    if (runnerIndexPromise) return runnerIndexPromise;
+    runnerIndexPromise = Promise.all(
+      YEARS.map((y) =>
+        fetch(y.file)
+          .then((r) => (r.ok ? r.json() : null))
+          .catch(() => null)
+      )
+    ).then((datasets) => {
+      const appearances = [];
+      datasets.forEach((data, i) => {
+        if (!data) return;
+        LEAGUES.forEach((lg) => {
+          (data.leagues[lg.key] || []).forEach((entry) => {
+            appearances.push({
+              year: YEARS[i].label,
+              league: lg.key,
+              name: entry.name,
+              races: entry.races,
+            });
+          });
+        });
+      });
+      return appearances;
+    });
+    return runnerIndexPromise;
+  }
+
+  // RACE_ORDER's "marathon_half" slot is really two different courses
+  // depending which league a given appearance was in (a half marathon one
+  // year and a full marathon the next aren't comparable "best times"), so
+  // it's split into its own two rows here instead of one.
+  function buildRunnerHistory(displayName) {
+    return loadRunnerIndex().then((appearances) => {
+      const key = canonicalRunnerKey(displayName);
+      const matches = appearances.filter((a) => canonicalRunnerKey(a.name) === key);
+      const halfCount = matches.filter((a) => a.league === "half_marathon").length;
+      const marathonCount = matches.filter((a) => a.league === "marathon").length;
+
+      function bestFor(raceKey, leagueFilter) {
+        let best = null;
+        matches.forEach((m) => {
+          if (leagueFilter && m.league !== leagueFilter) return;
+          const r = m.races[raceKey];
+          if (!r || !r.time) return;
+          const secs = parseTimeToSeconds(r.time);
+          if (secs === Infinity) return;
+          if (best === null || secs < best.seconds) best = { time: r.time, year: m.year, seconds: secs };
+        });
+        return best;
+      }
+
+      const rows = [];
+      if (halfCount > 0) rows.push({ label: "Half Marathon", best: bestFor("marathon_half", "half_marathon") });
+      if (marathonCount > 0) rows.push({ label: "Marathon", best: bestFor("marathon_half", "marathon") });
+      RACE_ORDER.filter((rk) => rk !== "marathon_half").forEach((rk) => {
+        const label = DATA.races[rk] ? DATA.races[rk].label : rk;
+        rows.push({ label, best: bestFor(rk, null) });
+      });
+
+      return { name: displayName, totalCount: matches.length, halfCount, marathonCount, rows };
+    });
+  }
+
+  function openRunnerModal(name) {
+    const overlay = document.getElementById("runnerModalOverlay");
+    const loading = document.getElementById("runnerModalLoading");
+    const table = document.getElementById("runnerModalTable");
+    document.getElementById("runnerModalName").textContent = name;
+    document.getElementById("runnerModalSummary").textContent = "";
+    document.getElementById("runnerModalRows").innerHTML = "";
+    table.hidden = true;
+    loading.hidden = false;
+    overlay.hidden = false;
+
+    buildRunnerHistory(name).then((history) => {
+      loading.hidden = true;
+      table.hidden = false;
+
+      const parts = [];
+      if (history.halfCount) parts.push(`${history.halfCount} Half Marathon`);
+      if (history.marathonCount) parts.push(`${history.marathonCount} Marathon`);
+      document.getElementById("runnerModalSummary").textContent =
+        `Competed in the series ${history.totalCount} time${history.totalCount === 1 ? "" : "s"}` +
+        (parts.length ? ` (${parts.join(", ")})` : "");
+
+      const tbody = document.getElementById("runnerModalRows");
+      history.rows.forEach((row) => {
+        const tr = document.createElement("tr");
+        const tdCourse = document.createElement("td");
+        tdCourse.textContent = row.label;
+        tr.appendChild(tdCourse);
+        const tdTime = document.createElement("td");
+        const tdYear = document.createElement("td");
+        if (row.best) {
+          tdTime.className = "best-time";
+          tdTime.textContent = fmtTime(row.best.seconds);
+          tdYear.textContent = row.best.year;
+        } else {
+          tdTime.className = "no-time";
+          tdTime.textContent = "–";
+          tdYear.textContent = "–";
+        }
+        tr.appendChild(tdTime);
+        tr.appendChild(tdYear);
+        tbody.appendChild(tr);
+      });
+    });
+  }
+
+  function closeRunnerModal() {
+    document.getElementById("runnerModalOverlay").hidden = true;
+  }
+
+  document.getElementById("runnerModalClose").addEventListener("click", closeRunnerModal);
+  document.getElementById("runnerModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "runnerModalOverlay") closeRunnerModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !document.getElementById("runnerModalOverlay").hidden) closeRunnerModal();
+  });
+
   function buildRows() {
     const tbody = document.getElementById("bodyRows");
     tbody.innerHTML = "";
@@ -507,7 +721,12 @@
 
       const tdName = document.createElement("td");
       tdName.className = "name";
-      tdName.textContent = entry.name;
+      const nameBtn = document.createElement("button");
+      nameBtn.type = "button";
+      nameBtn.className = "name-link";
+      nameBtn.textContent = entry.name;
+      nameBtn.addEventListener("click", () => openRunnerModal(entry.name));
+      tdName.appendChild(nameBtn);
       tr.appendChild(tdName);
 
       const tdCum = document.createElement("td");
