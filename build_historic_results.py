@@ -14,9 +14,10 @@ Peel Hill / Killer Mile / Foxdale 5 / Trail Run have no source at all for
 these years and are marked "unavailable", not "pending" (they didn't just
 not-happen-yet, there's no way to find out about them).
 
-These files are intentionally NOT wired into index.html's Year selector -
-they're incomplete (missing several races' worth of data) and shouldn't be
-presented as equivalent to the live 2026 site or the fuller 2025 archive.
+These are wired into index.html's Year selector alongside the fuller
+years, but the event title says "(partial results)" and the empty race
+columns speak for themselves - not presented as equivalent to a year with
+the full 6-race series.
 """
 
 import json
@@ -118,8 +119,9 @@ def build_year(year, mh_event_id, ramsey_event_id):
             f"No Peel Hill source exists for {year}, so there's no official series roster - "
             "the roster here is simply everyone who ran the Marathon or Half Marathon that year. "
             "Peel Hill, Killer Mile, Foxdale 5 and Trail Run have no source at all for this year "
-            "(marked 'unavailable') and don't count toward cumulative time. This file is NOT "
-            "representative of the full series and is kept out of the public site."
+            "(marked 'unavailable') and don't count toward cumulative time. Published with "
+            "'(partial results)' in the event title rather than held back, since it's still "
+            "genuine Marathon/Half Marathon (and, where available, Ramsey 10K) data."
         ),
     })
 
@@ -135,7 +137,7 @@ def build_year(year, mh_event_id, ramsey_event_id):
         races["ramsey_10k"]["finishers"] = len(ramsey_source_entries)
 
     output = {
-        "event": f"No Rest For the Wicked {year} (INCOMPLETE ARCHIVE - not public)",
+        "event": f"No Rest For the Wicked {year} (partial results)",
         "logo": "images/logo.jpg",
         "generated_at": generated_at,
         "races": races,

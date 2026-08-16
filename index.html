@@ -311,6 +311,8 @@
     width: 100%;
     max-height: 85vh;
     overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
   .runner-modal-close {
     position: absolute;
@@ -325,15 +327,33 @@
     padding: 4px;
   }
   .runner-modal-close:hover { color: var(--text); }
-  #runnerModalName { margin: 0 32px 6px 0; font-size: 1.2rem; }
+  #runnerModalName { margin: 0 32px 6px 0; font-size: 1.2rem; word-break: break-word; }
   .runner-modal-summary { margin: 0 0 16px; color: var(--muted); font-size: 0.88rem; }
-  .runner-modal-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
-  .runner-modal-table th, .runner-modal-table td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); }
+  .runner-modal-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+  }
+  .runner-modal-table th, .runner-modal-table td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--border); overflow-wrap: break-word; }
   .runner-modal-table th { font-size: 0.68rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.03em; }
+  .runner-modal-table th:first-child, .runner-modal-table td:first-child { padding-left: 0; width: 46%; }
+  .runner-modal-table th:last-child, .runner-modal-table td:last-child { padding-right: 0; width: 20%; }
   .runner-modal-table td.best-time { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
   .runner-modal-table td.no-time { color: var(--muted); }
   .runner-modal-loading { color: var(--muted); font-size: 0.86rem; margin: 8px 0 0; }
   .runner-modal-loading[hidden] { display: none; }
+
+  @media (max-width: 480px) {
+    .runner-modal-overlay { padding: 10px; }
+    .runner-modal { padding: 18px 14px; border-radius: 12px; max-height: 90vh; }
+    #runnerModalName { font-size: 1.05rem; margin-right: 28px; }
+    .runner-modal-close { top: 10px; right: 10px; }
+    .runner-modal-summary { font-size: 0.82rem; margin-bottom: 12px; }
+    .runner-modal-table { font-size: 0.78rem; }
+    .runner-modal-table th, .runner-modal-table td { padding: 6px 4px; }
+  }
 
   @media (max-width: 600px) {
     header.site img.logo { width: 96px; height: 96px; }
@@ -442,6 +462,9 @@
   const YEARS = [
     { key: "2026", label: "2026", file: "results.json" },
     { key: "2025", label: "2025", file: "2025.json" },
+    { key: "2024", label: "2024", file: "2024.json" },
+    { key: "2022", label: "2022", file: "2022.json" },
+    { key: "2021", label: "2021", file: "2021.json" },
     { key: "2019", label: "2019", file: "2019.json" },
     { key: "2018", label: "2018", file: "2018.json" },
     { key: "2017", label: "2017", file: "2017.json" },

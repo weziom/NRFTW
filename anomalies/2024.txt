@@ -1,3 +1,3 @@
-No Rest For the Wicked 2024 (incomplete archive) - anomalies as of 2026-08-12T15:10:29Z
+No Rest For the Wicked 2024 (incomplete archive) - anomalies as of 2026-08-16T10:49:32Z
 
-[incomplete_roster] No Peel Hill source exists for 2024, so there's no official series roster - the roster here is simply everyone who ran the Marathon or Half Marathon that year. Peel Hill, Killer Mile, Foxdale 5 and Trail Run have no source at all for this year (marked 'unavailable') and don't count toward cumulative time. This file is NOT representative of the full series and is kept out of the public site.
+[incomplete_roster] No Peel Hill source exists for 2024, so there's no official series roster - the roster here is simply everyone who ran the Marathon or Half Marathon that year. Peel Hill, Killer Mile, Foxdale 5 and Trail Run have no source at all for this year (marked 'unavailable') and don't count toward cumulative time. Published with '(partial results)' in the event title rather than held back, since it's still genuine Marathon/Half Marathon (and, where available, Ramsey 10K) data.
