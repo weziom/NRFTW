@@ -1,7 +1,7 @@
 {
   "event": "No Rest For the Wicked 2026",
   "logo": "images/logo.jpg",
-  "generated_at": "2026-08-15T12:44:33Z",
+  "generated_at": "2026-08-18T11:53:38Z",
   "races": {
     "marathon_half": {
       "label": "Marathon / Half Marathon",
@@ -4028,6 +4028,50 @@
         "races_completed": 6,
         "cumulative_seconds": 22455,
         "cumulative_time": "06:14:15"
+      },
+      {
+        "name": "Bryony Barron",
+        "club": "",
+        "gender": "F",
+        "age_group": "40-44",
+        "league": "half_marathon",
+        "races": {
+          "peel_hill": {
+            "position": 110,
+            "time": "00:32:50",
+            "category": "V40"
+          },
+          "marathon_half": {
+            "contest": "half_marathon",
+            "bib": "249",
+            "rank": "276th",
+            "time": "2h16m46s",
+            "category": "Women 40-44 (16th)"
+          },
+          "ramsey_10k": {
+            "position": 158,
+            "time": "01:05:57",
+            "category": ""
+          },
+          "killer_mile": {
+            "position": 109,
+            "time": "00:12:06",
+            "category": "V40"
+          },
+          "foxdale_5": {
+            "position": 118,
+            "time": "00:51:36",
+            "category": ""
+          },
+          "trail_run": {
+            "position": 97,
+            "time": "01:16:01",
+            "category": ""
+          }
+        },
+        "races_completed": 6,
+        "cumulative_seconds": 22516,
+        "cumulative_time": "06:15:16"
       },
       {
         "name": "Amanda Ansermoz",

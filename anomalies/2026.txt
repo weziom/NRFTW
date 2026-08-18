@@ -1,4 +1,4 @@
-No Rest For the Wicked 2026 - anomalies as of 2026-08-15T12:44:33Z
+No Rest For the Wicked 2026 - anomalies as of 2026-08-18T11:53:38Z
 
 [duplicate_name] 2 Marathon/Half Marathon entrants share the name 'David Williams'. Matched to the series roster by club name where possible.
 [no_result] Series entrant 'Harry Kneen' has no matching Marathon/Half Marathon result.
@@ -25,7 +25,6 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-15T12:44:33Z
 [no_result] Series entrant 'Peter Cooper' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Ian Callister' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Rosa Nelson-Rohrer' has no matching Marathon/Half Marathon result.
-[no_result] Series entrant 'Bryony Barron' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'John Watterson' has no matching Marathon/Half Marathon result. Possible spelling mismatch: found similarly named 'John Waterton' in Marathon/Half Marathon results.
 [no_result] Series entrant 'Huw Jones' has no matching Marathon/Half Marathon result.
 [no_result] Series entrant 'Troy Turner' has no matching Marathon/Half Marathon result.
@@ -81,7 +80,6 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-15T12:44:33Z
 [no_result] Series entrant 'Peter Cooper' has no matching Killer Mile result.
 [no_result] Series entrant 'Ian Callister' has no matching Killer Mile result.
 [no_result] Series entrant 'Rosa Nelson-Rohrer' has no matching Killer Mile result.
-[no_result] Series entrant 'Bryony Barron' has no matching Killer Mile result.
 [no_result] Series entrant 'John Watterson' has no matching Killer Mile result.
 [no_result] Series entrant 'Huw Jones' has no matching Killer Mile result.
 [no_result] Series entrant 'Troy Turner' has no matching Killer Mile result.
@@ -185,4 +183,3 @@ No Rest For the Wicked 2026 - anomalies as of 2026-08-15T12:44:33Z
 [removed_incomplete_series] 'Huw Jones' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile, Trail.
 [removed_incomplete_series] 'Al Graham' removed from the series - missing a result for: Trail.
 [removed_incomplete_series] 'Danny Taplin' removed from the series - missing a result for: Killer Mile, Foxdale 5, Trail.
-[removed_incomplete_series] 'Bryony Barron' removed from the series - missing a result for: Marathon / Half Marathon, Killer Mile.

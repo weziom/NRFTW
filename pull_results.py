@@ -104,6 +104,9 @@ NAME_ALIASES = {
     "belindie ferreira": "Belindie Ferrario",
     "johan ferreira": "Johan Ferrario",
     "ola rogalewska": "Ola Rogalewski",
+    # racetek-live's Killer Mile feed has this runner's first+last name
+    # fields both set to her full name, so it comes through duplicated.
+    "bryony barron bryony barron": "Bryony Barron",
 }
 
 
